@@ -38,6 +38,8 @@ After the installation finished, I needed to connect it to my Google account. Th
 gemini
 ```
 
+{% include figure.html path="/assets/images/gemini-launch.png" alt="Gemini CLI launch screen" %}
+
 That command automatically opened my web browser and prompted me to log in with my Google account and grant the necessary permissions. Once I did that, the CLI was authenticated and ready to go.
 
 ### 3. Using Gemini in My Terminal
