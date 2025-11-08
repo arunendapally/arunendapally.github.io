@@ -1,9 +1,14 @@
 ---
-layout: post
-title: How I Set Up Gemini in My VSCode Terminal
-date: 2025-11-08 12:00:00 +0000
-categories: [Gemini, VSCode, AI]
-tags: [gemini, vscode, ai, terminal, npm, workflow]
+title: "Getting Started with Google Gemini AI in VSCode: A Quick Setup Guide"
+author: arun
+date: 2025-11-08 12:00:00 +0530
+categories: [Development Tools, AI]
+tags: [gemini, vscode, ai, terminal, npm, workflow, google-ai, productivity]
+image:
+  path: /assets/img/posts/gemini-vscode/gemini-launch-heading.png
+  alt: Gemini CLI launch screen in VSCode terminal
+seo:
+  description: A straightforward guide to setting up and using Google's Gemini AI in your VSCode terminal for a better development experience
 ---
 
 I've been trying out a few different AI tools lately to see how they fit into my workflow. I've been playing around with Claude, and recently I decided to give Google's Gemini a shot. I found a really simple way to use it directly from my VSCode terminal, and I wanted to share how I got it set up.
@@ -38,7 +43,8 @@ After the installation finished, I needed to connect it to my Google account. Th
 gemini
 ```
 
-{% include figure.html path="/assets/images/gemini-launch.png" alt="Gemini CLI launch screen" %}
+![Gemini CLI launch screen](/assets/img/posts/gemini-vscode/gemini-launch.png)
+_The Gemini CLI welcome screen in VSCode terminal_
 
 That command automatically opened my web browser and prompted me to log in with my Google account and grant the necessary permissions. Once I did that, the CLI was authenticated and ready to go.
 

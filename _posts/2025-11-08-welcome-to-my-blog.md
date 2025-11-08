@@ -1,18 +1,24 @@
 ---
 title: Welcome to My Blog
-date: 2025-11-08
-categories: [General]
-tags: [welcome, first-post]
+author: arun
+date: 2025-11-08 12:00:00 +0530
+categories: [Personal]
+tags: [welcome, software-development, ai, cloud]
+pin: true
+seo:
+  description: Welcome to my blog where I share my experiences with software development, AI, and cloud technologies
 ---
 
-Welcome to my blog! This is my first post using the Chirpy theme. I'll be sharing my thoughts and experiences about technology, programming, and more.
+Hi there! I'm Arun, a Senior Technical Architect passionate about building great software solutions. I've spent over a decade working with various technologies and love learning new things.
 
-## What to Expect
+## What I'll Write About
 
-In this blog, you'll find:
-- Technical tutorials and guides
-- Programming tips and tricks
-- Reviews of tools and technologies
-- My experiences in software development
+I plan to share:
+- My hands-on experiences with new technologies
+- Quick tutorials on tools I find useful
+- Tips and tricks I learn along the way
+- Thoughts on AI and cloud computing
 
-Stay tuned for more content!
+I believe in keeping things practical and easy to understand. Whether you're a developer, architect, or just curious about technology, I hope you'll find something interesting here.
+
+Stay tuned for my upcoming posts!

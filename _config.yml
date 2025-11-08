@@ -14,9 +14,9 @@ timezone: America/New_York
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Arun Endapally's Blog # the main title
+title: "Tech Threads • Arun Endapally" # the main title
 
-tagline: Tech, Programming, and More # it will display as the subtitle
+tagline: "Thoughts on architecture, cloud, and the future of AI‑enabled engineering." # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A blog about technology, programming, and other interesting topics.
@@ -94,7 +94,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: "/assets/img/avatar/ak.jpg"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.

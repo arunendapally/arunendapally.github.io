@@ -1,0 +1,35 @@
+{% comment %} Include the image with caption. Child elements: 1. src (string) /
+img (object) 2. alt (string) 3. caption (string) (optional) 4. width (number)
+(optional) 5. class (string) (optional) {% endcomment %} {% assign img_path =
+include.src | default: include.img.path %} {% assign alt = include.alt |
+default: include.img.alt %} {% assign caption = include.caption | default:
+include.img.caption %} {% assign width = include.width | default:
+include.img.width %} {% assign class = include.class | default:
+include.img.class %} {% assign src = img_path | strip %} {% assign alt = alt |
+strip %} {% assign caption = caption | strip %} {% unless src contains '//' %}
+{% assign src = src | prepend: site.baseurl %} {% endunless %}
+
+<figure class="text-center {{ class | default: 'w-100' }}">
+  <img
+    src="{{ src }}"
+    alt="{{ alt }}"
+    {%
+    if
+    width
+    %}width="{{ width }}"
+    {%
+    endif
+    %}
+    class="preview-img"
+    {%
+    if
+    caption
+    %}title="{{ caption }}"
+    {%
+    endif
+    %}
+  />
+  {% if caption %}
+  <figcaption class="text-center">{{ caption }}</figcaption>
+  {% endif %}
+</figure>
