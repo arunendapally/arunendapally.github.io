@@ -6,19 +6,29 @@ categories: [Personal]
 tags: [welcome, software-development, ai, cloud]
 pin: true
 seo:
-  description: Welcome to my blog where I share my experiences with software development, AI, and cloud technologies
+  description: Arun Endapally — Senior Technical Architect writing about architecture, cloud, and AI-enabled engineering from 17+ years in the field
 ---
 
-Hi there! I'm Arun, a Senior Technical Architect passionate about building great software solutions. I've spent over a decade working with various technologies and love learning new things.
+Seventeen years of building software teaches you a few things: that clean architecture is rare, that most complexity is accidental, and that the tools change faster than the underlying problems do.
 
-## What I'll Write About
+I'm Arun — a Senior Technical Architect who's spent most of that time decomposing monoliths that probably shouldn't have been built that way in the first place, designing microservices that teams can actually maintain, and more recently, figuring out where AI genuinely accelerates engineering versus where it just adds noise.
 
-I plan to share:
-- My hands-on experiences with new technologies
-- Quick tutorials on tools I find useful
-- Tips and tricks I learn along the way
-- Thoughts on AI and cloud computing
+## What I Write About
 
-I believe in keeping things practical and easy to understand. Whether you're a developer, architect, or just curious about technology, I hope you'll find something interesting here.
+This blog is where I think out loud about three things:
 
-Stay tuned for my upcoming posts!
+**Architecture** — The decisions that are hard to reverse. Microservices vs. monolith, API design, micro-frontends, observability, performance. Not abstract theory — concrete trade-offs from real systems.
+
+**Cloud** — Mostly Azure. I hold certifications in Azure AI, Data, and Fundamentals, and I work with it daily. Practical guides, gotchas, and patterns that actually hold up.
+
+**AI in engineering** — This is where I spend a lot of energy right now. Not AI as a product feature, but AI as a development tool. Code generation, automated testing, agentic workflows. I've been running workshops on this for teams and organizations — I'll share what's working and what's overhyped.
+
+## Why Bother Writing?
+
+Because I've had to learn too many things the hard way, and the good write-ups are usually buried five pages deep in a search. If I've spent a day figuring something out, a post takes 30 minutes and might save you that day.
+
+I keep things practical. If I can't make it concrete, I don't post it.
+
+---
+
+Stick around — there's more coming.
