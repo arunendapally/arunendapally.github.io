@@ -19,7 +19,7 @@ This blog is where I think out loud about three things:
 
 **Architecture** — The decisions that are hard to reverse. Microservices vs. monolith, API design, micro-frontends, observability, performance. Not abstract theory — concrete trade-offs from real systems.
 
-**Cloud** — Mostly Azure. I hold certifications in Azure AI, Data, and Fundamentals, and I work with it daily. Practical guides, gotchas, and patterns that actually hold up.
+**Cloud** — Provider-agnostic, pattern-first. Distributed systems, resilience patterns, event-driven architecture, deployment strategies. The concepts that transfer whether you're on AWS, Azure, or GCP — not vendor tutorials.
 
 **AI in engineering** — This is where I spend a lot of energy right now. Not AI as a product feature, but AI as a development tool. Code generation, automated testing, agentic workflows. I've been running workshops on this for teams and organizations — I'll share what's working and what's overhyped.
 
