@@ -1,7 +1,7 @@
 ---
 title: "Building MCP Servers: A Practical Guide for .NET Developers"
 author: arun
-date: 2026-06-08 12:00:00 +0530
+date: 2026-06-08 00:00:00 +0000
 categories: [AI, .NET]
 tags: [mcp, model-context-protocol, dotnet, csharp, claude, ai, aspnet, architecture]
 mermaid: true
