@@ -14,7 +14,7 @@ Run through this checklist before marking a post ready:
 1. **What does the reader walk away knowing or able to do?** If you can't answer this in one sentence, the post is not ready.
 2. **Is every section earning its place?** Cut sections that restate the obvious or pad word count.
 3. **Does it have a concrete example, code sample, or real-world scenario?** Abstract-only posts fail the quality bar.
-4. **Would a senior engineer in this domain find it genuinely useful?** That is the target reader.
+4. **Would the target reader find it genuinely useful?** The audience is broader than engineers — posts about AI tools, productivity, and real-world workflows are welcome alongside technical architecture content.
 
 ### Voice and style
 - Write in plain, direct language — no writerly flourishes, no jargon for its own sake
