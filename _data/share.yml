@@ -16,7 +16,7 @@ platforms:
 
   - type: Linkedin
     icon: "fab fa-linkedin"
-    link: "https://www.linkedin.com/shareArticle?mini=true&url=URL&title=TITLE"
+    link: "https://www.linkedin.com/shareArticle?mini=true&url=URL&title=TITLE&summary=DESCRIPTION"
   #
   # - type: Weibo
   #   icon: "fab fa-weibo"
