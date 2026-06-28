@@ -1,46 +1,28 @@
 ---
-title: Why I'm Starting This Blog
+title: Getting started
 author: arun
 date: 2025-11-08 00:00:00 +0000
 categories: [Personal]
-tags: [welcome, software-development, ai, cloud]
+tags: [welcome, software-development, ai]
 pin: true
 seo:
-  description: Arun Endapally — Senior Technical Architect writing about architecture and AI in engineering, based on many years building enterprise-scale systems
+  description: Arun Endapally — Senior Technical Architect writing about building software and experimenting with AI
 ---
 
-Many years of building software teaches you a few things. Clean architecture is rare. Most complexity is accidental. And the tools change faster than the underlying problems do.
+I'm Arun, a Senior Technical Architect. I've spent many years building and modernising enterprise-scale platforms across fintech and global SaaS products. Day to day, that means breaking apart monoliths, designing APIs other teams have to live with, and making sure performance and security don't get left for "later" and then forgotten.
 
-I'm Arun — a Senior Technical Architect who has spent many years building and modernising enterprise-scale platforms across fintech and global SaaS products. I've been the person responsible for the decisions that are hard to reverse: how systems are decomposed, how APIs are versioned, how teams are structured around code.
+Most days are routine. But every now and then something happens — a tricky bug, a tool that surprises me, a decision that turns out to matter — that's worth writing down.
 
-This blog is where I write about what I've learned doing that work.
+That's really what this blog is: a journal of things I'm building, breaking, and figuring out, written close to when they happen.
 
-## What keeps going wrong
+## What you can expect
 
-The same problems appear everywhere, regardless of company size or tech stack.
+**Real experiments, not theory.** When I try a new AI coding tool, a different way of structuring a service, or a new approach to an old architecture problem, I write about it as I figure it out — what worked, what didn't, what I had to dig into before it made sense. I'd rather share that process than a clean explanation that skips the messy bits.
 
-**Systems that weren't designed to grow.** The most common thing I've done in my career is help organisations break apart monoliths that were built for a world that no longer exists. Decomposing legacy products into microservices, migrating monolithic UIs to micro-frontends, rebuilding multi-tenant platforms from the ground up. The technical steps differ but the underlying problem is the same: an architecture that made sense at one scale becomes a liability at another.
+**Architecture decisions and their tradeoffs.** Things like decomposing monoliths, micro-frontends, API versioning, and the non-functional stuff (observability, security) that's easy to skip and expensive to skip badly. These come from systems I've actually worked on, not pattern catalogues.
 
-**APIs that nobody can actually use.** Most API problems aren't technical. They're communication problems that show up as technical problems. Teams produce endpoints that are internally consistent but impossible to integrate against from the outside. Establishing OpenAPI standards and versioning practices that third parties can depend on is harder than it sounds. The lesson: an API is a promise. Design it like one.
+**AI in everyday engineering work.** I use AI tools constantly — for code, for tests, for thinking through requirements — and I run workshops helping other engineering teams figure out where AI actually helps them too. My working theory so far: it's a great accelerator for work you already understand well, and a lot less useful when you're trying to use it as a substitute for that understanding. I'm still testing that theory, and I'll share both kinds of stories.
 
-**Non-functional requirements treated as optional.** Performance, security, observability — these get deferred to "after we ship" and then never come back. Governing NFRs is part of my day job and the reason I've spent real time with tools like OpenTelemetry, DataDog, and Veracode. If you don't build these in from the start, you pay for them twice.
+**Honesty about what I don't know yet.** Some posts will be "here's a thing I figured out." Others will be "here's a thing I'm still confused about." Both are useful to write, and hopefully to read.
 
-## Where AI actually helps
-
-I've been running workshops on AI adoption for engineering teams for a couple of years now. The honest version of what I've found:
-
-AI tools are genuinely useful for code generation, automated test scaffolding, and requirement analysis. They save real time on well-defined tasks with clear inputs and outputs. Where they fall down is anywhere that requires understanding system context — knowing which change will break something three layers away, or why a particular architectural decision was made three years ago.
-
-The teams that get the most out of AI tools treat them as accelerators for work they already understand well. The teams that struggle treat them as a replacement for that understanding.
-
-I'm writing about this because the signal-to-noise ratio in "AI for developers" content is terrible. Most of it is either uncritical enthusiasm or blanket scepticism. What's missing is practical assessment based on real use.
-
-## What I'll write here
-
-Two things:
-
-**Architecture** — the decisions that are hard to reverse and the tradeoffs behind them. Microservices vs. monolith, API design, micro-frontends, event-driven architecture. Concrete tradeoffs from real systems, not pattern catalogues.
-
-**AI in engineering** — code generation, agentic workflows, automated testing. What I've seen work in practice, what's overhyped, and how to evaluate both honestly.
-
-I keep things practical. If I can't make it concrete, I don't post it.
+If something here saves you time on a problem you're stuck on, or just confirms you're not the only one finding it hard, that's the goal. Welcome.
