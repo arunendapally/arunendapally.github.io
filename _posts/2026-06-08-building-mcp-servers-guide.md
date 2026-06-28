@@ -162,6 +162,27 @@ npx @modelcontextprotocol/inspector
 
 It gives you a browser UI to list your server's tools, invoke them with test inputs, and inspect the raw JSON-RPC traffic. This is the fastest feedback loop — no LLM latency, no prompt ambiguity, just your server's actual behavior. For stdio servers, point the inspector at your server process. For HTTP servers, give it the endpoint URL.
 
+## Try It Yourself
+
+I've published a working version of the server above — [mcp-order-server on GitHub](https://github.com/arunendapally/mcp-order-server). It's the same `GetOrderStatus` tool, wired up exactly as shown, with a small in-memory dictionary standing in for a real order database.
+
+Clone it and run it:
+
+```bash
+git clone https://github.com/arunendapally/mcp-order-server.git
+cd mcp-order-server/McpOrderServer
+dotnet run
+```
+
+Then point the MCP Inspector at the URL it prints, with `/mcp` on the end:
+
+```bash
+npx @modelcontextprotocol/inspector --cli http://localhost:<port>/mcp --method tools/list
+npx @modelcontextprotocol/inspector --cli http://localhost:<port>/mcp --method tools/call --tool-name get_order_status --tool-arg orderId=123
+```
+
+You should see the tool listed with its JSON Schema, then get back `{"orderId":"123","status":"shipped","eta":"2026-07-02"}`. The repo skips auth to keep the example focused — see the [Authentication for Remote Servers](#authentication-for-remote-servers) section above for how to add it.
+
 ## Connecting to Claude
 
 Once your server works in the inspector, wiring it to Claude Desktop or Claude Code is a one-liner config change. For stdio:
