@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: Welcome to My Blog
 author: arun
 date: 2025-11-08 00:00:00 +0000
 categories: [Personal]
