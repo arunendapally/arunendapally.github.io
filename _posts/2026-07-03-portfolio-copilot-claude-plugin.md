@@ -79,16 +79,16 @@ An AI touching a brokerage account should make you nervous. It made me nervous, 
 
 **Setups, not forecasts.** Nobody can predict market direction reliably, so the plugin doesn't try. Morning briefings give you the setup — key levels, catalysts, what happened overnight — and let you judge.
 
+## Don't use Claude? You can still take the skills
+
+Everything in the plugin is plain markdown, MIT-licensed. If you use GitHub Copilot, ChatGPT, or any other assistant, you can copy any skill file into your custom instructions and the workflow logic — the audit steps, the risk thresholds, the output formats — carries over. And since MCP is an open standard, the same broker servers work in other MCP-capable clients like VS Code Copilot, Cursor, and ChatGPT's desktop app.
+
+One honest warning if you do this: the safety hook doesn't come with the markdown. In Claude, "no order without explicit confirmation" is enforced by a gate that runs before any order tool executes. Ported into another assistant, that rule is just text in a prompt — and text can be drifted past in a long conversation. If you connect a live broker elsewhere, you're trading with a written rule instead of an enforced one. Either accept that risk consciously or keep order placement out of the ported setup.
+
 ## What building a plugin taught me
 
 A Claude plugin is a folder: skills (markdown files describing workflows), optional agents (autonomous research subagents), optional hooks (event-triggered guards like the order gate above), and optional MCP server configs. The whole plugin is readable markdown and JSON — you can audit every instruction it gives the AI before installing it.
 
 Three lessons from the process:
 
-**Encode discipline, not data.** Early drafts had specific account details and fund choices baked in. Publishing meant sweeping every file for personal data and replacing specific choices with risk-profile-based defaults that adapt to whoever installs it. The rules survived; the personal details didn't.
-
-**Rules you write down get followed; rules you enforce can't be skipped.** Instructions like "always confirm before ordering" live in skill files, but long conversations can drift. Moving the critical rule into a hook made it structural.
-
-**The AI's failure modes become design inputs.** During development, Claude once produced an optimistic market read while the same message showed a sharp overnight selloff. That became a permanent rule in the plugin: every verdict is checked against the data presented alongside it before it's shown.
-
-**Real runs beat review.** No amount of reading the skills caught what the first days of actual scheduled runs did: a broker API returning a 71,000-
+**E
