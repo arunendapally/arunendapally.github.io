@@ -1,5 +1,5 @@
 ---
-title: "I Built an Open-Source Claude Plugin for Indian Retail Investors"
+title: "How I Manage My Stock Portfolio in 5 Minutes a Day With AI"
 author: arun
 date: 2026-07-03 00:00:00 +0000
 categories: [AI]
