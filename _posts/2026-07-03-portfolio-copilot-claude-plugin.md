@@ -30,18 +30,13 @@ After installing, you say "get started" and the plugin builds your investor prof
 Here's the whole flow in one picture — including the two ways your data gets in, and the safety gate every order must pass:
 
 ```mermaid
-flowchart TD
-    A(["You: 'daily briefing'"]) --> B["Claude + portfolio-copilot skills"]
-    B --> C{"Does your broker<br>have an MCP?"}
-    C -->|"Yes — Zerodha, Kotak Neo,<br>INDmoney, Upstox..."| D["Live pull:<br>holdings, orders, margins"]
-    C -->|"No — ICICI Direct,<br>HDFC Securities..."| E["You upload:<br>holdings export or CAS"]
-    D --> F["Analysis: P&L, risk limits,<br>stop-loss audit, MF drift"]
-    E --> F
-    F --> G["Plain-language report<br>+ only the alerts that matter"]
-    G --> H{"Does a fix<br>need an order?"}
-    H -->|No| I(["You read it.<br>Done in 5 minutes."])
-    H -->|Yes| J["🔒 Safety hook:<br>exact order shown,<br>your explicit YES required"]
-    J --> K(["Order drafted<br>at your broker"])
+flowchart LR
+    A["Broker with MCP<br>Zerodha, Kotak, ..."] --> C
+    B["Statement upload<br>any broker"] --> C
+    C["Analysis<br>P&L, risk, stop-losses"] --> D["Report<br>only alerts that matter"]
+    D -->|just reading| E(["Done in 5 min"])
+    D -->|needs an order| F["Confirmation gate<br>exact order + your yes"]
+    F --> G(["Order at broker"])
 ```
 
 ## It works with any broker
