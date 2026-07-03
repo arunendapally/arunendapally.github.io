@@ -5,6 +5,7 @@ date: 2026-07-03 00:00:00 +0000
 categories: [AI]
 tags: [claude, ai, investing, plugins, mcp, portfolio-management]
 mermaid: true
+image: /assets/img/posts/portfolio-copilot-card.png
 seo:
   description: portfolio-copilot is a free, open-source Claude plugin for Indian retail investors — daily briefings, stop-loss audits, mutual fund rebalancing, and risk checks. Works live with broker MCPs or with any broker via statement upload.
 ---
