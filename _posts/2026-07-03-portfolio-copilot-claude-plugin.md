@@ -92,4 +92,25 @@ A Claude plugin is a folder: skills (markdown files describing workflows), optio
 
 Three lessons from the process:
 
-**E
+**Encode discipline, not data.** Early drafts had specific account details and fund choices baked in. Publishing meant sweeping every file for personal data and replacing specific choices with risk-profile-based defaults that adapt to whoever installs it. The rules survived; the personal details didn't.
+
+**Rules you write down get followed; rules you enforce can't be skipped.** Instructions like "always confirm before ordering" live in skill files, but long conversations can drift. Moving the critical rule into a hook made it structural.
+
+**The AI's failure modes become design inputs.** During development, Claude once produced an optimistic market read while the same message showed a sharp overnight selloff. That became a permanent rule in the plugin: every verdict is checked against the data presented alongside it before it's shown.
+
+**Real runs beat review.** No amount of reading the skills caught what the first days of actual scheduled runs did: a broker API returning a 71,000-character response that overflowed limits, a skill referencing a tool that doesn't exist, and a suspended stock sitting in a portfolio looking like a normal holding — frozen at its buy price, unsellable, and invisible to a casual glance. All three became fixes within a day (payload reduction rules, a tool-surface audit, and a mechanical dead-holding detector). If you build agent skills, budget for this loop: ship, watch real runs, patch. The gap between "reads correctly" and "runs correctly" is where the real bugs live.
+
+## Try it
+
+If you use Claude (Pro/Max with the desktop app or Claude Code):
+
+```
+/plugin marketplace add arunendapally/portfolio-copilot
+/plugin install portfolio-copilot@portfolio-copilot-marketplace
+```
+
+Then say **"get started"** in a new chat — or "import my holdings" if your broker doesn't have a live connection. The source, install guide, and disclaimer are on [GitHub](https://github.com/arunendapally/portfolio-copilot) — MIT licensed, contributions welcome. If you find a rough edge or want better support for your broker, open an issue.
+
+It won't make you rich and it won't pick stocks for you. What it does is make the boring, protective parts of investing — the audits, the buffers, the discipline — cheap enough that you actually do them. That's where most of us lose money: not from missing the next big winner, but from skipping the routine.
+
+*Nothing in this post or plugin is investment advice. I'm not SEBI-registered; the plugin provides analysis and information only. Markets carry risk — decisions are yours.*
