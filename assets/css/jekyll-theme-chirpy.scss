@@ -14,3 +14,16 @@
 ';
 
 /* append your custom style below */
+
+/* Chirpy centres #back-to-top in the leftover margin:
+     right: calc((100vw - $sidebar-width-large - $main-content-max-width) / 2 + 2rem)
+   With the content widened to 1600px, sidebar + content = 1900px, so that
+   expression goes negative between the 1650px breakpoint and ~1900px and the
+   button lands under the scrollbar. Floor it at 2rem; the calc still wins on
+   genuinely ultra-wide screens. Interpolated so Sass emits CSS max() rather
+   than trying to evaluate it. */
+@media all and (min-width: 1650px) {
+  #back-to-top {
+    right: #{'max(2rem, calc((100vw - 300px - 1600px) / 2 + 2rem))'};
+  }
+}
