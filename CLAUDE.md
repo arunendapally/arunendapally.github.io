@@ -4,7 +4,7 @@
 
 Run through this checklist before marking a post ready:
 
-### Content quality (Google AdSense compliance)
+### Content quality
 - Minimum 600 words of original, substantive content
 - Every post must answer a real question or teach something concrete — no "here's what I'll write about" filler
 - No thin intro posts, placeholder content, or posts that exist only to describe the blog
@@ -26,7 +26,6 @@ Run through this checklist before marking a post ready:
 - Check that version numbers, API names, and tool references are current at time of publish
 - If a claim is contested or opinion-based, say so
 
-## AdSense rules (already configured in code)
-- The AdSense script only loads on post pages — do not move it to global includes
-- Do not add ad units to tag pages, category pages, archives, or the 404 page
-- Every page that shows ads must have substantial original content
+## Ads
+This site does not run ads. There is no AdSense script, ad unit, or `ads.txt`.
+Do not add ad code back without an explicit request.
