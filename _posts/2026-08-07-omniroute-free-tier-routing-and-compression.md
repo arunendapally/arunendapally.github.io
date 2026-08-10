@@ -30,6 +30,17 @@ Both have free models, so this isn't really free versus paid. It's who sits in t
 
 Here's what it changes, what the settings actually do, and how I checked that none of it was a toggle quietly doing nothing, because one of them was.
 
+> **TL;DR**
+>
+> - Claude Code speaks the Anthropic Messages API, so it can be pointed somewhere else. **OmniRoute** is a local gateway that answers that same API and forwards to free or cheap providers.
+> - Setup is `npm install -g omniroute`, then `ANTHROPIC_BASE_URL` to `http://localhost:20128` and `ANTHROPIC_MODEL` to `auto/best-free` in `settings.json`.
+> - `auto/best-free` is a **virtual model**, resolved per request from the providers you've connected, with a fallback chain and circuit breakers underneath it.
+> - Connect your first provider from **Providers → No Auth**, which needs no credentials. NVIDIA NIM is the best free tier I've added since, and it imports 51 free models.
+> - **Stacked compression** runs RTK then Caveman: tool output first, prose second, with code, paths and URLs left untouched.
+> - Don't trust the dashboard or the CLI on whether it's working. **Read the response headers**: `x-omniroute-decision` and `x-omniroute-compression` tell you what actually happened. I tuned a compression panel for a while with the master switch off.
+> - Free tiers are shared, rate-limited capacity. I build on them; **code review still goes to Anthropic**.
+{: .prompt-tip }
+
 ## What you need to run it
 
 OmniRoute is free and open source, and it runs entirely on your own machine, with no hosted service and no account to create. It's a Node package, so if you have Node and npm you have everything you need:
