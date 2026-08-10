@@ -1,5 +1,5 @@
 ---
-title: "Run Claude Code on Free Models Without Losing Reliability: OmniRoute Routing + Stacked Compression"
+title: "The Claude Code Token Headache: Run It on Free Models with OmniRoute"
 author: arun
 date: 2026-08-07 00:00:00 +0000
 categories: [AI]
