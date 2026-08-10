@@ -36,7 +36,7 @@ Here's what it changes, what the settings actually do, and how I checked that no
 > - Setup is `npm install -g omniroute`, then `ANTHROPIC_BASE_URL` to `http://localhost:20128` and `ANTHROPIC_MODEL` to `auto/best-free` in `settings.json`.
 > - `auto/best-free` is a **virtual model**, resolved per request from the providers you've connected, with a fallback chain and circuit breakers underneath it.
 > - Connect your first provider from **Providers → No Auth**, which needs no credentials. NVIDIA NIM is the best free tier I've added since, and it imports 51 free models.
-> - **Stacked compression** runs RTK then Caveman: tool output first, prose second, with code, paths and URLs left untouched.
+> - **Stacked compression** runs RTK then Caveman: tool output first, prose second, with code, paths and URLs left untouched. Early numbers on my own traffic: **5 percent** from RTK, not the 78 to 95 percent the docs quote.
 > - Don't trust the dashboard or the CLI on whether it's working. **Read the response headers**: `x-omniroute-decision` and `x-omniroute-compression` tell you what actually happened. I tuned a compression panel for a while with the master switch off.
 > - Free tiers are shared, rate-limited capacity. I build on them; **code review still goes to Anthropic**.
 {: .prompt-tip }
@@ -67,7 +67,7 @@ OmniRoute exposes the Anthropic Messages API, so Claude Code talks to it exactly
 ```mermaid
 flowchart LR
     A["Claude Code"] -->|"direct"| B["Anthropic API"]
-    A -->|"localhost:20128"| C["OmniRoute: auto-routing + stacked compression"]
+    A -->|"localhost:20128"| C["OmniRoute gateway"]
     C --> D["Free Provider 1"]
     C --> E["Free Provider 2"]
     C --> F["Free Provider 3"]
@@ -164,13 +164,15 @@ Most of what Claude Code sends is code, file paths, and terminal output, and non
 - **RTK** handles command output: dedupes repetitive tool noise, keeps raw output where it matters.
 - **Caveman** handles prose: compresses natural language while leaving code blocks, URLs, file paths, and error lines untouched, byte for byte.
 
-"Stacked" means both run in sequence, so the savings multiply rather than add: `1 - (1 - RTK) * (1 - Caveman)`. On tool-heavy sessions the docs quote 78 to 95 percent token savings. I haven't measured my own ratio, so I can't confirm the number: what I verified is that compression was actually running, using the header further down, and that I stopped running out mid-session.
+"Stacked" means both run in sequence, so the savings multiply rather than add: `1 - (1 - RTK) * (1 - Caveman)`. On tool-heavy sessions the docs quote 78 to 95 percent token savings. I'm early with this, and my own numbers are much smaller: after 204 requests, the RTK panel reports 885,430 tokens filtered at 5 percent average savings. That's RTK on its own, with Caveman counted separately, and it is real saving on a tier I'm not paying for. It's also nowhere near the headline figure, and the gap makes sense: how much RTK can strip depends on how much of your context is repetitive tool output, and mine is mostly code. Read your own panel rather than planning around anyone's number, including mine.
 
 I turned it on from **Settings → Compression** in the dashboard, picked **Standard Savings** (which maps to the `rtk → caveman` pipeline), and then spent a while tuning something that wasn't running.
 
-![OmniRoute RTK engine settings page showing 55 filters active, zero tokens filtered, zero requests, 0% average savings, and a warning that the Token Saver master switch is off](/assets/img/posts/omniroute/rtk-engine.png)
+Fifty-five filters active, max lines, dedupe threshold, a full filter catalog: the page reads like a control panel that's doing something even when it isn't. The master switch was off, and the three counters that would have told me so were all sitting at zero above the fold. I changed the dedupe threshold twice before I read the amber banner. A settings screen that looks alive is more convincing than a counter that says zero, which is worth knowing before you tune anything here.
 
-Fifty-five filters active, max lines, dedupe threshold, a full filter catalog: the page reads like a control panel that's doing something. It isn't. The master switch is off, and the three counters that would have told me so are sitting at 0 above the fold. I changed the dedupe threshold twice before I read the amber banner. A settings screen that looks alive is more convincing than a counter that says zero, which is worth knowing before you tune anything here.
+![OmniRoute RTK engine page with compression running: 885,430 tokens filtered, 55 filters active, 204 requests, 5% average savings, with max lines, max chars and deduplicate threshold settings below, and the other compression engines listed down the sidebar](/assets/img/posts/omniroute/rtk-engine.png)
+
+That's the same page with the switch on: 204 requests through it and the counters moving. Check those three first, because they answer "is this doing anything at all" before any setting below them matters. Worth noticing that **Code blocks** is unchecked, which is sensible (you don't want a filter rewriting your code) and is also the likeliest reason my average sits at 5 percent, since code is most of what I send.
 
 There's a second version of the same trap. The CLI's `omniroute compression status` can report the panel default even while a different profile is active at runtime. Don't trust that command on its own. Trust the header on a live request instead:
 
