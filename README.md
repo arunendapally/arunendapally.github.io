@@ -8,10 +8,14 @@ Requires Ruby 3.1+ and Bundler.
 
 ```shell
 bundle install   # installs deps pinned by Gemfile.lock
-bundle exec jekyll serve --livereload   # http://localhost:4000
+bundle exec jekyll serve   # http://localhost:4000
 ```
 
 `Gemfile.lock` is committed so local and CI builds resolve the same dependency versions.
+
+`--livereload` and `--detach` do not work on Windows: the first needs eventmachine's
+native extension, the second needs `fork`. Plain `serve` still rebuilds on save, so
+just reload the browser.
 
 ## Verification
 
