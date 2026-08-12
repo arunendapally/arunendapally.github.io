@@ -2,6 +2,12 @@
 .bundle
 vendor
 
+# Not committed: a lock generated on Windows pins mingw-only builds of
+# google-protobuf and sass-embedded, which fail to install on the Linux CI
+# runner. Regenerating it on Windows pulls gem versions that fail to build
+# locally. CI resolves fresh against the Gemfile instead.
+Gemfile.lock
+
 # Jekyll cache
 .jekyll-cache
 .jekyll-metadata

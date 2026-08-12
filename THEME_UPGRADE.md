@@ -1,7 +1,7 @@
 # Theme Sync Audit & Upgrade Roadmap
 
 **Audit date:** 2026-08-12
-**Blog theme version:** `jekyll-theme-chirpy` **7.6.0** (from `Gemfile.lock`)
+**Blog theme version:** `jekyll-theme-chirpy` **7.6.0** (from `bundle info jekyll-theme-chirpy`)
 **Upstream checked against:** `cotes2020/jekyll-theme-chirpy` @ `ae677a8` (2026-07-15)
 
 ## Verdict
@@ -21,7 +21,8 @@ safely without breaking the blog's customizations.
 The blog is **gem-based**, not a fork:
 
 - `Gemfile` pins `jekyll-theme-chirpy` (`~> 7.6, >= 7.6.0`); theme code ships in the gem.
-- `Gemfile.lock` is committed, so local and CI resolve identical versions.
+- `Gemfile.lock` is **not** committed (see `.gitignore` for why); the `Gemfile` version
+  constraint is what pins the theme. CI resolves fresh on Linux.
 - The blog keeps only **three** local files on top of the theme:
 
 | File | Purpose |
@@ -45,7 +46,7 @@ must preserve all of them:**
    disabled site-wide, `cdn:` left empty (self-hosted assets), `CLAUDE.md` + `THEME_UPGRADE.md`
    excluded from build.
 5. **`.github/workflows/pages-deploy.yml`** — Ruby 3.4, `bundler: default` (do not let it read
-   the older `BUNDLED WITH` from `Gemfile.lock`), `fetch-depth: 0` for the lastmod plugin, and
+   a stale `BUNDLED WITH` if a lock is ever reintroduced), `fetch-depth: 0` for the lastmod plugin, and
    `html-proofer` (external links off).
 6. **`_plugins/posts-lastmod-hook.rb`** — local-only plugin, not part of the gem. Reads git
    history for `last_modified_at`, which is why CI checks out full history.
@@ -87,7 +88,8 @@ Files touched: `_includes/head.html`, `_includes/datetime.html`, `_layouts/defau
 1. Update the constraint in `Gemfile` (e.g. `~> 7.7, >= 7.7.0`).
 2. `bundle update jekyll-theme-chirpy`
 3. `bundle exec jekyll build`
-   **Verify:** build succeeds with no warnings/errors; `Gemfile.lock` shows the new version.
+   **Verify:** build succeeds with no warnings/errors; `bundle info jekyll-theme-chirpy`
+   reports the new version.
 
 ### Phase 2 — Diff the overrides against the new gem
 1. `THEME=$(bundle show jekyll-theme-chirpy)`
@@ -118,7 +120,7 @@ Also note `jekyll serve --livereload` and `--detach` do not work on Windows (eve
 native extension, and `fork`, respectively). Plain `serve` auto-regenerates via polling.
 
 ### Phase 5 — Ship
-1. Commit (`Gemfile`, `Gemfile.lock`, any override updates).
+1. Commit (`Gemfile`, any override updates). `Gemfile.lock` is gitignored.
 2. Push — `pages-deploy.yml` builds on Ruby 3.4 and runs html-proofer.
 3. Check the live site: layout, back-to-top, share buttons, pageview counter (GoatCounter).
 

@@ -7,11 +7,15 @@ Source for [arunendapally.com](https://arunendapally.com) — a technical blog o
 Requires Ruby 3.1+ and Bundler.
 
 ```shell
-bundle install   # installs deps pinned by Gemfile.lock
+bundle install   # resolves deps from the Gemfile
 bundle exec jekyll serve   # http://localhost:4000
 ```
 
-`Gemfile.lock` is committed so local and CI builds resolve the same dependency versions.
+`Gemfile.lock` is **not** committed. A lock generated on Windows pins mingw-only builds of
+`google-protobuf` and `sass-embedded`, which the Linux CI runner cannot install; regenerating
+it on Windows pulls gem versions (`json`) that fail to build locally. CI resolves fresh
+against the `Gemfile`, which is why `jekyll-theme-chirpy` carries an explicit version
+constraint there.
 
 `--livereload` and `--detach` do not work on Windows: the first needs eventmachine's
 native extension, the second needs `fork`. Plain `serve` still rebuilds on save, so
