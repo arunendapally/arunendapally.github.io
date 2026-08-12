@@ -45,10 +45,13 @@ must preserve all of them:**
 4. **`_config.yml`** — site title/tagline/url/avatar, GoatCounter analytics, comments
    disabled site-wide, `cdn:` left empty (self-hosted assets), `CLAUDE.md` + `THEME_UPGRADE.md`
    excluded from build.
-5. **`.github/workflows/pages-deploy.yml`** — identical to upstream's
-   `.github/workflows/starter/pages-deploy.yml` apart from the commented-out `submodules`
-   lines. Ruby 3.4, `fetch-depth: 0` for the lastmod plugin, `html-proofer` (external links
-   off). Re-diff it against the starter template on upgrade.
+5. **`.github/workflows/pages-deploy.yml`** — upstream's
+   `.github/workflows/starter/pages-deploy.yml` plus a `pull_request` trigger, so PRs run
+   build + html-proofer without deploying (the deploy job and artifact upload are gated on
+   `github.event_name != 'pull_request'`, and the concurrency group is keyed by ref so a PR
+   cannot cancel a production deploy). Ruby 3.4, `fetch-depth: 0` for the lastmod plugin,
+   `html-proofer` (external links off). Re-diff against the starter template on upgrade,
+   keeping these additions.
 6. **`_plugins/posts-lastmod-hook.rb`** — local-only plugin, not part of the gem. Reads git
    history for `last_modified_at`, which is why CI checks out full history.
 
