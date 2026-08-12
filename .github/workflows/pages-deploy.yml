@@ -40,9 +40,6 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.4
-          # Use the Bundler shipped with Ruby 3.4 rather than the older version
-          # recorded in Gemfile.lock's `BUNDLED WITH`.
-          bundler: default
           bundler-cache: true
 
       - name: Build site
