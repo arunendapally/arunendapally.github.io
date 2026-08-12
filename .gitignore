@@ -8,6 +8,9 @@ vendor
 # locally. CI resolves fresh against the Gemfile instead.
 Gemfile.lock
 
+# Claude Code: per-machine settings stay local; launch.json is shared
+.claude/settings.local.json
+
 # Jekyll cache
 .jekyll-cache
 .jekyll-metadata
