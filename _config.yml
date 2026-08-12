@@ -168,6 +168,7 @@ exclude:
   - README.md
   - LICENSE
   - CLAUDE.md
+  - THEME_UPGRADE.md
 
 jekyll-archives:
   enabled: [categories, tags]
