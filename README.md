@@ -1,43 +1,37 @@
-# Chirpy Starter
+# arunendapally.com
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+Source for [arunendapally.com](https://arunendapally.com) — a technical blog on software architecture, cloud, and applying AI in engineering. Built with [Jekyll](https://jekyllrb.com/) and the [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) theme.
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+## Local development
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
-
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+Requires Ruby 3.1+ and Bundler.
 
 ```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+bundle install   # installs deps pinned by Gemfile.lock
+bundle exec jekyll serve   # http://localhost:4000
 ```
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+`Gemfile.lock` is committed so local and CI builds resolve the same dependency versions.
 
-## Usage
+`--livereload` and `--detach` do not work on Windows: the first needs eventmachine's
+native extension, the second needs `fork`. Plain `serve` still rebuilds on save, so
+just reload the browser.
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+## Verification
 
-## Contributing
+- **Build**: `bundle exec jekyll build`
+- **CI**: `.github/workflows/pages-deploy.yml` builds on Ruby 3.4, then runs `html-proofer` (external links disabled) on the `_site` output.
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+## Intentional customizations (re-diff when upgrading the Chirpy theme)
+
+- `assets/css/jekyll-theme-chirpy.scss` — widens content to 1600px and fixes the back-to-top button position.
+- `_includes/post-sharing.html` — adds the post's SEO description to share links.
+- `_plugins/posts-lastmod-hook.rb` — the Chirpy last-modified plugin (from the starter). It needs `fetch-depth: 0` in CI, which the workflow sets.
+
+## Deploy
+
+GitHub Pages via the `pages-deploy` workflow on `main` (Source: GitHub Actions).
 
 ## License
 
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+Blog content © Arun Endapally. Theme under [MIT](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE).
