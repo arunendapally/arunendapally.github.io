@@ -22,12 +22,13 @@ The blog is **gem-based**, not a fork:
 
 - `Gemfile` pins `jekyll-theme-chirpy` (`~> 7.6, >= 7.6.0`); theme code ships in the gem.
 - `Gemfile.lock` is committed, so local and CI resolve identical versions.
-- The blog keeps only **two** override files on top of the theme:
+- The blog keeps only **three** local files on top of the theme:
 
 | File | Purpose |
 |---|---|
 | `assets/css/jekyll-theme-chirpy.scss` | Widens main content to **1600px** (`$main-content-max-width`) + fixes `#back-to-top` position under the wider layout |
 | `_includes/post-sharing.html` | Adds a `DESCRIPTION` param to share links (pair with `_data/share.yml`) |
+| `_plugins/posts-lastmod-hook.rb` | Sets `last_modified_at` from git history. The gem ships no `_plugins/`, so this is local-only; it needs `fetch-depth: 0` in CI |
 
 ## Customization inventory (the regression surface)
 
@@ -43,7 +44,11 @@ must preserve all of them:**
 4. **`_config.yml`** — site title/tagline/url/avatar, GoatCounter analytics, comments
    disabled site-wide, `cdn:` left empty (self-hosted assets), `CLAUDE.md` + `THEME_UPGRADE.md`
    excluded from build.
-5. **`.github/workflows/pages-deploy.yml`** — Ruby 3.4 + `html-proofer` (external links off).
+5. **`.github/workflows/pages-deploy.yml`** — Ruby 3.4, `bundler: default` (do not let it read
+   the older `BUNDLED WITH` from `Gemfile.lock`), `fetch-depth: 0` for the lastmod plugin, and
+   `html-proofer` (external links off).
+6. **`_plugins/posts-lastmod-hook.rb`** — local-only plugin, not part of the gem. Reads git
+   history for `last_modified_at`, which is why CI checks out full history.
 
 **Hard rules from `CLAUDE.md`:** no ads. No AdSense, ad units, or `ads.txt` — do not re-add.
 
@@ -103,7 +108,14 @@ Files touched: `_includes/head.html`, `_includes/datetime.html`, `_layouts/defau
    **Check:** widened layout renders, back-to-top button sits in the right margin,
    share links carry a description, code blocks/MathJax render, no broken glyphs.
 2. `bundle exec htmlproofer ./_site --disable-external` (matches CI).
-   **Verify:** zero errors.
+   **Note:** this does not run on Windows: html-proofer needs `libcurl`, which the Ruby
+   installer does not ship. CI is the only place this step actually executes. Locally,
+   check the built `_site` for unresolved internal links, missing `alt` attributes, and
+   broken `#` anchors instead.
+   **Verify:** zero errors (in CI).
+
+Also note `jekyll serve --livereload` and `--detach` do not work on Windows (eventmachine's
+native extension, and `fork`, respectively). Plain `serve` auto-regenerates via polling.
 
 ### Phase 5 — Ship
 1. Commit (`Gemfile`, `Gemfile.lock`, any override updates).
