@@ -4,11 +4,11 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-I'm Arun, a Senior Technical Architect. I build and modernize large software platforms for a living, and I spend most of my spare attention on AI tooling: what it can actually do, where it falls over, and how to tell the difference.
+I'm Arun, a Senior Technical Architect. I build and modernize large software platforms, and I spend a good deal of my own time on AI tooling: what it can do, where it falls short, and how to tell the difference.
 
-The day job is architecture, though most of it looks less like drawing diagrams and more like turning half-formed requirements into something a team can actually build. Working out what is really being asked for. Weighing approaches and writing down why one won. Designing APIs and domain models that other teams have to live with for years. Making the case for the unglamorous things (performance, security, observability) before they turn into incidents. And a fair share of it is people rather than systems: reviews, mentoring, and helping engineers reach decisions they can defend.
+Most of the work is less about diagrams than about turning half-formed requirements into something a team can build. Working out what is actually being asked for. Weighing approaches and writing down why one won. Designing APIs and domain models that other teams have to live with for years. Making the case for performance, security and observability before they turn into incidents. A fair share of it is people rather than systems: reviews, mentoring, and helping engineers reach decisions they can defend.
 
-Lately that means a lot of spec-driven development: write the spec first, record the tradeoffs, then let AI agents do the parts they're genuinely good at. The interesting question isn't whether AI makes you faster. It's whether the rigour survives the speed.
+Lately that means a good deal of spec-driven development: write the spec first, record the tradeoffs, then use AI agents for the parts they are genuinely good at. The interesting question isn't whether AI makes you faster. It's whether the rigour survives the speed.
 
 ## What I work on
 
@@ -22,16 +22,16 @@ Lately that means a lot of spec-driven development: write the spec first, record
 
 What I reach for most: C# and .NET, React and TypeScript, PostgreSQL, RabbitMQ, Docker and Kubernetes, Azure and AWS.
 
-## The rest is curiosity
+## Experiments
 
-I'm curious about a lot of things, so I keep running experiments on my own life to see what actually sticks. Some of them turn out to be useful to other people too:
+I'm curious about a lot of things, so I run experiments on my own workflows and projects. Some of them turn out to be useful to other people:
 
-- A Claude plugin that runs my stock portfolio: daily briefings, stop-loss audits, risk checks. Five minutes a day instead of an hour.
-- Claude Code running entirely on free-tier models, with routing and compression stacked on top, just to see how far you get on nothing.
-- A two-line status line for Claude Code, because I kept losing track of which model was quietly burning my tokens.
+- A Claude plugin that manages my stock portfolio: daily briefings, stop-loss audits, and risk checks, in about five minutes a day.
+- Claude Code running entirely on free-tier models, with routing and compression layered on top, to find the practical limits.
+- A two-line status line for Claude Code showing the model, folder, git state and session cost at a glance.
 
-None of that is work, which is rather the point. These tools get interesting when you aim them at something you actually care about, and most of what I know about AI came from side projects rather than a roadmap.
+Most of what I know about applying AI came from projects like these rather than from a roadmap.
 
 **Certifications:** SAFe® 6 Architect, Microsoft Azure (AI Fundamentals, Data Fundamentals, Fundamentals), Agentic AI.
 
-On this blog I write mostly about applying AI to real engineering work: the tools I'm testing, what actually held up, and what didn't. Occasionally architecture, when I have something concrete to say.
+On this blog I write mostly about applying AI to real engineering work: the tools I'm testing, what held up, and what didn't. Occasionally architecture, when I have something concrete to say.
