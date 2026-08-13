@@ -9,9 +9,7 @@ seo:
   description: Arun Endapally — Senior Technical Architect writing about building software and experimenting with AI
 ---
 
-I'm Arun, a Senior Technical Architect. I've spent many years building and modernising enterprise-scale platforms across fintech and global SaaS products. Day to day, that means breaking apart monoliths, designing APIs other teams have to live with, and making sure performance and security don't get left for "later" and then forgotten.
-
-Most days are routine. But every now and then something happens — a tricky bug, a tool that surprises me, a decision that turns out to matter — that's worth writing down.
+Most days at work are routine. But every now and then something happens, a tricky bug, a tool that surprises me, a decision that turns out to matter, and that's worth writing down.
 
 That's really what this blog is: a journal of things I'm building, breaking, and figuring out, written close to when they happen.
 
