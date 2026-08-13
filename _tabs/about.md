@@ -19,8 +19,6 @@ Lately much of that runs through spec-driven development: specification first, t
 - **Observability and NFRs**: making performance, security, and reliability first-class concerns rather than afterthoughts, with OpenTelemetry, DataDog and Grafana
 - **Mentoring**: architecture and code reviews, hiring and interviewing, and coaching engineers toward decisions they can defend
 
-What I reach for most: C# and .NET, React and TypeScript, PostgreSQL, RabbitMQ, Docker and Kubernetes, Azure and AWS.
-
 ## Experiments
 
 I'm curious about a lot of things, so I run experiments on my own workflows and projects. Some of them turn out to be useful to other people:
