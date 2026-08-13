@@ -6,9 +6,9 @@ order: 4
 
 I'm Arun, a Senior Technical Architect. I build and modernize large software platforms, and I spend a good deal of my own time on AI tooling: what it can do, where it falls short, and how to tell the difference.
 
-Architecture is mostly judgement under incomplete information. Working out what the business actually needs before anyone has settled on how to describe it. Choosing between approaches that are all defensible, under constraints (time, budget, legacy, the skills on hand) that rule out the textbook answer. Setting standards and guardrails so several teams can move at once without the platform pulling apart. Knowing which problems to solve now and which to leave alone. And staying close enough to the code that the decisions still hold when someone builds them.
+Architecture is judgement work. Understanding what the business is trying to achieve, then shaping a direction early, while change is still cheap. Weighing several good options against what the platform will need in a few years rather than only this quarter. Setting the standards and guardrails that let teams move quickly and independently. Sequencing the work so the problems that matter get solved first. And staying close enough to the code that the choices hold up when someone builds them.
 
-A fair share of it is people rather than systems. Most architecture decisions are carried out by teams that don't report to you, so the work is as much about building agreement as about being right.
+A fair share of it is people. A design only works if the teams building it are convinced, so the job is as much about creating shared understanding as about picking the right answer.
 
 Lately much of that runs through spec-driven development: specification first, tradeoffs recorded, then AI agents on the parts they are genuinely good at. The interesting question isn't whether AI makes you faster. It's whether the rigour survives the speed.
 
