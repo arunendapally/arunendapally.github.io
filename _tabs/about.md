@@ -4,13 +4,13 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-I'm Arun, a Senior Technical Architect. My work sits at the intersection of architecture and engineering leadership: defining how systems are structured, governing the non-functional side, guiding teams, and staying close enough to the code to make those decisions well. Outside of that, a good deal of my time goes on AI tooling, working out what it can do, where it falls short, and how to tell the difference.
+I'm Arun, a Senior Technical Architect. My work sits at the intersection of architecture and engineering leadership: defining how systems are structured, governing the non-functional side, guiding teams, and staying close enough to the code to make those decisions well.
 
 Day to day I work with product and engineering teams to turn business goals into a design people can build against. Often that means being in the middle of the hard production problems: working out why something is slow, or fragile, or failing only under load, and making sure the fix holds rather than moves the symptom somewhere else.
 
 A fair share of the job is people rather than systems, so much of my week goes on reviews, mentoring, and getting teams to a shared understanding before the code gets written.
 
-Lately most of that runs through spec-driven development and AI-assisted delivery: specification first, tradeoffs recorded, then AI agents on the parts they are genuinely good at. What interests me is not whether it feels faster, but whether the rigour survives the speed.
+AI runs through most of what I do now: at work, in the side projects I build for myself, and in what I end up writing about here. At work that mostly means spec-driven development and AI-assisted delivery: specification first, tradeoffs recorded, then AI agents on the parts they are genuinely good at. What interests me is not whether it feels faster, but whether the rigour survives the speed.
 
 ## What I work on
 
@@ -21,8 +21,6 @@ Lately most of that runs through spec-driven development and AI-assisted deliver
 - **Architecture as written artifacts**: decision records, models, and migration strategies, because a decision nobody recorded is a decision nobody can revisit
 - **Guiding teams through delivery**: architecture and code reviews, mentoring, hiring and interviewing, and coaching engineers toward decisions they can defend
 
-You won't find a list of languages or platforms here, and that's deliberate. They change, and the cost of picking up a new one has dropped a long way now that AI can carry much of the ramp-up. Being able to learn something quickly and then actually deliver with it matters more than the badge on the stack.
-
 ## Experiments
 
 I'm curious about a lot of things, so I run experiments on my own workflows and projects. Some of them turn out to be useful to other people:
@@ -31,7 +29,7 @@ I'm curious about a lot of things, so I run experiments on my own workflows and 
 - Coding agents running entirely on free-tier models, with routing and compression layered on top, to find the practical limits.
 - A two-line status line for my terminal showing the model, folder, git state and session cost at a glance.
 
-Most of what I know about using these tools in practice came from side projects rather than from a roadmap.
+Most of what I know about using these tools in practice came from side projects rather than from a roadmap. Tools and platforms change quickly, and AI has cut the cost of picking up a new one, so I care more about learning fast and delivering than about which stack a problem arrives in.
 
 **Certifications:** SAFe® 6 Architect, Microsoft Azure (AI Fundamentals, Data Fundamentals, Fundamentals), Agentic AI.
 
