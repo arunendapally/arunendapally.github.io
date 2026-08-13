@@ -4,23 +4,33 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-I'm a Senior Technical Architect with many years of experience building and modernizing enterprise-scale platforms across fintech and global SaaS products. My work sits at the intersection of architecture and engineering leadership: defining how systems are structured, governing non-functional requirements, guiding distributed teams, and staying close enough to the code to make those decisions well.
+I'm Arun, a Senior Technical Architect. My work sits at the intersection of architecture and engineering leadership: defining how systems are structured, governing the non-functional side, guiding teams, and staying close enough to the code to make those decisions well.
 
-Much of my career has been spent on the hard problems. Decomposing monoliths that outgrew their original shape. Designing microservices architectures that teams can actually maintain. Building micro-frontend platforms that let large organizations ship independently. I've delivered greenfield SaaS platforms on .NET Core, RabbitMQ, PostgreSQL, Azure and AWS, and modernized legacy systems that were never meant to scale to where they ended up.
+Day to day I work with product and engineering teams to turn business goals into a design people can build against. Often that means being in the middle of the hard production problems: working out why something is slow, or fragile, or failing only under load, and making sure the fix holds rather than moves the symptom somewhere else.
 
-Lately most of my attention goes to spec-driven development and AI-SDLC: writing the specification first, evaluating approaches with explicit tradeoffs, keeping decision logs, then pairing those specs with AI agents across requirement analysis, code generation, and automated testing. The interesting part isn't the tooling. It's whether the rigour survives the speed.
+A fair share of the job is people rather than systems, so much of my week goes on reviews, mentoring, and getting teams to a shared understanding before the code gets written.
 
-**What I focus on:**
+AI runs through most of what I do now: at work, in the side projects I build for myself, and in what I end up writing about here. At work that mostly means spec-driven development and AI-assisted delivery: specification first, tradeoffs recorded, then AI agents on the parts they are genuinely good at. What interests me is not whether it feels faster, but whether the rigour survives the speed.
 
-- **Microservices and API design**: decomposing systems that have outgrown their original shape; resource-oriented REST, OpenAPI standards, and versioning practices that third parties can depend on
-- **Micro-frontends**: moving monolithic UIs to modular, independently deployable frontends using React and Web Components
-- **Architecture as written artifacts**: ADRs, C4 models, domain models, and migration strategies, because a decision nobody recorded is a decision nobody can revisit
-- **Observability and NFRs**: making performance, security, and reliability first-class concerns rather than afterthoughts, with OpenTelemetry, DataDog and Grafana
-- **AI in engineering workflows**: workshops and proof-of-concepts on code generation, automated testing, and agentic tooling; helping teams get genuine value from AI rather than just noise
-- **Mentoring**: architecture and code reviews, hiring and interviewing, and coaching engineers toward decisions they can defend
+## What I work on
+
+- **Hard production problems**: root-cause analysis on live issues, and fixes that hold
+- **Performance and resilience**: tuning across the application and data layers, idempotent integrations, and systems that degrade sensibly instead of falling over
+- **Microservices and API design**: service boundaries, versioning, and contracts that other teams and third parties can depend on; decomposing systems that have outgrown their original shape
+- **Observability and NFRs**: making performance, security, and reliability first-class concerns rather than afterthoughts, and instrumented well enough to prove it
+- **Architecture as written artifacts**: decision records, models, and migration strategies, because a decision nobody recorded is a decision nobody can revisit
+- **Guiding teams through delivery**: architecture and code reviews, mentoring, hiring and interviewing, and coaching engineers toward decisions they can defend
+
+## Experiments
+
+I'm curious about a lot of things, so I run experiments on my own workflows and projects. Some of them turn out to be useful to other people:
+
+- A plugin that manages my stock portfolio: daily briefings, stop-loss audits, and risk checks, in about five minutes a day.
+- Coding agents running entirely on free-tier models, with routing and compression layered on top, to find the practical limits.
+- A two-line status line for my terminal showing the model, folder, git state and session cost at a glance.
+
+Most of what I know about using these tools in practice came from side projects rather than from a roadmap. Tools and platforms change quickly, and AI has cut the cost of picking up a new one, so I care more about learning fast and delivering than about which stack a problem arrives in.
 
 **Certifications:** SAFe® 6 Architect, Microsoft Azure (AI Fundamentals, Data Fundamentals, Fundamentals), Agentic AI.
 
-**Education:** B.Tech, Electronics & Instrumentation Engineering, JNTU Hyderabad.
-
-On this blog I write mostly about applying AI to real engineering work: the tools I'm testing, what actually held up, and what didn't. Occasionally architecture, when I have something concrete to say.
+On this blog I write mostly about applying AI to real engineering work: the tools I'm testing, what held up, and what didn't. Occasionally architecture, when I have something concrete to say.
