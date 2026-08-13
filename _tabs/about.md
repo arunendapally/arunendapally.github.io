@@ -4,17 +4,14 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-I'm Arun, a Senior Technical Architect. I build and modernize large software platforms, and I spend a good deal of my own time on AI tooling: what it can do, where it falls short, and how to tell the difference.
+I'm Arun, a Senior Technical Architect. I work on large software platforms: how they are structured, how teams build on them, and how well they hold up as they grow. Outside of that, a good deal of my time goes on AI tooling, working out what it can do, where it falls short, and how to tell the difference.
 
-Architecture is judgement work. Understanding what the business is trying to achieve, then shaping a direction early, while change is still cheap. Weighing several good options against what the platform will need in a few years rather than only this quarter. Setting the standards and guardrails that let teams move quickly and independently. Sequencing the work so the problems that matter get solved first. And staying close enough to the code that the choices hold up when someone builds them.
+Day to day I work with product and engineering teams to turn business goals into a design people can build against, then stay close enough to delivery to see whether it survives contact with reality. A fair share of the job is people rather than systems, so much of my week goes on reviews, mentoring, and getting teams to a shared understanding before the code gets written.
 
-A fair share of it is people. A design only works if the teams building it are convinced, so the job is as much about creating shared understanding as about picking the right answer.
-
-Lately much of that runs through spec-driven development: specification first, tradeoffs recorded, then AI agents on the parts they are genuinely good at. The interesting question isn't whether AI makes you faster. It's whether the rigour survives the speed.
+Lately most of that runs through spec-driven development and AI-assisted delivery: specification first, tradeoffs recorded, then AI agents on the parts they are genuinely good at. What interests me is not whether it feels faster, but whether the rigour survives the speed.
 
 ## What I work on
 
-- **Requirements to target-state design**: working with product and engineering to turn business intent into a concrete target state, and getting it through review
 - **Microservices and API design**: resource-oriented REST, OpenAPI standards, and versioning practices that third parties can depend on; decomposing systems that have outgrown their original shape
 - **Micro-frontends**: moving monolithic UIs to modular, independently deployable frontends using React and Web Components
 - **Architecture as written artifacts**: ADRs, C4 models, domain models, and migration strategies, because a decision nobody recorded is a decision nobody can revisit
