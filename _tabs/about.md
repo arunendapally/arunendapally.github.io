@@ -6,11 +6,14 @@ order: 4
 
 I'm Arun, a Senior Technical Architect. I build and modernize large software platforms for a living, and I spend most of my spare attention on AI tooling: what it can actually do, where it falls over, and how to tell the difference.
 
-The day job is architecture. Breaking apart monoliths that outgrew their shape, designing APIs other teams have to live with for years, and arguing for the unglamorous things (performance, security, observability) before they turn into incidents. Lately that means a lot of spec-driven development: write the spec first, record the tradeoffs, then let AI agents do the parts they're genuinely good at. The interesting question isn't whether AI makes you faster. It's whether the rigour survives the speed.
+The day job is architecture, though most of it looks less like drawing diagrams and more like turning half-formed requirements into something a team can actually build. Working out what is really being asked for. Weighing approaches and writing down why one won. Designing APIs and domain models that other teams have to live with for years. Making the case for the unglamorous things (performance, security, observability) before they turn into incidents. And a fair share of it is people rather than systems: reviews, mentoring, and helping engineers reach decisions they can defend.
+
+Lately that means a lot of spec-driven development: write the spec first, record the tradeoffs, then let AI agents do the parts they're genuinely good at. The interesting question isn't whether AI makes you faster. It's whether the rigour survives the speed.
 
 ## What I work on
 
-- **Microservices and API design**: decomposing systems that have outgrown their original shape; resource-oriented REST, OpenAPI standards, and versioning practices that third parties can depend on
+- **Requirements to target-state design**: working with product and engineering to turn business intent into a design people agree on, then getting it through review with the tradeoffs written down
+- **Microservices and API design**: resource-oriented REST, OpenAPI standards, and versioning practices that third parties can depend on; decomposing systems that have outgrown their original shape
 - **Micro-frontends**: moving monolithic UIs to modular, independently deployable frontends using React and Web Components
 - **Architecture as written artifacts**: ADRs, C4 models, domain models, and migration strategies, because a decision nobody recorded is a decision nobody can revisit
 - **Observability and NFRs**: making performance, security, and reliability first-class concerns rather than afterthoughts, with OpenTelemetry, DataDog and Grafana
