@@ -14,7 +14,7 @@ Lately most of that runs through spec-driven development and AI-assisted deliver
 
 ## What I work on
 
-- **Hard production problems**: root-cause analysis on live issues using telemetry and process dumps, load testing, and getting releases stable again
+- **Hard production problems**: root-cause analysis on live issues, and fixes that hold
 - **Performance and resilience**: tuning across application and database layers, idempotent integrations, and systems that degrade sensibly instead of falling over
 - **Microservices and API design**: resource-oriented REST, OpenAPI standards, and versioning practices that third parties can depend on; decomposing systems that have outgrown their original shape
 - **Observability and NFRs**: making performance, security, and reliability first-class concerns rather than afterthoughts, with OpenTelemetry, DataDog and Grafana
