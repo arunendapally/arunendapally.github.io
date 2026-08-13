@@ -21,19 +21,14 @@ What I reach for most: C# and .NET, React and TypeScript, PostgreSQL, RabbitMQ, 
 
 ## The rest is curiosity
 
-Some of what I've built or broken recently:
+I'm curious about a lot of things, so I keep running experiments on my own life to see what actually sticks. Some of them turn out to be useful to other people too:
 
 - A Claude plugin that runs my stock portfolio: daily briefings, stop-loss audits, risk checks. Five minutes a day instead of an hour.
 - Claude Code running entirely on free-tier models, with routing and compression stacked on top, just to see how far you get on nothing.
-- A weekend spent pointing Claude at a decade of Google Drive chaos. 642 files, duplicates, names like `final_v3`. It worked, after one blocker nearly killed it.
 - A two-line status line for Claude Code, because I kept losing track of which model was quietly burning my tokens.
 
 None of that is work, which is rather the point. These tools get interesting when you aim them at something you actually care about, and most of what I know about AI came from side projects rather than a roadmap.
 
-## The formal bits
-
 **Certifications:** SAFe® 6 Architect, Microsoft Azure (AI Fundamentals, Data Fundamentals, Fundamentals), Agentic AI.
-
-**Education:** B.Tech, Electronics & Instrumentation Engineering, JNTU Hyderabad.
 
 On this blog I write mostly about applying AI to real engineering work: the tools I'm testing, what actually held up, and what didn't. Occasionally architecture, when I have something concrete to say.
