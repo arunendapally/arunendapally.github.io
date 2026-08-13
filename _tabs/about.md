@@ -4,9 +4,9 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-I'm Arun, a Senior Technical Architect. I work on large software platforms: how they are structured, how teams build on them, and how well they hold up as they grow. Outside of that, a good deal of my time goes on AI tooling, working out what it can do, where it falls short, and how to tell the difference.
+I'm Arun, a Senior Technical Architect. My work sits at the intersection of architecture and engineering leadership: defining how systems are structured, governing the non-functional side, guiding teams, and staying close enough to the code to make those decisions well. Outside of that, a good deal of my time goes on AI tooling, working out what it can do, where it falls short, and how to tell the difference.
 
-Day to day I work with product and engineering teams to turn business goals into a design people can build against, then stay close enough to delivery to see whether it survives contact with reality. Often that means being in the middle of the hard production problems: working out why something is slow, or fragile, or failing only under load, and making sure the fix holds rather than moves the symptom somewhere else.
+Day to day I work with product and engineering teams to turn business goals into a design people can build against. Often that means being in the middle of the hard production problems: working out why something is slow, or fragile, or failing only under load, and making sure the fix holds rather than moves the symptom somewhere else.
 
 A fair share of the job is people rather than systems, so much of my week goes on reviews, mentoring, and getting teams to a shared understanding before the code gets written.
 
@@ -15,19 +15,21 @@ Lately most of that runs through spec-driven development and AI-assisted deliver
 ## What I work on
 
 - **Hard production problems**: root-cause analysis on live issues, and fixes that hold
-- **Performance and resilience**: tuning across application and database layers, idempotent integrations, and systems that degrade sensibly instead of falling over
-- **Microservices and API design**: resource-oriented REST, OpenAPI standards, and versioning practices that third parties can depend on; decomposing systems that have outgrown their original shape
-- **Observability and NFRs**: making performance, security, and reliability first-class concerns rather than afterthoughts, with OpenTelemetry, DataDog and Grafana
-- **Architecture as written artifacts**: ADRs, C4 models, domain models, and migration strategies, because a decision nobody recorded is a decision nobody can revisit
+- **Performance and resilience**: tuning across the application and data layers, idempotent integrations, and systems that degrade sensibly instead of falling over
+- **Microservices and API design**: service boundaries, versioning, and contracts that other teams and third parties can depend on; decomposing systems that have outgrown their original shape
+- **Observability and NFRs**: making performance, security, and reliability first-class concerns rather than afterthoughts, and instrumented well enough to prove it
+- **Architecture as written artifacts**: decision records, models, and migration strategies, because a decision nobody recorded is a decision nobody can revisit
 - **Guiding teams through delivery**: architecture and code reviews, mentoring, hiring and interviewing, and coaching engineers toward decisions they can defend
+
+You won't find a list of languages or platforms here, and that's deliberate. They change, and the cost of picking up a new one has dropped a long way now that AI can carry much of the ramp-up. Being able to learn something quickly and then actually deliver with it matters more than the badge on the stack.
 
 ## Experiments
 
 I'm curious about a lot of things, so I run experiments on my own workflows and projects. Some of them turn out to be useful to other people:
 
-- A Claude plugin that manages my stock portfolio: daily briefings, stop-loss audits, and risk checks, in about five minutes a day.
-- Claude Code running entirely on free-tier models, with routing and compression layered on top, to find the practical limits.
-- A two-line status line for Claude Code showing the model, folder, git state and session cost at a glance.
+- A plugin that manages my stock portfolio: daily briefings, stop-loss audits, and risk checks, in about five minutes a day.
+- Coding agents running entirely on free-tier models, with routing and compression layered on top, to find the practical limits.
+- A two-line status line for my terminal showing the model, folder, git state and session cost at a glance.
 
 Most of what I know about using these tools in practice came from side projects rather than from a roadmap.
 
