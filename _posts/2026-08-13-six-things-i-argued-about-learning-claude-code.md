@@ -48,13 +48,13 @@ _The whole post in one picture: what loads always, what loads on demand, and wha
 
 **Why.** Three things you lose if you skip the file.
 
-You retype the same lines every session. Your project uses pnpm, not npm. You will type that a hundred times.
+You retype the same lines every session. The migrations live in the Infrastructure project, not the API one. You will type that a hundred times.
 
 Long sessions get squeezed. When the conversation gets too big, older parts get summarized. Your carefully typed instructions can get lost in that. The file does not.
 
 But the big one is this. The file stops mistakes you never thought to prevent. You cannot type an instruction for a problem you did not see coming.
 
-**Example.** You never mention your package manager, because why would you. Claude runs `npm install`. Now you have a broken lockfile and a confused twenty minutes. One line in CLAUDE.md ("use pnpm, never npm") and that never happens, in any session, forever.
+**Example.** Claude pulls Serilog from nuget.org, because nothing tells it your org publishes its own logging package to a private feed. One line in CLAUDE.md and it stops guessing.
 
 ## 2. But a smart model like Opus does not need this, right?
 
@@ -70,7 +70,7 @@ But no model, however good, can guess that your `utils` folder is the old one no
 
 There is a twist too. A strong model follows your file *more* carefully. So junk in the file hurts more, not less.
 
-**Example.** You wrote "always add comprehensive tests" as filler. A weak model half ignores it. Opus takes you seriously and writes a test suite for your one-line typo fix. You did not want that. You just typed it without thinking.
+**Example.** You ask for a one-line null check. Your file says "always write unit tests", so Opus adds a test class and a mock to go with it, for a change that needed neither.
 
 ## 3. Do I need a `/plan` for a small change?
 
@@ -84,7 +84,7 @@ There is a twist too. A strong model follows your file *more* carefully. So junk
 
 **When you do plan, plan with Opus and build with Sonnet.** `/model opusplan` runs plan mode on Opus, then switches to Sonnet for the execution. You do not swap anything by hand. Judgement is what planning needs, and execution is what burns most of the tokens, so the expensive model only runs where it earns its keep. That is a real saving, but it does not make a plan worth having on a one-line fix. For the small change in the heading, the money you save is the plan you skipped.
 
-**Example.** Fixing a typo in one file? Just ask. "Add rate limiting to the API"? You have no idea how many files that touches. Plan that one.
+**Example.** Fixing a typo in one file? Just ask. Adding rate limiting to the API? You have no idea how many files that touches, so plan that one.
 
 ## 4. `/init` writes a huge CLAUDE.md. Should I write it by hand instead?
 
@@ -94,7 +94,7 @@ There is a twist too. A strong model follows your file *more* carefully. So junk
 
 **What to do.** Run `/init`, then delete most of it. Aim for twenty to fifty lines.
 
-Cut anything Claude can look up itself: it can read your package.json, it does not need a list of your dependencies. Cut generic advice like "write clean code." Cut rules nobody actually follows.
+Cut anything Claude can look up itself: it can read your csproj files, it does not need a list of your NuGet packages. Cut generic advice like "write clean code." Cut rules nobody actually follows.
 
 Keep only what is surprising or expensive to get wrong.
 
@@ -102,7 +102,7 @@ Keep only what is surprising or expensive to get wrong.
 
 Then let it grow slowly. Every time Claude gets something wrong, add one line. Those lines earned their place. The generated ones did not.
 
-**Example.** Delete "this project uses React and TypeScript." Claude can see that. Keep "run `make dev`; `npm run dev` looks like it works but skips the proxy setup." That one saves you an hour.
+**Example.** Delete the line saying you use .NET 8 and xUnit, because Claude reads that from the csproj. Keep the line saying `dotnet test` needs Docker running first, because nothing else tells it.
 
 ## 5. Why make a skill? Can I not just link a file from CLAUDE.md?
 
@@ -116,7 +116,7 @@ Then let it grow slowly. Every time Claude gets something wrong, add one line. T
 
 That is the whole idea behind the word "progressive disclosure," which sounds fancier than it is. Load it when you need it, not before.
 
-**Example.** Your deploy checklist stays quiet all week. You say something about shipping, it loads, you get the full checklist. Monday's typo fix never pays for it.
+**Example.** Your code review skill sits in context as one line saying what it is for. Ask for a pull request review and the other two hundred lines load, and not before.
 
 CLAUDE.md is for what is true always. A skill is for what is true sometimes.
 
@@ -140,7 +140,7 @@ CLAUDE.md is for what is true always. A skill is for what is true sometimes.
 
 **The prompt was the same, but the conversation was not.** The same question in a fresh chat and twenty messages deep gives two different answers. Your prompt is only part of what it is reading.
 
-**Example.** "Clean up this data" gets you a different shape of answer each run, because there are ten reasonable readings of "clean up." "Drop rows where email is empty, trim whitespace, return CSV with the same columns" gets you the same thing every time. You just stopped leaving the decision open.
+**Example.** Ask for validation on an endpoint and you get data annotations one day, FluentValidation the next. Name the one you want and the answer stops moving.
 
 None of these is a bug. Each is a gap you can close, and the ones you keep hitting belong in CLAUDE.md or a skill, written down once so you cannot forget to say them. The bigger the ask, the more gaps it holds: a whole feature with five scenarios in one prompt is five chances to mean something you never said. That is why I write the [spec first](/posts/spec-driven-development-with-spec-kit/) and hand over one scenario at a time.
 
