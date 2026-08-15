@@ -4,8 +4,8 @@ author: arun
 date: 2026-06-10 00:00:00 +0000
 categories: [AI, Developer Tools]
 tags: [claude-code, statusline, cli, git, productivity, developer-tools, nodejs]
-seo:
-  description: Build a custom two-line status line for Claude Code so you can see the model, folder, git status, and session cost at a glance — handy when you're juggling several Windows Terminal tabs. Includes a working Node.js script.
+image: /assets/img/posts/statusline-card.png
+description: Build a custom two-line status line for Claude Code so you can see the model, folder, git status, and session cost at a glance, handy when you're juggling several Windows Terminal tabs. Includes a working Node.js script.
 ---
 
 If you work the way I do, you've usually got several Windows Terminal tabs open at once — a different project in each one, each running its own Claude Code session. The problem is that every tab looks the same. You switch to one and have to stop and work out where you are: which project is this, which branch am I on, and how much has this session cost so far?
@@ -20,7 +20,7 @@ By the end you'll have something like this:
 ▓▓▓▓▓▓▓░░░░░ 55% │ $0.34 │ ⏱ 3m5s │ ⚙ high │ 5h:24%
 ```
 
-The first line answers "where am I?" — the model, the folder, the git status, and any open PR. The second line answers "how is this session going?" — a bar for context usage, plus cost, time spent, reasoning effort, and rate limit.
+The first line answers "where am I?" — the model, the folder, the git status, and any open PR. The second line answers "how is this session going?" — a bar for context usage, plus cost, time spent, reasoning effort, and rate limit. That last pair matters more than it sounds: watching the rate limit climb in real time is what eventually pushed me to [run Claude Code through free-tier models](/posts/omniroute-free-tier-routing-and-compression/).
 
 ## What Data You Get
 
@@ -51,6 +51,7 @@ Add a `statusLine` entry to `~/.claude/settings.json`:
   }
 }
 ```
+{: file="~/.claude/settings.json" }
 
 On Windows, Claude Code runs this through Git Bash if you have it installed, or PowerShell if you don't. One thing to watch out for: Git Bash treats backslashes as special characters, so a path like `C:\Users\...` gets broken and the command fails without showing any error. Use **forward slashes** instead — they work in both Git Bash and PowerShell. With forward slashes you can point `node` straight at the script and skip any `.sh` or `.ps1` wrapper.
 
@@ -199,6 +200,7 @@ process.stdin.on('end', () => {
   console.log(line2.join(SEP));
 });
 ```
+{: file="~/.claude/statusline-command.js" }
 
 ## A Few Design Choices
 
@@ -241,7 +243,7 @@ Run it inside a git repo to see the branch and status part, and from a clean che
 - Use color to show state (clean vs. dirty, under vs. over a limit), not just for looks.
 - Test by piping sample JSON straight into the script — no need to restart Claude Code each time.
 
-## Further Reading
+## References
 
 - [Customize your status line – Claude Code Docs](https://code.claude.com/docs/en/statusline)
 - [ccstatusline – community pre-built status line themes](https://github.com/sirmalloc/ccstatusline)

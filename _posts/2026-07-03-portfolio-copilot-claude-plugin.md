@@ -6,13 +6,15 @@ categories: [AI]
 tags: [claude, ai, investing, plugins, mcp, portfolio-management]
 mermaid: true
 image: /assets/img/posts/portfolio-copilot-card.png
-seo:
-  description: portfolio-copilot is a free, open-source Claude plugin for Indian retail investors — daily briefings, stop-loss audits, mutual fund rebalancing, and risk checks. Works live with broker MCPs or with any broker via statement upload.
+description: "portfolio-copilot is a free, open-source Claude plugin for Indian retail investors: daily briefings, stop-loss audits, mutual fund rebalancing, and risk checks. Works live with broker MCPs or with any broker via statement upload."
 ---
 
 Retail investing in India comes with a part-time job attached: the admin. Stop-loss orders (GTTs) silently get cancelled when a company pays a dividend — leaving positions unprotected with no notification. Mutual fund SIPs pile up over the years until a portfolio holds 13 schemes doing the work of five. And when markets fall 5% in a day, most of us make our worst decisions in our worst state of mind.
 
 I'd been using Claude connected to broker APIs to handle this kind of routine, and the workflows eventually became reliable enough to package. The result is **[portfolio-copilot](https://github.com/arunendapally/portfolio-copilot)** — a free, open-source Claude plugin anyone can install. This post covers what it does, how it's built, and the design decisions that mattered — especially the safety ones.
+
+> **Not investment advice.** I'm not SEBI-registered. The plugin provides analysis and information only: it never tells you what to buy, and nothing in this post is a recommendation. Markets carry risk, and the decisions are yours.
+{: .prompt-warning }
 
 ## What it does
 
@@ -83,7 +85,7 @@ One honest warning if you do this: the safety hook doesn't come with the markdow
 
 ## What building a plugin taught me
 
-A Claude plugin is a folder: skills (markdown files describing workflows), optional agents (autonomous research subagents), optional hooks (event-triggered guards like the order gate above), and optional MCP server configs. The whole plugin is readable markdown and JSON — you can audit every instruction it gives the AI before installing it.
+A Claude plugin is a folder: skills (markdown files describing workflows), optional agents (autonomous research subagents), optional hooks (event-triggered guards like the order gate above), and optional [MCP server](/posts/building-mcp-servers-guide/) configs. The whole plugin is readable markdown and JSON — you can audit every instruction it gives the AI before installing it.
 
 Three lessons from the process:
 
@@ -107,5 +109,3 @@ If you use Claude (Pro/Max with the desktop app or Claude Code):
 Then say **"get started"** in a new chat — or "import my holdings" if your broker doesn't have a live connection. The source, install guide, and disclaimer are on [GitHub](https://github.com/arunendapally/portfolio-copilot) — MIT licensed, contributions welcome. If you find a rough edge or want better support for your broker, open an issue.
 
 It won't make you rich and it won't pick stocks for you. What it does is make the boring, protective parts of investing — the audits, the buffers, the discipline — cheap enough that you actually do them. That's where most of us lose money: not from missing the next big winner, but from skipping the routine.
-
-*Nothing in this post or plugin is investment advice. I'm not SEBI-registered; the plugin provides analysis and information only. Markets carry risk — decisions are yours.*

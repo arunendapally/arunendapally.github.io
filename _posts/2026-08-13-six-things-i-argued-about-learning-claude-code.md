@@ -138,7 +138,7 @@ CLAUDE.md is for what is true always. A skill is for what is true sometimes.
 
 **You used words that sound precise but are not.** Better. Cleaner. Simpler. More professional. They feel like instructions, but they carry no decision, so the decision stays with the model.
 
-**The prompt was the same, but the conversation was not.** The same question in a fresh chat and twenty messages deep gives two different answers. Your prompt is only part of what it is reading.
+**The prompt was the same, but the conversation was not.** The same question in a fresh chat and twenty messages deep gives two different answers. Your prompt is only part of what it is reading. Keeping [context usage and cost on screen](/posts/claude-code-custom-statusline/) makes that visible instead of something you notice afterwards.
 
 **Example.** Ask for validation on an endpoint and you get data annotations one day, FluentValidation the next. Name the one you want and the answer stops moving.
 

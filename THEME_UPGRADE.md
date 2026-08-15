@@ -23,12 +23,14 @@ The blog is **gem-based**, not a fork:
 - `Gemfile` pins `jekyll-theme-chirpy` (`~> 7.6, >= 7.6.0`); theme code ships in the gem.
 - `Gemfile.lock` is **not** committed (see `.gitignore` for why); the `Gemfile` version
   constraint is what pins the theme. CI resolves fresh on Linux.
-- The blog keeps only **three** local files on top of the theme:
+- The blog keeps only **five** local files on top of the theme:
 
 | File | Purpose |
 |---|---|
-| `assets/css/jekyll-theme-chirpy.scss` | Widens main content to **1600px** (`$main-content-max-width`) + fixes `#back-to-top` position under the wider layout |
+| `assets/css/jekyll-theme-chirpy.scss` | Widens main content to **1600px** (`$main-content-max-width`) + fixes `#back-to-top` position under the wider layout + styles the newsletter block |
 | `_includes/post-sharing.html` | Adds a `DESCRIPTION` param to share links (pair with `_data/share.yml`) |
+| `_layouts/post.html` | **Verbatim copy of the gem's layout** with one line added: `newsletter` at the head of `tail_includes` |
+| `_includes/newsletter.html` | New file, not an override. Buttondown signup, gated on `newsletter.buttondown_user` in `_config.yml` |
 | `_plugins/posts-lastmod-hook.rb` | Sets `last_modified_at` from git history. The gem ships no `_plugins/`, so this is local-only; it needs `fetch-depth: 0` in CI |
 
 ## Customization inventory (the regression surface)
@@ -41,18 +43,23 @@ must preserve all of them:**
    theme's version of it changes structurally on upgrade, merge carefully.
 2. **`_includes/post-sharing.html`** — injects `DESCRIPTION` (from page/site description)
    into share links. Upstream 7.6.0 does **not** have this.
-3. **`_data/share.yml`** — share links use the `DESCRIPTION` placeholder; LinkedIn enabled.
-4. **`_config.yml`** — site title/tagline/url/avatar, GoatCounter analytics, comments
+3. **`_layouts/post.html`** — the highest-risk override, because it is a full copy of the
+   gem's layout rather than a small patch. The only intentional difference from stock is
+   `newsletter` added to the front of `tail_includes`. On upgrade, diff it against the new
+   gem layout and re-apply that one line rather than keeping the stale copy:
+   `diff _layouts/post.html "$THEME/_layouts/post.html"` should show exactly that addition.
+4. **`_data/share.yml`** — share links use the `DESCRIPTION` placeholder; LinkedIn enabled.
+5. **`_config.yml`** — site title/tagline/url/avatar, GoatCounter analytics, comments
    disabled site-wide, `cdn:` left empty (self-hosted assets), `CLAUDE.md` + `THEME_UPGRADE.md`
    excluded from build.
-5. **`.github/workflows/pages-deploy.yml`** — upstream's
+6. **`.github/workflows/pages-deploy.yml`** — upstream's
    `.github/workflows/starter/pages-deploy.yml` plus a `pull_request` trigger, so PRs run
    build + html-proofer without deploying (the deploy job and artifact upload are gated on
    `github.event_name != 'pull_request'`, and the concurrency group is keyed by ref so a PR
    cannot cancel a production deploy). Ruby 3.4, `fetch-depth: 0` for the lastmod plugin,
    `html-proofer` (external links off). Re-diff against the starter template on upgrade,
    keeping these additions.
-6. **`_plugins/posts-lastmod-hook.rb`** — local-only plugin, not part of the gem. Reads git
+7. **`_plugins/posts-lastmod-hook.rb`** — local-only plugin, not part of the gem. Reads git
    history for `last_modified_at`, which is why CI checks out full history.
 
 **Hard rules from `CLAUDE.md`:** no ads. No AdSense, ad units, or `ads.txt` — do not re-add.
@@ -101,8 +108,12 @@ Files touched: `_includes/head.html`, `_includes/datetime.html`, `_layouts/defau
    **Verify:** the only differences are the blog's `DESCRIPTION` lines. If upstream added
    DESCRIPTION itself, drop the override.
 3. `diff assets/css/jekyll-theme-chirpy.scss "$THEME/assets/css/jekyll-theme-chirpy.scss"`
-   **Verify:** only the `1600px` + `#back-to-top` additions differ. If upstream restructured
-   the file, re-apply the two customizations onto the new base.
+   **Verify:** only the `1600px`, `#back-to-top`, and `.newsletter` additions differ. If
+   upstream restructured the file, re-apply the customizations onto the new base.
+4. `diff _layouts/post.html "$THEME/_layouts/post.html"`
+   **Verify:** the only difference is `newsletter` in `tail_includes`. Because this override
+   is a full copy, prefer replacing it with the new gem layout and re-adding that one line
+   over keeping the old copy.
 
 ### Phase 3 — Diff config defaults
 1. `diff _config.yml "$THEME/_config.yml"`

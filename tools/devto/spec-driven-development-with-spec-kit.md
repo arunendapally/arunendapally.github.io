@@ -1,12 +1,10 @@
 ---
 title: "Spec-Driven Development with Spec Kit: A Practical Guide"
-author: arun
-date: 2026-07-24 00:00:00 +0000
-categories: [AI]
-tags: [spec-driven-development, spec-kit, claude, claude-code, ai, mcp, architecture, agents]
-mermaid: true
-image: /assets/img/posts/spec-kit-card.png
+published: false
 description: "A practical, step-by-step guide to spec-driven development with GitHub Spec Kit and Claude Code: install it, run the constitution, specify, clarify, plan, tasks, analyze, and implement commands, know what to review at each step, and keep the spec alive as new requirements and bugs arrive."
+tags: ai, claudecode, programming, productivity
+canonical_url: https://arunendapally.com/posts/spec-driven-development-with-spec-kit/
+cover_image: https://arunendapally.com/assets/img/posts/spec-kit-card.png
 ---
 
 If you've used an AI coding agent on anything beyond a toy, you know the failure mode. You describe what you want, it starts writing code, and three prompts later it's confidently building the wrong thing. Not because the model is dumb, but because there was never a shared, written definition of *right* to work against. The agent optimizes for "produce plausible code now," and you find out about the mismatch after it's already sunk an hour into it.
@@ -25,13 +23,12 @@ If you've used an AI coding agent on anything beyond a toy, you know the failure
 > - **Implement one story at a time**, not the whole task list.
 > - The pipeline **doesn't end at implement**. New requirements, bugs and UI changes go back through the documents first. That habit is the actual discipline; no tool enforces it for you.
 > - Skip all of this for a throwaway script. Use it when the code has to stay coherent across many files and more than one repo.
-{: .prompt-tip }
 
 ## How it differs from vibe coding
 
 "Vibe coding" is the natural way most people use an AI agent: you describe what you want in chat and let it write code immediately, steering with follow-up prompts. It's fast and it's genuinely great for small, throwaway work. It falls apart when the thing has to hold together, because the only record of what you decided lives in a scrolling chat and in the code itself, and both drift.
 
-Spec-driven development flips the order. You write the decisions down first, review them, and only then let the agent generate code from them. Put another way, it moves your decisions out of the agent's short-term context, where they drift, and into a durable *memory* it can't lose track of, which is the shift I unpack in [the four kinds of memory Claude runs on](/posts/get-more-out-of-claude-memory/). Here's the contrast at a glance:
+Spec-driven development flips the order. You write the decisions down first, review them, and only then let the agent generate code from them. Put another way, it moves your decisions out of the agent's short-term context, where they drift, and into a durable *memory* it can't lose track of, which is the shift I unpack in [the four kinds of memory Claude runs on](https://arunendapally.com/posts/get-more-out-of-claude-memory/). Here's the contrast at a glance:
 
 | | Vibe coding | Spec-driven development |
 |---|---|---|
@@ -74,6 +71,8 @@ One practical note before you start: those `/speckit-*` commands are installed a
 ## The pipeline
 
 Spec Kit's flow is a sequence of commands, each consuming the previous stage's output and producing the next artifact:
+
+_[Rendered diagram in the original post](https://arunendapally.com/posts/spec-driven-development-with-spec-kit/)._
 
 ```mermaid
 flowchart TD
@@ -129,7 +128,7 @@ Only at `/speckit-plan` does technology enter the picture. This stage reads the 
 
 - `research.md`: each technology choice with its rationale and the alternatives rejected.
 - `data-model.md`: the schema, with your constitution's conventions baked in.
-- `contracts/`: the API or tool surface and its input schemas: REST endpoints, event payloads, or [MCP](/posts/building-mcp-servers-guide/) tool definitions, depending on what you're exposing.
+- `contracts/`: the API or tool surface and its input schemas: REST endpoints, event payloads, or [MCP](https://arunendapally.com/posts/building-mcp-servers-guide/) tool definitions, depending on what you're exposing.
 - `quickstart.md`: a runnable validation guide mapped to the user stories.
 
 The step to actually read here is the **Constitution Check** the plan runs against every principle. This is where a good constitution pays off: it forces the stack decisions to be traceable to constraints you set earlier, rather than to whatever the model felt like reaching for.

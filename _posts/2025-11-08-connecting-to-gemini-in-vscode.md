@@ -2,10 +2,10 @@
 title: "Getting Started with Google Gemini AI in VSCode: A Quick Setup Guide"
 author: arun
 date: 2025-11-08 00:00:00 +0000
-categories: [Development Tools, AI]
+categories: [AI, Developer Tools]
 tags: [gemini, vscode, ai, terminal, npm, workflow, google-ai, productivity]
-seo:
-  description: A straightforward guide to setting up and using Google's Gemini AI in your VSCode terminal — including when it's worth reaching for over other tools
+image: /assets/img/posts/gemini-vscode-card.png
+description: A straightforward guide to setting up and using Google's Gemini AI in your VSCode terminal, including when it's worth reaching for over other tools
 ---
 
 I've been running a few different AI tools in parallel to see how they actually fit into a developer workflow. Claude for longer sessions and architecture thinking, Copilot for in-editor completions. When Google released the Gemini CLI I added it to the mix and found it earns its place for a specific kind of work — fast, lightweight, no context overhead. Here's how to set it up and when I actually reach for it.
@@ -84,7 +84,7 @@ After a few months of using this alongside other tools, here's where Gemini CLI 
 
 **Brainstorming without committing to a session.** When I want to think through a problem without starting a full conversation, a one-shot `-p` prompt is enough. I'm not loading context, I'm not in a session that I'll want to continue — just a question and an answer.
 
-**Where it's not the right choice:** anything that requires understanding your codebase. The CLI has no access to your files unless you paste content directly into the prompt. For refactoring, code review, or multi-file work, an editor-integrated tool or a tool with file access (like Claude Code) is the better fit. The CLI is deliberately lightweight — that's both its strength and its limit.
+**Where it's not the right choice:** anything that requires understanding your codebase. The CLI has no access to your files unless you paste content directly into the prompt. For refactoring, code review, or multi-file work, an editor-integrated tool or a tool with file access (like [Claude Code](/posts/six-things-i-argued-about-learning-claude-code/)) is the better fit. The CLI is deliberately lightweight — that's both its strength and its limit.
 
 ## A Few Practical Notes
 

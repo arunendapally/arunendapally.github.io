@@ -5,8 +5,8 @@ date: 2026-06-09 00:00:00 +0000
 categories: [AI, Developer Tools]
 tags: [github-copilot, agent-mode, coding-agent, ai, vscode, github, developer-tools]
 mermaid: true
-seo:
-  description: A practical breakdown of GitHub Copilot's two agentic modes — synchronous Agent Mode in your IDE vs. the asynchronous cloud Coding Agent — and how to pick the right one.
+image: /assets/img/posts/copilot-agents-card.png
+description: A practical breakdown of GitHub Copilot's two agentic modes (synchronous Agent Mode in your IDE, and the asynchronous cloud Coding Agent) and how to pick the right one.
 ---
 
 I see a lot of developers fire up Agent Mode for work they could have simply handed off to the cloud—and then they sit there watching a task that never needed them in the first place. Copilot has *two* agentic modes, they look almost the same, and picking the wrong one quietly eats up your hours. Let me break down how to know which one to reach for.
@@ -83,7 +83,7 @@ This is genuinely useful for:
 - Let it run tests; the iterate-on-failure loop is where it earns its keep
 
 **For the coding agent:**
-- Write issues like you'd write a ticket for a human: background, expected behavior, acceptance criteria
+- Write issues like you'd write a ticket for a human: background, expected behavior, acceptance criteria. If you want a repeatable way to get to that level of detail, [spec-driven development](/posts/spec-driven-development-with-spec-kit/) is the same idea with more structure
 - Assign straightforward bugs and test-coverage gaps before bigger features
 - Review the PR plan (Copilot posts one as a comment) before it opens the full PR—you can redirect early
 
@@ -122,7 +122,7 @@ Simple rule I follow: treat the Coding Agent like a helpful contractor who only 
 - The coding agent requires well-written issues to produce useful PRs—quality in, quality out
 - Both modes are GA as of early 2026 and require no special flags to enable
 
-## Further Reading
+## References
 
 - [Agent mode 101 – The GitHub Blog](https://github.blog/ai-and-ml/github-copilot/agent-mode-101-all-about-github-copilots-powerful-mode/)
 - [The difference between coding agent and agent mode – The GitHub Blog](https://github.blog/developer-skills/github/less-todo-more-done-the-difference-between-coding-agent-and-agent-mode-in-github-copilot/)

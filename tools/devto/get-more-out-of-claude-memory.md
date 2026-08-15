@@ -1,17 +1,17 @@
 ---
 title: "Get More Out of Claude by Understanding Its 4 Types of Memory"
-author: arun
-date: 2026-07-15 00:00:00 +0000
-categories: [AI]
-tags: [ai, agents, memory, claude, claude-code, claude-desktop, mcp, rag, llm, architecture]
-mermaid: true
-image: /assets/img/posts/claude-agent-memory/share-card.png
+published: false
 description: "A practical guide to how memory works in Claude: working, semantic, procedural, and episodic, with pros, cons, token costs, and best practices across Claude Code, Claude Desktop, and Claude Cowork."
+tags: ai, claude, llm, programming
+canonical_url: https://arunendapally.com/posts/get-more-out-of-claude-memory/
+cover_image: https://arunendapally.com/assets/img/posts/claude-agent-memory/share-card.png
 ---
 
 If you use Claude every day, you've probably noticed it behaves differently depending on where you use it. In a fresh chat it starts from nothing. In Claude Code, it seems to "know" your project's conventions. Open a Project and it remembers documents you added weeks ago. That's not the same model behaving inconsistently. It's different **memory** being wired up behind the scenes.
 
 The clearest way I've found to reason about it borrows four categories from how human memory is described. In plain terms, they are what Claude is looking at right now (**working** memory), what it knows (**semantic**), what it can do (**procedural**), and what it remembers doing (**episodic**). Once you can name them, a lot of Claude's behaviour (the good and the frustrating) starts to make sense. For each type I'll cover what it is, how Claude uses it, its trade-offs, and the practices that get the most out of it, across Claude Code, Claude Desktop, and Claude Cowork (Desktop with access to your local files).
+
+_[Rendered diagram in the original post](https://arunendapally.com/posts/get-more-out-of-claude-memory/)._
 
 ```mermaid
 flowchart LR
@@ -50,11 +50,11 @@ Semantic memory is Claude's persistent knowledge base: facts, rules, documentati
   - **Folder scope:** you can drop a `CLAUDE.md` inside a subfolder for rules that only apply to that part of the codebase.
 - **In Claude Desktop and the web app**, this is **Projects**: the custom instructions and documents you attach to a Project so Claude keeps them in mind as the foundation for every chat inside it.
 
-Because these files stack (and every one of them is re-sent on every turn), **keeping each one short matters a lot.** A lean `CLAUDE.md` with only the rules that earn their place beats a long one that buries the important lines and quietly taxes every message. Put global habits in the user file, project facts in the project file, and resist the urge to write an essay in either. I pushed back on this advice myself before it clicked, and wrote up [where I landed on `CLAUDE.md` and five other habits](/posts/six-things-i-argued-about-learning-claude-code/).
+Because these files stack (and every one of them is re-sent on every turn), **keeping each one short matters a lot.** A lean `CLAUDE.md` with only the rules that earn their place beats a long one that buries the important lines and quietly taxes every message. Put global habits in the user file, project facts in the project file, and resist the urge to write an essay in either. I pushed back on this advice myself before it clicked, and wrote up [where I landed on `CLAUDE.md` and five other habits](https://arunendapally.com/posts/six-things-i-argued-about-learning-claude-code/).
 
 That raises an obvious question: what about the other docs in your repo, like an `architecture.md` or a `change-log.md`? They're memory too, just a different kind. Your whole repository is a latent knowledge base. The difference is *when* it loads: `CLAUDE.md` is always resident (loaded every turn, costs tokens continuously), while `architecture.md` sits on disk for free and only enters context when Claude actually reads it. So the trick is to keep `CLAUDE.md` as a lean **index that points outward** ("architecture is documented in `architecture.md`; recent changes in `change-log.md`") rather than pasting those files in. The detail stays available at zero standing cost, and loads only when a task needs it, the same `progressive disclosure` principle that keeps skills cheap. (It's worth noting a `change-log.md` is really *episodic* memory, a record of what changed and when, sitting alongside the semantic docs.)
 
-![A Claude Cowork Project panel showing three sections: Instructions, Memory, and Context files (CLAUDE.md and other markdown documents)](/assets/img/posts/claude-agent-memory/cowork-project-memory.png){: w="769" h="395" }
+![A Claude Cowork Project panel showing three sections: Instructions, Memory, and Context files (CLAUDE.md and other markdown documents)](https://arunendapally.com/assets/img/posts/claude-agent-memory/cowork-project-memory.png){: w="769" h="395" }
 
 _A Project's semantic memory has three parts: **Instructions**, **Memory**, and **Context** files._
 
@@ -107,7 +107,7 @@ The sneaky one is **semantic memory**. Working memory growth is obvious; you wat
 
 Two commands let you actually see and manage this. **`/context`** renders a breakdown of what's occupying the window right now:
 
-![Claude Code /context output showing token usage by category (system prompt, system tools, custom agents, memory files, skills, and messages) with 98% of the window still free](/assets/img/posts/claude-agent-memory/context-usage.png){: w="421" h="383" }
+![Claude Code /context output showing token usage by category (system prompt, system tools, custom agents, memory files, skills, and messages) with 98% of the window still free](https://arunendapally.com/assets/img/posts/claude-agent-memory/context-usage.png){: w="421" h="383" }
 
 _The `/context` view. Notice how the memory types map to categories: **Memory files** (1.6k) is semantic, **Skills** (2.9k for 24 skills) is procedural, and **Messages** (8 tokens, fresh session) is working memory._
 
@@ -120,7 +120,7 @@ This is worth reading closely, because it makes the whole framework tangible:
 
 The other lever is **`/memory`**, which opens your `CLAUDE.md` files for viewing and editing. It's not a gauge, it's where you *act*: when `/context` shows memory files eating too much, `/memory` is where you trim them.
 
-![Claude Code /memory menu showing auto-memory on, user memory at ~/.claude/CLAUDE.md, and project memory at ./CLAUDE.md](/assets/img/posts/claude-agent-memory/memory-menu.png){: w="411" h="148" }
+![Claude Code /memory menu showing auto-memory on, user memory at ~/.claude/CLAUDE.md, and project memory at ./CLAUDE.md](https://arunendapally.com/assets/img/posts/claude-agent-memory/memory-menu.png){: w="411" h="148" }
 
 _The `/memory` menu: user memory (global preferences) and project memory (`CLAUDE.md` in your repo) are the two semantic-memory files you edit most._
 
@@ -130,7 +130,7 @@ The workflow that follows: run `/context` to find the bloat → if *memory files
 
 The three ways you're likely to use Claude sit at different points on this spectrum. The bigger the reach into your machine, the more of the memory stack comes into play.
 
-![The Claude Cowork home screen with a toggle between Chat and Cowork modes, and a Project or folder selector](/assets/img/posts/claude-agent-memory/cowork-home.png){: w="380" h="284" }
+![The Claude Cowork home screen with a toggle between Chat and Cowork modes, and a Project or folder selector](https://arunendapally.com/assets/img/posts/claude-agent-memory/cowork-home.png){: w="380" h="284" }
 
 _Claude Cowork is Claude Desktop with a **Cowork** mode (note the Chat/Cowork toggle) that can point at a project or folder on your machine, which is what gives it procedural and episodic reach that plain chat lacks._
 

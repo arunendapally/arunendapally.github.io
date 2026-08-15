@@ -5,11 +5,11 @@ date: 2026-06-08 00:00:00 +0000
 categories: [AI, .NET]
 tags: [mcp, model-context-protocol, dotnet, csharp, claude, ai, aspnet, architecture]
 mermaid: true
-seo:
-  description: A practical guide to building MCP servers with .NET Minimal APIs — covering tools, transports, auth, and testing with MCP Inspector
+image: /assets/img/posts/mcp-servers-card.png
+description: "A practical guide to building MCP servers with .NET Minimal APIs: tools, transports, auth, and testing with MCP Inspector"
 ---
 
-MCP (Model Context Protocol) has quietly become the standard way to wire AI models to external tools and data. It went from 2 million monthly SDK downloads at launch in late 2024 to 97 million by March 2026 — which tells you the ecosystem moved fast. If you're building anything where Claude (or another LLM) needs to talk to your APIs, databases, or services, writing an MCP server is now the cleaner path than duct-taping tool integrations together.
+MCP (Model Context Protocol) has quietly become the standard way to wire AI models to external tools and data. The official TypeScript and Python SDKs went from roughly 2 million monthly downloads at launch in late 2024 to about 97 million by March 2026, and they have [kept climbing since](https://blog.modelcontextprotocol.io/posts/2026-07-28/). If you're building anything where Claude (or another LLM) needs to talk to your APIs, databases, or services, writing an MCP server is now the cleaner path than duct-taping tool integrations together.
 
 I've been working with MCP in .NET lately and wanted to put together a practical guide — from the core concepts to a working server with auth.
 
@@ -50,6 +50,7 @@ dotnet add package ModelContextProtocol.AspNetCore
 **Define your tools** — any class decorated with `[McpServerToolType]`, methods with `[McpServerTool]`:
 
 ```csharp
+using System.ComponentModel;
 using ModelContextProtocol.Server;
 
 [McpServerToolType]
@@ -59,12 +60,15 @@ public static class OrderTools
     public static object GetOrderStatus(string orderId)
     {
         // Your actual business logic here
-        return new { orderId, status = "shipped", eta = "2026-06-10" };
+        return new { orderId, status = "shipped", eta = "2026-07-02" };
     }
 }
 ```
+{: file="OrderTools.cs" }
 
-**Wire it up in `Program.cs`:**
+`[Description]` comes from `System.ComponentModel`, not from the MCP SDK, so that first using is easy to miss and the build fails without it. The description text matters more than it looks: it's what Claude reads when deciding whether to call this tool at all.
+
+**Wire it up:**
 
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
@@ -80,6 +84,7 @@ app.MapMcp("/mcp");  // exposes the MCP endpoint at /mcp
 
 app.Run();
 ```
+{: file="Program.cs" }
 
 That's it. `MapMcp` handles the Streamable HTTP transport — JSON-RPC routing, SSE streaming for long responses, and the MCP handshake. You don't write any of that yourself.
 
@@ -91,6 +96,7 @@ app.UseAuthorization();
 
 app.MapMcp("/mcp").RequireAuthorization();
 ```
+{: file="Program.cs" }
 
 Plug in your existing JWT/OAuth middleware and the MCP endpoint inherits it automatically.
 
@@ -108,19 +114,22 @@ This trips people up. Your MCP server *runs on HTTP*, so what's actually differe
 
 MCP Streamable HTTP is a **specific protocol layered on HTTP**. The message format (JSON-RPC), the endpoint semantics (`tools/call`, `resources/read`), and the streaming behavior are all defined by the MCP spec. You're not designing the API shape — the spec does that for you. Your job is implementing the tool logic.
 
-When Claude calls `GetOrderStatus`, it's not hitting `GET /orders/{id}`. It's POSTing a JSON-RPC message to `/mcp`:
+When Claude calls your tool, it's not hitting `GET /orders/{id}`. It's POSTing a JSON-RPC message to `/mcp`:
 
 ```json
 {
   "method": "tools/call",
   "params": {
-    "name": "GetOrderStatus",
+    "name": "get_order_status",
     "arguments": { "orderId": "123" }
   }
 }
 ```
 
 The SDK handles all of that translation for you.
+
+> Note the name on the wire. You wrote a method called `GetOrderStatus`, but the tool is exposed as `get_order_status`. When you don't pass a name to `[McpServerTool]`, the SDK derives one from the method: it strips an `Async` suffix, replaces non-alphanumeric runs with underscores, and lower snake-cases the result. Pass `[McpServerTool(Name = "...")]` if you want to pin it yourself. This catches people out the first time they call a tool by its C# name and get "unknown tool" back.
+{: .prompt-info }
 
 Here's the full flow end-to-end:
 
@@ -132,12 +141,12 @@ sequenceDiagram
     participant Backend
 
     User->>Claude: "What's the status of order #123?"
-    Claude->>MCP Server: POST /mcp<br/>tools/call → GetOrderStatus(orderId: "123")
+    Claude->>MCP Server: POST /mcp<br/>tools/call → get_order_status(orderId: "123")
     MCP Server->>Backend: query order #123
     Note over MCP Server,Backend: REST, gRPC, DB — whatever your tool code calls
-    Backend-->>MCP Server: { status: "shipped", eta: "2026-06-10" }
+    Backend-->>MCP Server: { status: "shipped", eta: "2026-07-02" }
     MCP Server-->>Claude: tool result (JSON-RPC)
-    Claude-->>User: "Order #123 is shipped, arriving June 10"
+    Claude-->>User: "Order #123 is shipped, arriving July 2"
 ```
 
 ## Authentication for Remote Servers
@@ -197,8 +206,11 @@ Once your server works in the inspector, wiring it to Claude Desktop or Claude C
   }
 }
 ```
+{: file="claude_desktop_config.json" }
 
 For remote HTTP servers, use `"url": "https://your-server.example.com/mcp"` with appropriate auth headers.
+
+If you want to see what this looks like once it ships, [portfolio-copilot](/posts/portfolio-copilot-claude-plugin/) is a Claude plugin I built that bundles broker MCP servers this way and puts skills and hooks on top of them.
 
 ## Key Takeaways
 
@@ -208,7 +220,7 @@ For remote HTTP servers, use `"url": "https://your-server.example.com/mcp"` with
 - **Test with MCP Inspector before involving Claude** — faster feedback and exact error messages.
 - **The ecosystem is large** — the official `modelcontextprotocol/servers` repo has reference implementations for GitHub, Slack, PostgreSQL, and a dozen others. Worth reading the source before writing your own.
 
-## Further Reading
+## References
 
 - [MCP Official Docs](https://docs.claude.com/en/docs/mcp)
 - [Build an MCP Server — Official Tutorial](https://modelcontextprotocol.io/docs/develop/build-server)

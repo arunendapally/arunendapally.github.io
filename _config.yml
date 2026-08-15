@@ -42,6 +42,15 @@ social:
     - https://www.linkedin.com/in/arunendapally
     - https://x.com/arunendapally
 
+# Search engine ownership verification. Paste the value from each console's
+# "HTML tag" verification method (the `content` attribute only, not the whole
+# tag). Empty keys render no meta tag, so it is safe to leave one blank.
+# Google › https://search.google.com/search-console
+# Bing   › https://www.bing.com/webmasters
+webmaster_verifications:
+  google:
+  bing:
+
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
 
@@ -53,6 +62,14 @@ analytics:
 # Page views settings
 pageviews:
   provider: goatcounter # now only supports 'goatcounter'
+
+# Newsletter signup, rendered at the end of every post.
+# Leave `buttondown_user` empty and nothing is rendered at all.
+# Create the list at https://buttondown.com, then put the username here.
+newsletter:
+  buttondown_user:
+  heading: "Get new posts by email"
+  blurb: "Occasional posts on AI tooling, architecture, and what actually worked. No spam, unsubscribe anytime."
 
 # Prefer color scheme setting.
 #

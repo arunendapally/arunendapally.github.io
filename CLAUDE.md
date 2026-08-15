@@ -1,5 +1,12 @@
 # Blog Content Standards
 
+## Post mechanics
+Front matter conventions and Chirpy syntax (prompt callouts, image attributes, code block filenames, embeds, mermaid, math) live in the `new-post` skill at `.claude/skills/new-post/SKILL.md`. Read it before creating or editing a post.
+
+Two rules worth repeating here:
+- Post `date` is always `00:00:00 +0000`. A `+0530` offset can be future-dated in UTC and Jekyll drops the post silently.
+- Use top-level `description:` in front matter, not `seo: description:`. Chirpy only reads `seo.description` for share text; the meta description and post subtitle come from `description`.
+
 ## Before publishing any post
 
 Run through this checklist before marking a post ready:

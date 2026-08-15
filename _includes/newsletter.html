@@ -1,0 +1,26 @@
+{% comment %}
+  Newsletter signup. Renders only when `newsletter.buttondown_user` is set in _config.yml.
+{% endcomment %}
+
+{% if site.newsletter.buttondown_user %}
+  <div class="newsletter card">
+    <div class="card-body">
+      <h3 class="newsletter-title">{{ site.newsletter.heading | default: 'Get new posts by email' }}</h3>
+      <p class="newsletter-blurb text-muted">
+        {{ site.newsletter.blurb | default: 'No spam, no schedule. Just new posts when they go up.' }}
+      </p>
+
+      <form
+        class="newsletter-form"
+        action="https://buttondown.com/api/emails/embed-subscribe/{{ site.newsletter.buttondown_user }}"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.com/{{ site.newsletter.buttondown_user }}', 'popupwindow')"
+      >
+        <label class="visually-hidden" for="bd-email">Email address</label>
+        <input id="bd-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+{% endif %}

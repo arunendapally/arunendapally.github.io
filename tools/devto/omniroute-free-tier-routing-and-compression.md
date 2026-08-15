@@ -1,17 +1,15 @@
 ---
 title: "The Claude Code Token Headache: Run It on Free Models with OmniRoute"
-author: arun
-date: 2026-08-07 00:00:00 +0000
-categories: [AI]
-tags: [omniroute, claude-code, routing, compression, rtk, caveman, free-tier, tokens, llm, ai]
-mermaid: true
-image: /assets/img/posts/omniroute-card.png
+published: false
 description: "A hands-on guide to pointing Claude Code at free-tier models through OmniRoute: auto-routing with fallbacks, stacked RTK→Caveman compression, and how to verify all of it actually works."
+tags: ai, claudecode, llm, productivity
+canonical_url: https://arunendapally.com/posts/omniroute-free-tier-routing-and-compression/
+cover_image: https://arunendapally.com/assets/img/posts/omniroute-card.png
 ---
 
 ## The token headache we all have
 
-I'm building a couple of side projects at the moment. Not as demos, and not as weekend projects I'll abandon at 80 percent. I want them in production, with real users, built [spec-driven](/posts/spec-driven-development-with-spec-kit/) from the first line. There's no shortage of impressive things built with AI agents, but they mostly stop at the prototype: the demo works, the repo gets stars, and it never has to survive a production deploy, a schema migration, or a bug reported by someone who isn't the author. I want to walk into that gap myself, on projects I care about, and find out exactly where it bites.
+I'm building a couple of side projects at the moment. Not as demos, and not as weekend projects I'll abandon at 80 percent. I want them in production, with real users, built [spec-driven](https://arunendapally.com/posts/spec-driven-development-with-spec-kit/) from the first line. There's no shortage of impressive things built with AI agents, but they mostly stop at the prototype: the demo works, the repo gets stars, and it never has to survive a production deploy, a schema migration, or a bug reported by someone who isn't the author. I want to walk into that gap myself, on projects I care about, and find out exactly where it bites.
 
 Which is when hitting a usage limit stopped being an inconvenience. Claude Desktop and Claude on the go barely dent my usage, but the moment I sit down to actually build with Claude Code, my credits disappear. The official fix is to wait out the reset window, and even that stopped working: I'd wait, get a fresh short-term allowance, burn through that too, and still hit the weekly cap before the week was anywhere near over. So I started rationing. Batching questions. Deciding whether a refactor was worth spending a request on. That's a bad way to run any project, but it's a useless way to run an experiment, because the whole point is to follow the problems where they lead.
 
@@ -38,7 +36,6 @@ Here's what it changes, what the settings actually do, and how I checked that no
 > - **Stacked compression** runs RTK then Caveman: tool output first, prose second, with code, paths and URLs left untouched. Early numbers on my own traffic: **5 percent** from RTK, not the 78 to 95 percent the docs quote.
 > - Don't trust the dashboard or the CLI on whether it's working. **Read the response headers**: `x-omniroute-decision` and `x-omniroute-compression` tell you what actually happened. I tuned a compression panel for a while with the master switch off.
 > - Free tiers are shared, rate-limited capacity. I build on them; **code review still goes to Anthropic**.
-{: .prompt-tip }
 
 ## What you need to run it
 
@@ -51,7 +48,7 @@ omniroute
 
 That's the whole install. Starting it is also the only recurring chore: one terminal window, one command, and it stays up until you shut it down.
 
-![OmniRoute v3.8.49 starting in a PowerShell terminal, showing the ASCII banner, the Next.js server on localhost:20128, SQLite storage initializing, and the health-check and scheduler startup lines](/assets/img/posts/omniroute/startup-terminal.png){: w="1472" h="821" }
+![OmniRoute v3.8.49 starting in a PowerShell terminal, showing the ASCII banner, the Next.js server on localhost:20128, SQLite storage initializing, and the health-check and scheduler startup lines](https://arunendapally.com/assets/img/posts/omniroute/startup-terminal.png){: w="1472" h="821" }
 
 Two things about that output. The dashboard is at `http://localhost:20128`, and the first time you open it, the default password is printed for you, so you're not hunting for credentials. And "Server did not respond within 60s" reads alarmingly, but the server output below it shows everything came up fine; on a cold start the readiness check is just slower than the timeout. Open the dashboard before you assume it failed.
 
@@ -62,6 +59,8 @@ On cost: I haven't paid for anything. The free tiers are genuinely free: no cred
 ## What OmniRoute actually sits between
 
 OmniRoute exposes the Anthropic Messages API, so Claude Code talks to it exactly the way it talks to Anthropic: same protocol, different base URL. It's agent-agnostic, though. [OpenCode](https://opencode.ai/) is the other obvious client, and the gateway doesn't care which one is in front of it. I use Claude Code, so that's what this post covers; OpenCode is on my list to try. Underneath, my install lists 295 providers, 126 of them with free tiers. Two of its features matter here: **auto-routing**, which decides who answers, and **compression**, which shrinks what they read. Both ship on by default in a sensible configuration, and that default is the right starting point. Don't hand-tune this before you've verified the defaults are already doing their job.
+
+_[Rendered diagram in the original post](https://arunendapally.com/posts/omniroute-free-tier-routing-and-compression/)._
 
 ```mermaid
 flowchart LR
@@ -86,6 +85,7 @@ The entire difference between "pay per token, one provider" and "route and compr
 | Cost per token | full price | free/cheapest healthy provider |
 | Provider lock-in | yes, one vendor | no, resolved per request |
 
+**`~/.claude/settings.json`**
 ```json
 {
   "env": {
@@ -96,13 +96,12 @@ The entire difference between "pay per token, one provider" and "route and compr
   }
 }
 ```
-{: file="~/.claude/settings.json" }
 
 `auto/best-free` is the part worth pausing on. It's a *virtual* model: OmniRoute builds it per request from whatever providers you actually have connected, instead of you pinning one fragile free tier and hoping it's up. The config line never changes as you add providers; the same string just gets more to choose from.
 
 Connecting your first one takes about a minute. Go to **Providers**, filter by **No Auth** (those are the open endpoints that need no credentials at all), and toggle one on. That's how I got started: OpenCode Free, one click, done.
 
-![OmniRoute Providers dashboard filtered to No Auth providers, showing nine open endpoints with only OpenCode Free connected, and a 1/295 connected counter](/assets/img/posts/omniroute/providers-no-auth.png){: w="1861" h="1009" }
+![OmniRoute Providers dashboard filtered to No Auth providers, showing nine open endpoints with only OpenCode Free connected, and a 1/295 connected counter](https://arunendapally.com/assets/img/posts/omniroute/providers-no-auth.png){: w="1861" h="1009" }
 
 The counter in the corner of that screen reads `1/295`: one provider connected out of 295 available. That was deliberate. Nine of those providers need no credentials at all, and each one is somewhere my code would go. Right now that code is side projects nobody uses yet, so my threat model is low. It won't stay that way: the moment they have real users and their data, "free and no sign-up" is a different conversation, and I'd decide differently again for a client repo. So I started with the one provider I already had a relationship with rather than switching on everything that was free, and added the second deliberately too.
 
@@ -135,7 +134,7 @@ That's routing picking the OpenCode provider and a request that cost nothing. Se
 
 There's one wrinkle when you set `ANTHROPIC_MODEL` to `auto/best-free`. Claude Code doesn't recognize the name (it's OmniRoute's invention, not Anthropic's), so it warns that it will assume a 200k context window and auto-compact against that:
 
-![Claude Code starting up against OmniRoute, warning that auto/best-free is not a recognized model, then switching to nvidia/nvidia/nemotron-3-super-120b-a12b and answering a test prompt](/assets/img/posts/omniroute/claude-code-model-select.png){: w="1905" h="786" }
+![Claude Code starting up against OmniRoute, warning that auto/best-free is not a recognized model, then switching to nvidia/nvidia/nemotron-3-super-120b-a12b and answering a test prompt](https://arunendapally.com/assets/img/posts/omniroute/claude-code-model-select.png){: w="1905" h="786" }
 
 It's a warning, not an error: the session works. But it means Claude Code is guessing at your context window, so if the model behind the route has a bigger one, you're leaving room on the table until you set `CLAUDE_CODE_MAX_CONTEXT_TOKENS` yourself. You can also sidestep it entirely by naming a concrete model with `/model`, which is what I'm doing above.
 
@@ -143,15 +142,15 @@ It's a warning, not an error: the session works. But it means Claude Code is gue
 
 The no-auth providers get you running, but one connection is not much of a routing table. The best free tier I've added since is [NVIDIA NIM](https://build.nvidia.com/): you sign up, generate an API key, and paste it into OmniRoute's provider screen.
 
-![OmniRoute's Add NVIDIA NIM API Key dialog with the key validated, and the Import only free models toggle switched on](/assets/img/posts/omniroute/nvidia-nim-api-key.png){: w="535" h="745" }
+![OmniRoute's Add NVIDIA NIM API Key dialog with the key validated, and the Import only free models toggle switched on](https://arunendapally.com/assets/img/posts/omniroute/nvidia-nim-api-key.png){: w="535" h="745" }
 
 **Check** validates the key before you save it, which beats finding out at request time. The toggle worth noticing is **Import only free models**. Leave it on and paid models are skipped entirely, so there's no path by which a stray request quietly costs you money. Given the whole point is to stay inside free tiers, that's the setting I'd want on by default.
 
-![NVIDIA NIM provider page in OmniRoute showing one connection named main with connected status](/assets/img/posts/omniroute/nvidia-nim-connection.png){: w="1616" h="359" }
+![NVIDIA NIM provider page in OmniRoute showing one connection named main with connected status](https://arunendapally.com/assets/img/posts/omniroute/nvidia-nim-connection.png){: w="1616" h="359" }
 
 Once the key is in, importing the model list pulls in a lot: 51 models, all free.
 
-![OmniRoute's NVIDIA NIM model list showing 51 active free models including GLM 5.2, MiniMax M2.7, Gemma 4 31B, Mistral Large 3, Devstral 2, Qwen3.5, DeepSeek V4 Pro, GPT OSS 120B and Nemotron 3 Super 120B, some with green checks and some with red warnings](/assets/img/posts/omniroute/nvidia-nim-models.png){: w="1878" h="951" }
+![OmniRoute's NVIDIA NIM model list showing 51 active free models including GLM 5.2, MiniMax M2.7, Gemma 4 31B, Mistral Large 3, Devstral 2, Qwen3.5, DeepSeek V4 Pro, GPT OSS 120B and Nemotron 3 Super 120B, some with green checks and some with red warnings](https://arunendapally.com/assets/img/posts/omniroute/nvidia-nim-models.png){: w="1878" h="951" }
 
 **Test all models** is the button to press first. The green checks and red warnings in that grid are the result: a model being listed doesn't mean it works through this path, and it's much better to learn that from a test sweep than mid-task. Nemotron 3 Super passed for me, which is why it's the one selected in the Claude Code screenshot above.
 
@@ -170,7 +169,7 @@ I turned it on from **Settings → Compression** in the dashboard, picked **Stan
 
 Fifty-five filters active, max lines, dedupe threshold, a full filter catalog: the page reads like a control panel that's doing something even when it isn't. The master switch was off, and the three counters that would have told me so were all sitting at zero above the fold. I changed the dedupe threshold twice before I read the amber banner. A settings screen that looks alive is more convincing than a counter that says zero, which is worth knowing before you tune anything here.
 
-![OmniRoute RTK engine page with compression running: 885,430 tokens filtered, 55 filters active, 204 requests, 5% average savings, with max lines, max chars and deduplicate threshold settings below, and the other compression engines listed down the sidebar](/assets/img/posts/omniroute/rtk-engine.png){: w="1840" h="963" }
+![OmniRoute RTK engine page with compression running: 885,430 tokens filtered, 55 filters active, 204 requests, 5% average savings, with max lines, max chars and deduplicate threshold settings below, and the other compression engines listed down the sidebar](https://arunendapally.com/assets/img/posts/omniroute/rtk-engine.png){: w="1840" h="963" }
 
 That's the same page with the switch on: 204 requests through it and the counters moving. Check those three first, because they answer "is this doing anything at all" before any setting below them matters. Worth noticing that **Code blocks** is unchecked, which is sensible (you don't want a filter rewriting your code) and is also the likeliest reason my average sits at 5 percent, since code is most of what I send.
 

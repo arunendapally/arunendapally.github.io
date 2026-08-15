@@ -15,6 +15,59 @@
 
 /* append your custom style below */
 
+/* Newsletter signup (_includes/newsletter.html). Inherits Chirpy's .card
+   background and shadow; only the form row needs styling. */
+.newsletter {
+  margin-bottom: 1.75rem;
+
+  .newsletter-title {
+    margin: 0 0 0.35rem;
+    font-size: 1.15rem;
+    color: var(--heading-color);
+  }
+
+  .newsletter-blurb {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .newsletter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    input[type='email'] {
+      flex: 1 1 16rem;
+      min-width: 0;
+      padding: 0.5rem 0.75rem;
+      color: inherit;
+      background: var(--main-bg);
+      /* Bootstrap's form-control border token, not --main-border-color: the
+         latter is #f3f3f3 in light mode and vanishes against the white card. */
+      border: 1px solid var(--bs-border-color);
+      border-radius: 0.4rem;
+
+      &:focus {
+        border-color: var(--input-focus-border-color);
+        outline: none;
+      }
+    }
+
+    button {
+      padding: 0.5rem 1.25rem;
+      color: var(--card-bg);
+      background: var(--link-color);
+      border: 1px solid var(--link-color);
+      border-radius: 0.4rem;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+}
+
 /* Chirpy centres #back-to-top in the leftover margin:
      right: calc((100vw - $sidebar-width-large - $main-content-max-width) / 2 + 2rem)
    With the content widened to 1600px, sidebar + content = 1900px, so that

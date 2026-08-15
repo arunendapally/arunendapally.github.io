@@ -4,9 +4,8 @@ author: arun
 date: 2025-11-08 00:00:00 +0000
 categories: [Personal]
 tags: [welcome, software-development, ai]
-pin: true
-seo:
-  description: Arun Endapally — Senior Technical Architect writing about building software and experimenting with AI
+image: /assets/img/posts/welcome-card.png
+description: Arun Endapally, Senior Technical Architect, writing about building software and experimenting with AI
 ---
 
 Most days at work are routine. But every now and then something happens, a tricky bug, a tool that surprises me, a decision that turns out to matter, and that's worth writing down.

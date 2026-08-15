@@ -4,8 +4,8 @@ author: arun
 date: 2026-06-17 00:00:00 +0000
 categories: [AI]
 tags: [claude, ai, productivity, developer-tools, workflow]
-seo:
-  description: How I used Claude to audit 642 files across a cluttered Google Drive, detect duplicates, rename ambiguous files, and reorganize everything — and the one technical blocker that almost stopped it before it started.
+image: /assets/img/posts/google-drive-card.png
+description: How I used Claude to audit 642 files across a cluttered Google Drive, detect duplicates, rename ambiguous files, and reorganize everything, plus the one technical blocker that almost stopped it before it started.
 ---
 
 Like most people, my Google Drive had become a digital junk drawer. After years of saving files without any real system — loose PDFs at the root, duplicate folders, mystery files with names that made no sense out of context — it had grown into 642 files across 16 folders with no consistent structure.
@@ -29,7 +29,7 @@ Once connected, Claude can read your Drive contents directly in the conversation
 
 ### Step 2: Install Google Drive Desktop (if you haven't already)
 
-The connector gives Claude visibility into your Drive. But to actually move and reorganize files — which Claude does by writing and running a script — it needs local file system access. That requires Google Drive Desktop installed on your machine.
+The connector gives Claude visibility into your Drive. But to actually move and reorganize files — which Claude does by writing and running a script — it needs [local file system access](/posts/get-more-out-of-claude-memory/). That requires Google Drive Desktop installed on your machine.
 
 Download it from [drive.google.com/drive/download](https://drive.google.com/drive/download) and sign in with the same account.
 
@@ -49,7 +49,7 @@ The fix: switch to **Mirror files** mode.
 
 Mirror mode downloads everything locally and creates a real folder on your machine (something like `My Drive` in your user directory). Once it's synced — which takes a few minutes depending on your Drive size — Claude can read, scan, and reorganize your files through that folder.
 
-![Google Drive Preferences showing Stream files and Mirror files options, with Mirror files selected](/assets/img/posts/google-drive-organization/drive-mirror-mode.png)
+![Google Drive Preferences showing Stream files and Mirror files options, with Mirror files selected](/assets/img/posts/google-drive-organization/drive-mirror-mode.png){: w="1028" h="742" }
 
 _Google Drive Preferences — select Mirror files under My Drive syncing options_
 
