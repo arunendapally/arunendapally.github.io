@@ -52,6 +52,11 @@ CARDS = {
         "Auditing and reorganizing 642 files with Claude",
         ["claude", "google drive", "cleanup"],
     ),
+    "claude-design-card": (
+        "How I Am Using Claude Design",
+        "Every screen on one canvas, then handed to Claude Code",
+        ["claude design", "ux", "mcp"],
+    ),
     "welcome-card": (
         "Arun Endapally",
         "Architecture, cloud, and getting real value from AI",
@@ -93,6 +98,8 @@ def render(name, title, subtitle, tags):
         d.text((MARGIN, y), line, font=title_font, fill=TITLE)
         y += line_h
 
+    if sub_font.getlength(subtitle) > max_text:
+        raise ValueError(f"subtitle {subtitle!r} is too wide for the card")
     d.text((MARGIN, sub_top), subtitle, font=sub_font, fill=MUTED)
 
     # Tag pill, anchored to the bottom of the card rather than the title.
