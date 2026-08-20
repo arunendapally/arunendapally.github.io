@@ -11,8 +11,8 @@ description: "How I am using Claude Design to build a fitness app: every screen 
 
 I am not a designer. I am building a fitness app on my own, and it has to be easy to use in a gym, one-handed and between sets. The loop went like this. Describe a screen to Claude Code, get working code back, run it, and only then find out the screen looked wrong, or looked fine and was annoying to use. Every fix meant another prompt, another build, another look. Nothing was broken about that loop. It was just a slow way to answer questions that had nothing to do with code.
 
-![The fitness app on a phone: an exercise card for Barbell Bent-Over Row showing a cue, a reason, one logged set, one set mid-entry, and a row marked not yet recorded](/assets/img/posts/claude-design-ui-ux-fitness-app/log-screen-phone.png){: w="308" h="562" .shadow }
-_What came out of it, mid-set. Set 1 logged, Set 2 waiting for numbers, Set 3 saying "not yet recorded" rather than sitting blank. Every one of those decisions was made by looking at the screen, not by describing it._
+![The fitness app on a phone: an exercise card for Barbell Bent-Over Row showing a cue, a reason, one logged set, one set mid-entry, and two rows marked not yet recorded](/assets/img/posts/claude-design-ui-ux-fitness-app/log-screen-phone.png){: w="360" h="800" .shadow }
+_The app this ended up producing, mid-set. Set 1 logged, Set 2 waiting for numbers, Sets 3 and 4 reading "not yet recorded" rather than sitting blank. The wording on an empty row is not something you get right by describing it._
 
 The usual answer to this is a design tool, and the one everybody names is Figma. It is far deeper than anything I am about to describe, with design systems, real-time collaboration and a plugin ecosystem Claude Design has nothing like. It solves a different problem to mine, though. A Figma screen is a picture of a screen, and somebody still has to turn it into code afterwards. I did not want a better picture. I wanted the screens themselves, early enough that changing my mind was cheap.
 
