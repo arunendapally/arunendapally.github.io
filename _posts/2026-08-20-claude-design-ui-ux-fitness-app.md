@@ -76,7 +76,7 @@ I expected to spend my time on layout. Almost everything I actually found was a 
 
 **A cardio row asking for kilograms.** The Incline Treadmill Walk had kg, reps and reps-left inputs, because it sat in a list of weighted lifts and quietly inherited their shape. You cannot log a fifteen minute walk in kg. It became minutes plus optional steps. That is a data model bug, caught by looking at a screen.
 
-**Four screens, three different headers.** Dashboard had icon and text navigation with a hamburger below 720px. Log and History had text-only navigation, no hamburger and no sign-out. Apps grow this way, one screen at a time, and nobody notices until the screens are side by side. Dashboard's pattern won and the other three were made to match it.
+**Four screens, three different headers.** Dashboard had icon and text navigation with a hamburger below 720px. Log and History had text-only navigation and no hamburger. Apps grow this way, one screen at a time, and nobody notices until the screens are side by side. Dashboard's pattern won and the other three were made to match it.
 
 **A page that jumped when you moved between screens.** The content width was different on different pages, so navigating shifted everything sideways. Nothing about that shows up in a description or a single screenshot. You catch it by clicking from one screen to the next. One width everywhere and it was gone.
 
