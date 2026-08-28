@@ -57,6 +57,11 @@ CARDS = {
         "Every screen on one canvas, then handed to Claude Code",
         ["claude design", "ux", "mcp"],
     ),
+    "openwiki-agent-documentation-card": (
+        "A Repo Wiki Built for Agents",
+        "Running OpenWiki on a Claude plan, no API key",
+        ["openwiki", "agents", "claude code"],
+    ),
     "welcome-card": (
         "Arun Endapally",
         "Architecture, cloud, and getting real value from AI",
