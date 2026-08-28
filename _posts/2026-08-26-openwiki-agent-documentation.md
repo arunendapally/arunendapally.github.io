@@ -4,7 +4,7 @@ author: arun
 date: 2026-08-26 00:00:00 +0000
 categories: [AI, Developer Tools]
 tags: [openwiki, langchain, claude-code, mcp, agents, documentation, context-engineering, microservices]
-description: "Every new agent session rebuilds the same understanding of your repo from scratch. OpenWiki writes a linked wiki you commit alongside the code, so the next session reads a page instead of the repository. How it works, how it handles going stale, and how to run it on a Claude subscription with no API key."
+description: "Every new agent session rebuilds the same understanding of your repo from scratch, and across a platform of many services that costs real tokens and real time. OpenWiki writes a linked wiki you commit alongside the code, so the next session reads a page instead of the repository. How it works, how it handles going stale, and how to run it on a Claude subscription with no API key."
 image: /assets/img/posts/openwiki-agent-documentation-card.png
 ---
 
@@ -12,15 +12,15 @@ You ask your agent to add a field to an endpoint. Before it touches anything, it
 
 None of that is wrong. It is exactly what a careful new joiner would do, and it is why the exploration is worth watching: you learn something about your own codebase from the order in which it looks things up.
 
-The trouble is that it happens again tomorrow. And in the session after lunch. The agent rebuilds the same understanding every time, gets to roughly where it was, and loses all of it when the window closes. What a human does once and remembers for a year, an agent does every single time.
+The trouble is that it happens again tomorrow. And in the session after lunch. The agent rebuilds the same understanding every time, gets to roughly where it was, and loses all of it when the window closes. What a human does once and remembers for a year, an agent does on every prompt, and you pay for it twice over: in tokens, and in the minutes you spend watching it catch up.
 
-It gets harder in a microservices estate. When the service you are changing calls three others, the agent cannot answer "what can that service do, and what does it hand back" without going and reading that service too. Now you are re-exploring several repositories to make one change in one of them.
+It stops being a rounding error on an enterprise platform. When the service you are changing calls three others, the agent cannot answer "what can that service do, and what does it hand back" without going and reading that service too. Multiply that across dozens of microservices and micro frontends and the rediscovery, rather than the work, becomes the biggest line in your context budget.
 
 [OpenWiki](https://github.com/langchain-ai/openwiki) is LangChain's answer. Its own description is a good one: *the self-maintaining wiki, built for agents, explored by humans*. It reads your sources, writes a linked Markdown wiki that you own and commit, and keeps it current as the code moves.
 
 > **TL;DR**
 >
-> - The exploring is fine. The **re-exploring** is the waste. Committed documentation makes it a one-off.
+> - The exploring is fine. The **re-exploring** is the waste, and it is paid for in tokens and in waiting, on every prompt. Committed documentation makes it a one-off.
 > - One giant instructions file does not solve it, because it is all or nothing. A **linked wiki with an index** lets the agent open only the page the task needs. Progressive disclosure, applied to documentation.
 > - Staleness is handled by **Grounded Claims**: each fact cites a versioned source span, so the tool knows which statements to recheck when that code changes.
 > - **You do not need an API key.** `openwiki integrations install claude` makes OpenWiki an MCP server and lets Claude Code do the thinking on the subscription you already have.
@@ -31,7 +31,7 @@ It gets harder in a microservices estate. When the service you are changing call
 
 The obvious fix is to write it all down in `CLAUDE.md`{: .filepath} or `AGENTS.md`{: .filepath}. Most of us have tried. It starts as fifteen honest lines and six weeks later it is four hundred, including a paragraph nobody remembers adding.
 
-The length is not really the problem. The problem is that the file is **indivisible**. It is read in full on every task, whether the task is fixing a typo or redesigning a schema. You end up choosing between giving the agent too little context and handing it far more than the job needs, and you make that choice again on every request.
+The length is not really the problem. The problem is that the file is **indivisible**. It is read in full on every task, whether the task is fixing a typo or redesigning a schema. You end up choosing between giving the agent too little context and paying for the whole file on a one-line fix, and you make that choice again on every request.
 
 A wiki with an index changes the shape of the choice. The index is small and always affordable. Each page is opened only when the task points at it. Working on authentication? Read the auth page, and nothing else.
 
