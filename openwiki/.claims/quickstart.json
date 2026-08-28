@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:961a1b8524be7b96201de46f70f20c3dafe63d791078c5f2620e825bca16b476",
+  "claims": [
+    {
+      "id": "claim_63e6845c5fab4d02a60ef40eb5db9ab6",
+      "statement": "The repository is a Jekyll blog that consumes Chirpy as a pinned gem and deploys to GitHub Pages through GitHub Actions, so the working tree holds content plus a small override layer rather than theme source.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/pages-deploy.yml#L1-L20",
+          "version": "repo-lines-v1:sha256:3b7886fc39d8b1aafe5ef273914f35c5dcddeb904774b74a4a276d266ac7e5fe:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0ZTA5NmE1NzY0YTBiOTQ5ZWQyNDMxN2NlYTQ4MTYwOGEwMmMzNGZiYTVhNzNlODA1ZDdjZWExYWM0MjYxOWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2NjIzMmVhNWMxY2Y4MTZiZjBhYTI1NTg0MzVkMDZlNzA5NmYyOGI3OWY2OGFjZmZjNjFiOWZkOWY5YTA5NGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEzNjZmNmMyNTRhYTNmNjA0YzA4MDlhNDRiYzJkMjMyNjZiYzllYTU5N2ZjYzFmYmE0MWVmOTEzYzU4ZjZjMTIifQ"
+        },
+        {
+          "resource": "repo://Gemfile#L1-L6",
+          "version": "repo-lines-v1:sha256:8b2c0724800d5540591cc8be44d8ce087ce693511ceb3cf1be6121a9b49c90fe:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODVmMDI1YmYwZTc4MTA0OTEyZjljMjQzNDU5ZTYxMDM1ODE3N2Y4OGY1ZjUxYTZlYzkzMDVhZjMyMjY2ZmY0NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmQzMmJlNmNhMDYyMjNmNDg5ZjlmZDI1ZGE1MDJlMzhlMjY4NTI4MDkzZDA1NTA4M2QzNTdkM2ExYTMyY2NiNCJ9"
+        },
+        {
+          "resource": "repo://_config.yml#L1-L5",
+          "version": "repo-lines-v1:sha256:ebe992d5ee4379771ced7d82a4cf49284998c2600f445be847f7cdbbb6fa85eb:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWQ0MzE0NTFlYzNiYWZiNzQxYTVlYmYzYzkxN2Q3MjEzYjdkZTZhYjA3YWMyYjY0MjdhMTNkMGJhNDUxNjFhOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGY0NmQ2OGI1NWRhMTQyY2JlYTUwNGJjZDUxYjUxN2NjNzZkMTNlZGZmY2U5MTEzY2Y3OWFkOTg3MTU3ZGY2NiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4d139fbd80f043ed9a5cac13bf0d652c",
+      "statement": "The only executable code running during the site build is the git-backed last-modified hook, so the build is otherwise pure content rendering.",
+      "evidence": [
+        {
+          "resource": "repo://_plugins/posts-lastmod-hook.rb",
+          "version": "repo-file-v1:sha256:05998202c3808487d7df0a34dc093de1ddd94579df06bbce6f0cb1cfb545e7cd"
+        }
+      ]
+    },
+    {
+      "id": "claim_53f342baec1848688324150e83713f10",
+      "statement": "Local setup is `bundle install` followed by `bundle exec jekyll serve` on Ruby 3.1 or newer, with no committed lockfile so local and CI both resolve fresh against the Gemfile.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L5-L18",
+          "version": "repo-lines-v1:sha256:0e39ca0f6210142c312178a537f55b92d45ef671b3f713744e5202937706dabd:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3NGYyYWEyN2VjNzlhZWJjMjhhNGZmYmE3YjA4NTg3ODczZjZiOGY1MWEzYWE2MjM1NjM0MmIzMmZlNGNmMGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwYWNjNWMwZDk1NTA4MWZhOWZkODMxNTljZTc0YTI5NDM3NDhmZjY1ZGVmYmVjNjRkNTg3ZGNhNTIzYWYxNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUzNjVmMWE1NDA4MWVkN2UxZDIzZTBiZmUwNTc2NjEwNDQ2ZTE2NzQzNzZiMDFjMmRhNDA4YTAxZmE0ODIyYjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYxNWZjMmM1MmRkZTQ0NWUzMDQyMGUzNjAyZWI1YjQwOTVlNDNjMDE3NmQxODE4MGQ1MmY3NmI0YmMwNzY2ZDcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_825a114e8f514780a67677038308d1da",
+      "statement": "On Windows a clean local build is not evidence that CI will pass, because livereload, detached serving, and html-proofer are all unavailable there.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L20-L22",
+          "version": "repo-lines-v1:sha256:8b5ecd37d6efa66dc3a6ca5b686475a72190b34cc5f2afee3fdb243ed16a7d4f:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTJhZTljZjhjODQ2NjFkOTRmYzYzNmZlMGNiMGUwZmUzN2ExYTk3OTYyODRkZDQ0NzRmZjRlZmEzYjUzOTAxMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmE4Y2NhMDNlZDRjMjBhZDI3ODEzM2FjNmEyNWNmMjQ1NmY1ZDQ5YjVmMWU5N2ZjMzMxYzhjN2E1YTg0OWRhMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmFlYmVkZGY1OWNjZWQ2MjI4MGRjM2JhODQ1NmE4Y2E4MGUxM2YyNTEzZTE3NzdmMDViMjA2M2NiMGExNTk5ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTkxNjIyNDVkOWRhYmNkNDRmMTE4ZjdjZDNhOWUxZDUwY2I0ODlkY2RmNTlmNTI3ZjU2Mzk5OWE4MThlY2E0ZSJ9"
+        },
+        {
+          "resource": "repo://THEME_UPGRADE.md#L136-L143",
+          "version": "repo-lines-v1:sha256:296779fd9f62e33a8bc79489bfb355d13a83ab96c9760f043506eade0f5518c1:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGIwYWU5NDk2MWI0NWU2ZDFjZjNlMWQ1ZmY1NGEzOWUyMDJiNTIxNDNjMTViN2Y0ZDk4NDc4NTA2ODlmZDNhYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTVkZTdiMDgwMTQ3YzE5NDViNjZlNmZkNTQ2MDNkNDliZWVkYzA3Mzc1ZGUyOGQwYWEyMWU2ODZlYzQzNDI1YyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8ce60752026b43f286e2a4f5e2c349da",
+      "statement": "Content standards and post mechanics are documented in `CLAUDE.md` and the `new-post` skill, both of which are excluded from the built site.",
+      "evidence": [
+        {
+          "resource": "repo://CLAUDE.md#L1-L9",
+          "version": "repo-lines-v1:sha256:fa86cef800c47638a0832b28ec0b890a96b697e59c8a906565b04bdf5473897a:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQ3YjRhNDVhNDcxNGFlYTlhMjRiOTEwNjI5ZTY3MGE5N2FmYWExYWViYTk3MjU5NWU1NTBlOWZmNDhiODg1YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTA5MjI2ZTY1ZjIzY2U0M2IyOWJjNmIzZWUwZTVjZDc3MDk4OGQ1ZmEwZTVkYjdjNWMzY2EzYTc4NDVhMDk2MSJ9"
+        },
+        {
+          "resource": "repo://_config.yml#L181-L188",
+          "version": "repo-lines-v1:sha256:7b94a1fda95c7daa1e449dde6326f4450109062864e3a883c854922943603577:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTdkYWYwOTExYjUxOTkyZDAyY2U0ZmJmNzk0NTVmYzEwOGI1MGUzMzAzNmJkMjRmMmRjMjA2YTc4NDQzNmFkZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmM2OWRmNzY3OGY4MTIxNzFhMDRkOGQ0ODlmYTU1ODc3MWJmOWQ2MjdmNmM3NTE1OWI3MzZjNDkwNDI1ODM3MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjBiZGE2MTNiYmNhOTY5ZTIxNjAxOGQ4NGIyYzZhNTkxOWZkNDM5M2Q1NTkwODBhMWM4N2ZmNjBjNGFmYTQxMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDdkODJkNjNhZjk4NTYyMWE3MjQxN2QxY2YxZGZkOGYyNzdlMDQ0YjlmM2IxY2M4ZDFjOGU4ZDUwM2Y1NjA4NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ec27efea93ad4b43abaa25fa1343363a",
+      "statement": "Two standing constraints apply beyond any single post: the site carries no advertising, and post voice never cites a specific number of years of experience.",
+      "evidence": [
+        {
+          "resource": "repo://CLAUDE.md#L26-L38",
+          "version": "repo-lines-v1:sha256:5b4f9249130ee96fa01bba38ae24aea26c5796d596c86197d01b5a03387584df:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVmMDVmMDM0MzQyM2Q0MzY3YzMyZjU2NGQyNWMzZjk3MGM0YjEwYzljNDBiMDc4MmQyMWIwYzFhOTU1MzZjOWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg2Njk2OTQ4MWI3NWU5Nzg0NThlOGNlZmI4YTRlODQ5MWM5M2QwNTYwYWEwZGZkODBjZTM5ZjRmMzQ1NTM4ZjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE3NzA4YWY5ZjJjM2QzOWRlZmEzYzJjODg2ZjRlYWNkMDUwMzM3MzU0ZDliMDdmNDdiZTgwOGNhNjUxYzY4NTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImViMWJjNWJjNGEyMzdmNTc4ZTZhZjRhNDE1ZDA2NDdmOTkxMGIwM2IzNjRlMWUyN2MxZjFkYmFhNzQzZDAzYmEifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.4.0",
+    "at": "2026-08-27T15:56:38.540Z"
+  }
+}

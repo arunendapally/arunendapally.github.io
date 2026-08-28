@@ -1,0 +1,33 @@
+# OpenWiki reads the working tree, not tracked files. Anything gitignored but
+# present on disk is still visible to it, so secrets are excluded here too.
+
+# Credentials and local secrets
+.env
+.env.*
+*.pem
+*.key
+*_rsa
+.claude/settings.local.json
+
+# Build output and caches
+_site/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+node_modules/
+.bundle/
+__pycache__/
+*.pyc
+
+# Vendored theme assets, not this repo's code
+_sass/vendors/
+assets/js/dist/
+
+# Binary assets carry no documentable logic
+assets/img/
+tools/social/
+
+# Post bodies are content, not system behaviour. The publishing conventions
+# that govern them are documented instead; the prose itself is not.
+_posts/
+tools/devto/

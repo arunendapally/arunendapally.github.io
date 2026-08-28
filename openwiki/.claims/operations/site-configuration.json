@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:71acde6bee77ecb873d865d96b4bdf6a4abf0f9c43c76edb11d0b9a27ebe8724",
+  "claims": [
+    {
+      "id": "claim_c28e999bc58f4f0a85465a1069e6eb26",
+      "statement": "The site-level `description` is the last fallback for a page's share text and meta description, so it is what appears when a page supplies neither.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L19-L26",
+          "version": "repo-lines-v1:sha256:0c5d0686c6f6a881cb16edaa8b85325d06eb2005d29919eaab2b909b24a1ca61:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2M2NjlkMDhhMGU1ZjFjZGZmYzYwMmU5ODg2Njg1MGVlOWI1ZGYwN2NmMzUwNzU2YTgwZWNiMmNjMWQ4ZTNmMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTEwY2U5NDIwODhmMTQ5Zjk5Y2Y5NGMwYjM5YTBiZTU0ZWVmZjljMTY4MGIwOGYyZDljMTk1NTIwNGEyMWZhYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTIzNjIwMzA3NDk2ZDI0M2NkMzZjMjk4MzhhMzg3YzA1NzUxZDRhNWU3OGUyNGM5NGZhMzY0ZTdhMzg3MDFhMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjYwZmJmZTZkMWNmMzliOTc4ZWQ4NTQxYTQ3NGY4OTk2ODk0Mjg5MmMyZjBmMDFhOTQ2NzZhNDk3NDY1YmQxZSJ9"
+        },
+        {
+          "resource": "repo://_includes/post-sharing.html#L9-L9",
+          "version": "repo-lines-v1:sha256:37d1ea34066c6e10fcc66bc5d3a6e2050522f8c4c20c15a44f861e5a47b810e8:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzdkMWVhMzQwNjZjNmUxMGZjYzY2YmM1ZDNhNmUyMDUwNTIyZjhjNGMyMGMxNWE0NGY4NjFlNWE0N2I4MTBlOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzdkMWVhMzQwNjZjNmUxMGZjYzY2YmM1ZDNhNmUyMDUwNTIyZjhjNGMyMGMxNWE0NGY4NjFlNWE0N2I4MTBlOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjIyYjg2ZTI3ZDJlNmI2OTI0MjQwM2Q4MjMwN2FmYTliZDIwYWI3YmVkYTUzODhkMmU3NzhjYjBjNWQ2N2FkZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWJhYzI4ZDY5Y2M0ZTE5NmM3ZDMyZDM1OTE4YjE4NmQ4NzVhN2I3ZDBmYzliMTlkYTE3ODRlNzc2MWRlYjRkNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b1906a3a3d8a4d0aa34831c9a53a7866",
+      "statement": "The canonical origin in `url` must match the custom domain declared in `CNAME`, because a mismatch still serves correctly but emits absolute URLs pointing elsewhere, which the internal-only link check cannot detect.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/pages-deploy.yml#L54-L59",
+          "version": "repo-lines-v1:sha256:61e85d5f51685170c61469072080169653535656dd95e1410c85e5e4d6abb784:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdjY2Y0YmYzMTQ2MWI5NzZmY2M4NzI5ZDE5NGExNDdkZjA5NzVjYjI3MTE3NTRlNGVhYjNlZWEwOTRkZTU3MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjc0NDM2MGM2MDkyZDM3YzNiMDc3N2FhOWJkOTU2ZDBmNWZhMmJiZTM2NWVmMTA4MmI3OGFiYWZkN2I4Y2E4ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTA1NDExYmU2ODQ1Y2VhY2EwY2FjNzUyOGI2OGQ0MmJiNTFlZTU1MzJkZTVmOTNiOTJlN2NlMGIyNTY4OTI3OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDUxOWFjNjRkZDYyODAwOGMwYTUxOWNkYzQyNWI3YmFkY2I5NjdmZDBkZTg2NjU4OGQ2MGUwMDY1YjBlYWIyNyJ9"
+        },
+        {
+          "resource": "repo://CNAME",
+          "version": "repo-file-v1:sha256:96eaca499fdf76a8c4a1278e350417716f9a5120c37bec97b2805598b35d9f9e"
+        },
+        {
+          "resource": "repo://_config.yml#L24-L26",
+          "version": "repo-lines-v1:sha256:c960e04f9f38b4b15d93b5bc176e0133d48c13a0b673a6fc45418a1a589326fa:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTAyOTExZjljYTQ5MWVmYmNjM2Y4NTg0NThkZmU3YWRmOGE1Y2MwOTQxYjZhZWYzMTA3ZjIzYzk2ZDIyNGQyMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTEwY2U5NDIwODhmMTQ5Zjk5Y2Y5NGMwYjM5YTBiZTU0ZWVmZjljMTY4MGIwOGYyZDljMTk1NTIwNGEyMWZhYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmYxZWRlYWY4YWVjZDFjNzk4OGQxZjZjYTIzMDZmYTg5ZjZmZTM2ZjQ2ZTFiYWJiMDM5Yjc2NjAxNDE4MjMxYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjYwZmJmZTZkMWNmMzliOTc4ZWQ4NTQxYTQ3NGY4OTk2ODk0Mjg5MmMyZjBmMDFhOTQ2NzZhNDk3NDY1YmQxZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_99ae5b56df034c05b082b3c39ddf31fd",
+      "statement": "`social_preview_image` supplies the site-wide `og:image` and is overridden per post by that post's `image` front matter key.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L97-L99",
+          "version": "repo-lines-v1:sha256:91db371667f2e77d82fed86ec29e09acc916fccfcde8f079547eac54dbcdb647:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNThjYmYxYmRkYWM3ZGI3MDQwNWE1MTljZDI0NjNmMmFkZjc2ZTdhZGRlNDM3NTRiZWY5Y2Q3M2I0Njc4Y2QwNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODdhMjAzZGI1ZDE3NGNhMTFkMzQyYjEzMzcxMGQ1N2ZmYzNkYzRjMmMzMjE0ODczNDkwNWJlNjg5YjAyMjg3NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDQ0YjU2YWJlYmRhNjk4MTQ3M2RmZmUxYzg1ZjVkZWEwMGViMWU2NDkxNDM0OTk3Yzg0MjgyNjdlOWNlMDUxYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTM2ZTZlYzA3MWIxZDgwM2JkMDMzZWEwZmQyNWRlNTNlYzY0ZTU0MjdjYmIzNjQ1NWRmZWNlZmFiYjYxNWQzZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e1b1a9c977cc48399a95e193c0c47d61",
+      "statement": "The search-console verification keys take only the `content` attribute value rather than a whole meta tag, and leaving one blank renders no meta tag at all rather than an empty one.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L44-L53",
+          "version": "repo-lines-v1:sha256:903a7f5f80f454e1e886d5a3d3d01cef243b772816f0d655e5458cb72a2e0a3c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI3NzVkN2Y5MWEzZWM3Y2NiYzJlYjAzMDAyMDlhYmE0N2JmMDM2ZWFhMDlmMzYzOGE1MzJmZWE3OGY2MTI5ZGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkxY2Q3MzA1NDA1NGQ5Yjg1Nzc2YWRjZDJlZmY3MWE1Zjc1ZmQ5NTI3YjQ3M2YxZjViNDcyMDM1NDI5YWMxZjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_787fe07d5aed4c72a91f8595968eef04",
+      "statement": "Assigning the `cdn` key prepends the CDN origin to every media resource path beginning with `/`, including the avatar and all post images, so an empty value keeps media paths site-relative.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L87-L92",
+          "version": "repo-lines-v1:sha256:f09cb5ff02b6146336e0c1a3940b9a16fee9aefa32ff6ad16f37a95ea11a29e0:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTgzNzYwZGMyMzEyYjA5MTA0NzU4NzZhMWRiYzNhYzZlODhjMmQyNmQ1OWExMzdmYTBiMWQxYTI1MTNlYjVkYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzFjODFiZDYzYzg0YjEyZTViZDMyODc0Y2YzZWI2MTYxN2QyYzA5YzgxMzA4Y2ZkOTI3NWY3ZmUzNzJhOGZiNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTJjOWZmZTIxZjBjY2Y2NWQ3NDljYzZhOWM2ZTJkMjNhYTVjODNmYjY2OWY1YzkyN2E4NTdkMWJmOTYxN2Q4MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODk1N2E5MWVlZGYwZGJkOWRkN2VmMDgyMGIyODA0Y2Q0ZjUwM2I4OTY1ZDBmNGQ1OGIzZjIwNGJkZWM0YWNkNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c72209178f2c4ba6bc9500f9218fac74",
+      "statement": "An empty `theme_mode` makes the site follow the visitor's system colour preference and render a light/dark toggle in the sidebar.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L74-L85",
+          "version": "repo-lines-v1:sha256:ab1d1e6ca88f3902143bc3bc7ce38facd441702403afd895ea8820a4fa0b669d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBmMDg5NDcxZDAxOWRiZGVhMjhjOGRkN2E1NGQwY2FkMWU3ZTVjM2YyYTg0MDcwMzIwMGY2ZjlmMmUwYTA3NWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3MGQxODc4MmYzZmU3M2JiMDdmYjk0NjhiNzE5ZWZiYTA1YjUzY2MzZTU1NjA1MWIzNTFjYjdhNTNjNWViZjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgzZGM2NzkxMTJkMmI4OGQyOGU3MjExNzlmOTU0ZTNmMDkzMmFlYmE3Zjc5MjBmOGYyMGFkM2M1NzM2YTJmMDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcyZGRhOTUwNTAyYWE5NTRkMjY0ZDQ3YTk0OTc0Y2VhY2IzMTg3YWM5MWExNDExYmYwY2YxYzIyNDIxY2M1MmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7fecae37d1774763abf9f003a7b2f8ad",
+      "statement": "Page-view counting requires both `analytics.goatcounter.id` and `pageviews.provider`: the post layout renders the counter only when the provider is set and the matching analytics ID exists.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L56-L65",
+          "version": "repo-lines-v1:sha256:4e697ac74a5dbd00bff95fc18eaea7411f13115e5546a62418b66171292a3f8d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5MWY1OGJmYzVhNGE5NzU2MjM2ODlhZTYyZGNhYTU5MTI2MzVkYzFiN2Y4ZGRlMDI1MGU0NWYxYTcyNTZmMTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUwZDc2ZDU4MmFhMWFlNjFmOWUxN2I3YTI0NTMzMTFmYzlkNDM1ZmRkZWM2NjhkNjRkNzBmZGY2OWNiMDRkZjQifQ"
+        },
+        {
+          "resource": "repo://_layouts/post.html#L88-L97",
+          "version": "repo-lines-v1:sha256:72b70c67bf61728888ae31b63102fc198860129bde66230a85fdf8e57edbb188:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2NWE5ZTQyYWQ0MWQ2Y2YyOTcxNGZhYmQ4NjI4NmU0Y2E1ODZhZDNjNWZkNmRlODZhYmJmNzQ0NjIwMDQ4NzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwMzRjY2I0MzA3MWY5MGUxNzJmZjY3MmU1Njc2OTg0MDYyODExNGY2ZTIyZDg0ODAwZGE0MmMxNTFkYTQ0ZTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFkZDZmYTk3YTY0NDEwOGYwZjU0ZjUyMGRiOTEzNjZiNWViNDQwMWIwNmI1NWViYjM5NThkMzdlZDUyN2YyY2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBiMjI0YTRlZjJiZmZjOTdiNTgxN2RjOWNiNzU0MWVjNzA2Yjk5ZDdiMTg0ZGYwYzcwZjUyMWZjZTZkNGUzNjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ba31bdeb7e894bee8729c03b360bca91",
+      "statement": "`compress_html` is configured to strip whitespace and comments in every environment except development, so served development HTML differs structurally from production output.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L172-L180",
+          "version": "repo-lines-v1:sha256:15661ae0b193f95775950a37debe9d7e372266b569e835e3c6839528cbc5d8e2:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGJlZTQ4YzEyZWM0MDM5YTNjNDQ0YmY1NmE2MGY3ZTQ0NWYyNDQxYTExOTEwMjcxYjRkNjdjYjU5NzU1ZDc4NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmY1MGRjMDNkZjFmMzQwOWUxM2RlNWY5ODM4OTYxOWJjZDQwNzAzNDBjZjc2MThkZGU5MWZmZWFlOGZjMzE3MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjFiNmZlYTkyMzExZmM3YmVjNjBhNWI3ZmMyNjg1MTkwM2E2YjY5NTcwYjcxZDdjOGUzOWYwYTFiZmQ1NGYwZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a57e44ff98604625b94638bc84e9d724",
+      "statement": "The `exclude` list keeps `tools` out of the build, which is load-bearing because the dev.to exporter writes front-matter-bearing Markdown into `tools/devto/` that Jekyll would otherwise publish as duplicate pages.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L181-L188",
+          "version": "repo-lines-v1:sha256:7b94a1fda95c7daa1e449dde6326f4450109062864e3a883c854922943603577:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTdkYWYwOTExYjUxOTkyZDAyY2U0ZmJmNzk0NTVmYzEwOGI1MGUzMzAzNmJkMjRmMmRjMjA2YTc4NDQzNmFkZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmM2OWRmNzY3OGY4MTIxNzFhMDRkOGQ0ODlmYTU1ODc3MWJmOWQ2MjdmNmM3NTE1OWI3MzZjNDkwNDI1ODM3MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjBiZGE2MTNiYmNhOTY5ZTIxNjAxOGQ4NGIyYzZhNTkxOWZkNDM5M2Q1NTkwODBhMWM4N2ZmNjBjNGFmYTQxMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDdkODJkNjNhZjk4NTYyMWE3MjQxN2QxY2YxZGZkOGYyNzdlMDQ0YjlmM2IxY2M4ZDFjOGU4ZDUwM2Y1NjA4NCJ9"
+        },
+        {
+          "resource": "repo://tools/devto-export.py#L20-L23",
+          "version": "repo-lines-v1:sha256:fa3d560bcd0e58bad5a0dbf47593ec49f6c992efe7e1cc790eb16d30a336f87b:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTVhYjE5MDZmYjY0M2Y2M2Q3NDgzYmY2OWYwYWM2YmE4ZjkxNTBjM2UwNmU1MTNiYjdlYTNiN2E5YTFkNDM1NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODljNmZiZDg2NjBlNDNkMTk2MGFlODFmNGM0MmI5NmYzZmY5Nzc3YmIxZGU2ZDU3NWE0M2M1MGE0Y2M1MTg2OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDY0M2VkYjE4ZmI2OThhOTZiYWIxMTVlYzBmMzFkYmY0YzBlMGI0MzhlMDg5OTI3ZWIxNzVmOWE0YzI1Y2JhZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2MxYmQ1N2VmNjc2OWRkMTdhZTNkOTM3ZjcwODMxZjg0ODJlMjg1Njg2Yzk3YzJkNTk1NTVlNjcyZDA5Y2U2OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c010fb77353247338563a7606ee20d00",
+      "statement": "`_data/authors.yml` defines the author key posts reference, and the post layout falls back to the site social name when a post names no author.",
+      "evidence": [
+        {
+          "resource": "repo://_data/authors.yml",
+          "version": "repo-file-v1:sha256:d21fb2abd277a12daf6c06ca9e9225c1e1e17a52d4438f40eb534e3d8ccf87a0"
+        },
+        {
+          "resource": "repo://_layouts/post.html#L70-L86",
+          "version": "repo-lines-v1:sha256:e15a97e9bf05399b9d049963c667527eca4829775556d950a0c626d12d502c24:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0MDZkZDJlYWM3MTNhNGZlZjcwOGY3MjRlNWE1YTJhNDY1YmE4NTk2NTAzMzhiOTNkOTg2ODYzNDg5M2E3ZjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwNmE1ZmEwM2FjMDJlNmJlN2VmNTI5ZjYxMDRhNzY4NGQ3NWE5ZjlmNWMzZjFlNWQ2Y2Y3NzQ1NDQzZTg2NmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZiYTZiNGFkNzUyNmQ2Mjk0YTNhZTM1YmM1YmY0ODQzMzQ0ZGNhNWIwZGQzN2JjODUwMzMwNGFmNmI0MjA3MjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkyYjkwZjJmNzQzODA2YTE5NWU5ZTFjZWMyZjMyYjUyMmFkODE0ZmI5ZDA2NzYxYWZhMDllM2RiNDAyNTRjZGQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8f5d2da46ad14af4ab5146fdf1db1f4e",
+      "statement": "Contact entries in `_data/contact.yml` omit `url` when the theme can derive it from the corresponding `_config.yml` value, and `noblank: true` opens a link in the current tab instead of a new one.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L28-L43",
+          "version": "repo-lines-v1:sha256:e3d12547fed861c11ec019d37204df17e36bdee7e88b3a388a5c049845d287f9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkYzNmOWFiNjU2NTI3ZGQwOTIyYTdiZGNlZDBiZjg1OTIxZjU3YTM3MzFmNWEzMDllNjFiOGI2MzE3MTU4OGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA1ZDI2MzAzN2VhMmRjYjc5OWUyZTczNTMwMWRhMzQwODRmNzRkYzg2NjAwZjEzODNjNzc3Zjk4NjhlMTAwNWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk4NzNmZjJkZjEwZjUzOWI3YjM4MzIyNGNkMzUwMDA4NjM1MjEyMjBjZjc5MDI4MWEwNTU3ODdmMDhjM2NkMTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUxY2ZiNzlhYWNkMWEyNTY2YzExOTQyOWU1MGM1YjMwYWNmMTUxZGYyYzcxYWZiYzgzYjJlNDEyZTgzMmUwYjkifQ"
+        },
+        {
+          "resource": "repo://_data/contact.yml",
+          "version": "repo-file-v1:sha256:7b082f2db9c2494d076150e509e16c79e78384921a1b5b1d94e20015ae246f15"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.4.0",
+    "at": "2026-08-27T15:56:38.540Z"
+  }
+}

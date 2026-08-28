@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:dc69f957b6274ea8d2b175039904af0ec5cd638978f29d37eb638c999a078a6f",
+  "claims": [
+    {
+      "id": "claim_7d941c290d8e4c43bc1a72e2382acde4",
+      "statement": "The site consumes Chirpy as a versioned RubyGem rather than vendoring a fork, so layouts, includes, and styles resolve from the installed gem at build time and only deliberate overrides exist in the working tree.",
+      "evidence": [
+        {
+          "resource": "repo://Gemfile#L1-L6",
+          "version": "repo-lines-v1:sha256:8b2c0724800d5540591cc8be44d8ce087ce693511ceb3cf1be6121a9b49c90fe:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODVmMDI1YmYwZTc4MTA0OTEyZjljMjQzNDU5ZTYxMDM1ODE3N2Y4OGY1ZjUxYTZlYzkzMDVhZjMyMjY2ZmY0NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmQzMmJlNmNhMDYyMjNmNDg5ZjlmZDI1ZGE1MDJlMzhlMjY4NTI4MDkzZDA1NTA4M2QzNTdkM2ExYTMyY2NiNCJ9"
+        },
+        {
+          "resource": "repo://_config.yml#L1-L5",
+          "version": "repo-lines-v1:sha256:ebe992d5ee4379771ced7d82a4cf49284998c2600f445be847f7cdbbb6fa85eb:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWQ0MzE0NTFlYzNiYWZiNzQxYTVlYmYzYzkxN2Q3MjEzYjdkZTZhYjA3YWMyYjY0MjdhMTNkMGJhNDUxNjFhOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGY0NmQ2OGI1NWRhMTQyY2JlYTUwNGJjZDUxYjUxN2NjNzZkMTNlZGZmY2U5MTEzY2Y3OWFkOTg3MTU3ZGY2NiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_fa15b992b1794580b0c4618b4c0391b9",
+      "statement": "The `tabs` collection is configured with `output: true` and `sort_by: order`, which is what makes each tab file's front matter `order:` key determine its position in the sidebar navigation.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L146-L149",
+          "version": "repo-lines-v1:sha256:b7e154f545adc2f944687bf1f665bb17054f95b2c740a1e7360aad9b6513a82a:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2Q2NTI0MmEwMWQxYmJkMjRkYmNkYzVhMmYxOTQwMzA0NzNlYjMzNDdhYmIxODE4N2NmNjhmNDVmYjg3OTZkOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzZlNjkzMDY3NzNlMWYyZGM0NjYzMzk2NzliNzZmYTg2NzZjYWFmMTAwMzhhMzg3YjljMmQ2YTdkNTUyMDYyYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjRiZDRiY2E3ZGNkOTAwYTRiMGJmMjFhNGNiOTZhMmFiM2I4OGM0MzM3MTEyZmYyYjhmM2M2YjY1ZGIxOWU5MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTdjNmIwYmUyZTdkN2YzM2VkOTgxYWNiNGE1YTc3ZTg2YTYzYmI3ZTk1YzQ3YTA4ZmI3NmRmMGM5ODNlNjdiNCJ9"
+        },
+        {
+          "resource": "repo://_tabs/categories.md#L1-L5",
+          "version": "repo-lines-v1:sha256:c0697bd13a5d2007040a7d477b3693d87f036bb81ad4c8dd3b7be5379f69d721:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzljNzg0NzhjOTcxODdiZWZkZjBmM2FkYjdiYWRjNTAxODNjZDAyOWJjZWEzNTliZTc2NmRkY2EwZDUwODBmZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzljNzg0NzhjOTcxODdiZWZkZjBmM2FkYjdiYWRjNTAxODNjZDAyOWJjZWEzNTliZTc2NmRkY2EwZDUwODBmZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6bf5dab2943e4fa88935d1b1ab7229b5",
+      "statement": "Scoped `defaults` supply layout, TOC, comment, and permalink values to every post and tab, so individual content files never declare them.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L151-L167",
+          "version": "repo-lines-v1:sha256:3bf22b1cb44822f5cd87bbed471a2ad269718670c156207c3214f2b57d11b4cc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFhNTEzY2JhZDMyMjdhNzNiYmU5ZjdlYzNhYmQ4ZjkxZDc0ODhjYjk3Y2IxMDlhY2NmYTQyNzA3NWRlMDQ0YWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlNTg4MzhjZmE5OTRmMDg0ZWYwNGY2NTE0MzBmNGQ3YzYwYzlmNjQ5YTM3Mzg0ZDlhMDMwNDM3MTU5MjMxZjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhhYzg4YTEzZTUwMjY3MjM2ZmQzN2Q2ZTExYTM5M2EwNWI0NTcxYjdmNmVkZGZhMzRiNjQ0MTAyOGI4ODljOGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVhZDEzYWM1Yjg5MDUwZWZlYzZhNzYxOWYzZDBiMzBmZjI1M2E0MWRhNWI0YTA1NjA3ZDk2MmFkMDIyZTFhNzcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4c7dfb10157c4da690e59d76eea75e96",
+      "statement": "Comments are disabled through the posts `defaults` block, so configuring a provider under the `comments` key alone would not enable them on posts.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L103-L107",
+          "version": "repo-lines-v1:sha256:cb4298fd828126676721f7071c0bfac1dce87e47010084a9eef6dd417c50d1ea:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2M4Y2Y1ZmUyZGViZTYxNWY1OWRhZDZlYjQ1MjA2MjY2ZmE1OTYwYWE5Y2Q3MWY3NjkzYWJlZGI2YmQ4NDBjNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTM2ZTZlYzA3MWIxZDgwM2JkMDMzZWEwZmQyNWRlNTNlYzY0ZTU0MjdjYmIzNjQ1NWRmZWNlZmFiYjYxNWQzZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTliNDhmOGJjOGZmYmJiYTI5MmFjNzg3M2U0Yjg4YzdjMmIwMTA3NDJkY2ZkYTdmNzljZTVjZTMwM2QzNjcwOSJ9"
+        },
+        {
+          "resource": "repo://_config.yml#L151-L158",
+          "version": "repo-lines-v1:sha256:f7594681d272fd74d908e27cdf93cf9036803b3f2b702ba11f095c3dfa4803a1:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWE1MTNjYmFkMzIyN2E3M2JiZTlmN2VjM2FiZDhmOTFkNzQ4OGNiOTdjYjEwOWFjY2ZhNDI3MDc1ZGUwNDRhZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzExNjEwOWEzZGZhODgwMmIxNDRjZGE5ZjE4YmY4MjkwOGQyNWM5NzYwYjYwN2NkZWI0ODk1YjUwY2ZjZDNmOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGFjODhhMTNlNTAyNjcyMzZmZDM3ZDZlMTFhMzkzYTA1YjQ1NzFiN2Y2ZWRkZmEzNGI2NDQxMDI4Yjg4OWM4ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzZlODcxOTZlMmE4NzdkOWU5NTg5YzQ3ZmI2OGI3ZjgxYzBiMWFmMzFlNmVmMWVlMTUwYjVkOWNmNTE5NzQ2OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c5b9d00434b1486c8000c002ca9a67d6",
+      "statement": "Posts publish at a date-free permalink of `/posts/:title/`, so a dated post filename maps to a URL containing only its slug.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L158-L161",
+          "version": "repo-lines-v1:sha256:ff32c782e44e3b4affa1cc4c4d8877ea8522f886682b391f314ad6153324aaed:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzExNjEwOWEzZGZhODgwMmIxNDRjZGE5ZjE4YmY4MjkwOGQyNWM5NzYwYjYwN2NkZWI0ODk1YjUwY2ZjZDNmOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzczNzFiYjhiOGVhMGQ1YWRhYjUwODNmN2IyZDk4ODRjYjFmMDkyZDg3YTA4NTgxNGQ0NjMzMzY2NmY0M2JlNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzlhZTEwNGRkMDVjN2I2NjAzNDU1MWYzYWFlMzEyYTFlOGQwMzE3YjllMDUzYmQ5ZGRhZTA5YTdiNjI4OGMxMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTMxN2IzODgxMmVmZjRiMWUwZWY2MTllN2EwNDA3YzM5NjY3NGJlMTc0ZTYxNTY4Y2VmZDU1YzA1NjQwZmNmNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3f2cdb16f4bc435fb279340c8c95bca5",
+      "statement": "Category and tag listing pages are generated by jekyll-archives at `/categories/:name/` and `/tags/:name/`, and the post layout links to them by slugifying and URL-encoding each name at render time.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L190-L197",
+          "version": "repo-lines-v1:sha256:2a95498248ecb604fa5d6b225e81e4b310f0745dce40844db55099742b6fdfaa:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2Q2NTQ2YWY0MTgxMjM2OWQ2NGUxNzA1NWQ3YTQ1NjM5NjQzOGJiMTQ4YmNhZjAxNzgzMThiMTM2MDdhZGUzMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzM5MWQ2ZjJlYjVkYTc3M2JhY2UzZTQyMDI2N2Q0Mzc3ZTlmNTlkOGU4YmNlZGQ0MzBmMjVmM2IyODJjN2NlYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjBmYjgxZjdlN2EzYmU1ZTgyZTM0ZmE3YjhkYmVmYTY5ZGYxMjQ0MDRhOTA3OThjOWYyNzNmYWY4OTg4YzUyNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://_layouts/post.html#L130-L155",
+          "version": "repo-lines-v1:sha256:1336d3e53fb1dc9720baa47e86b6a51c0c3b9307a1d4acf76b20d4dbd5746c49:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY2YTJjMjc5MDk2M2NhZDlkNWVmZjUwMmRlZmZiZTFkYWViMDAzNGFmYjA0YjIxNjlmZDczNzEyNzc3OWIxMjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzMzc1MWQ3YzhlZDY1MDM4YjAyODk1YmYxOWVhNmE1NmE3MjBiNjEzMzI5ZTU3ZTAwNzNkNDU5ZGFiOTZjMjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMyMjU5ZDdiNzIzMjA1ZjY0MDVjMDg0M2NkM2M3ZDYwNzEyODc5OTQwODI1MTJhNjk4YTQ4NDhmZTdlNWIxNzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU0YmUyNTljYzFmNGQ2MjMxMDZmNWJmYTZlNjliZDY3ZjczZTk5NzcwYzRhMTc1OTA3NzA5N2ZiZWZiM2I5YjAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2774b30c2c534df79efa288ed5327af3",
+      "statement": "The `posts-lastmod-hook.rb` plugin derives each post's `last_modified_at` by shelling out to git during the build, treating a post with more than one commit as edited and reading the date of its most recent commit.",
+      "evidence": [
+        {
+          "resource": "repo://_plugins/posts-lastmod-hook.rb#L5-L14",
+          "version": "repo-lines-v1:sha256:7874e27e0796f706f4c2c6c8c07845e5c0fb6aa28d20f30b3ad124b15e3abd81:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyY2YzMGQ4NTUxMWFmOGEyMzA5ZmRiNjgyZDJiYjg2YWJjMTZjZmMwM2EzMGJlZDM2ODdjNDI2ZmI2NWJiZTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3YjZjNjU4OWRiZjI3MDkxNTI4ZmMyMTNlYTNhM2M2YmVmNmYzNzBmNjQ1ZTdkNzc3ZTMyMTAwMzYxYzc2NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZmMzY1MDI1YWY0NzE3MDIzNjk2MzRiZmY1NzhmZmYxNjZkNmI1NGFhYTEzMWVlY2ZjZjUxNjgzMzBhZWYzYzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e38f79f7a9c546ceabb39039b92f3c83",
+      "statement": "Because the last-modified value comes from commit history rather than front matter, a shallow clone would make every post appear unmodified, which is why the build must check out full history.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/pages-deploy.yml#L36-L39",
+          "version": "repo-lines-v1:sha256:b8b479e7d9c2fa7ee111e3388fa905346a87c04fdc15a391389562d8b1061eff:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTU3ZjI5Njc4OThjODA2NzlhMTFlYjUyMmFkMWQxOTAyMTA4ZDg5Yjc2ZDg0YTc2NDA3OGNiMDQwOGViM2NjMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmMxNjgyMGIzNzg3ODJlYTMzMTdhYjVkZDQ0ZGUxYTliMzliNmNkYWQyMzM5OGViOTQyNWQ4MmZhNmRmYTM4YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmNmYjE5ZTFjZDVmNzcwNGE4MjFkNzBiZjBmYzE0NGQwYmEwZjcyODA2ODBmNDNmMDk5NjI4OWU4NTQ5NTk5NCJ9"
+        },
+        {
+          "resource": "repo://_plugins/posts-lastmod-hook.rb#L5-L14",
+          "version": "repo-lines-v1:sha256:7874e27e0796f706f4c2c6c8c07845e5c0fb6aa28d20f30b3ad124b15e3abd81:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyY2YzMGQ4NTUxMWFmOGEyMzA5ZmRiNjgyZDJiYjg2YWJjMTZjZmMwM2EzMGJlZDM2ODdjNDI2ZmI2NWJiZTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3YjZjNjU4OWRiZjI3MDkxNTI4ZmMyMTNlYTNhM2M2YmVmNmYzNzBmNjQ1ZTdkNzc3ZTMyMTAwMzYxYzc2NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZmMzY1MDI1YWY0NzE3MDIzNjk2MzRiZmY1NzhmZmYxNjZkNmI1NGFhYTEzMWVlY2ZjZjUxNjgzMzBhZWYzYzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e7f4f215a02b4886ac152645bc0ba659",
+      "statement": "The post layout renders an \"Updated\" timestamp only when `last_modified_at` is present and differs from the publication date, so a post committed once displays a single date.",
+      "evidence": [
+        {
+          "resource": "repo://_layouts/post.html#L30-L38",
+          "version": "repo-lines-v1:sha256:52969dba112d306accd9fa0e9d7f1bfda02d72807c36715e7bf42e7c3fece31d:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDljYjEzOGUyN2NiZWIwNGI5ZTE0NjUwN2VkZWEyODBmZjM2NGVkNDEyODg0ZThjN2Q3Y2FkM2VkZmVhMDdlYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTRiZmRkMDdjYWU2ZjQ5NjBhNWEzNzFlZDI3N2U1NmE0MWRkMjJmOWIyNmJhNjMxMDExMjcyY2M0NDkwYWZhYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_cc9c29a747374ca1a01cb807380b30fe",
+      "statement": "The home page and three of the four tab pages contain front matter only, delegating all markup and listing logic to the theme's layouts.",
+      "evidence": [
+        {
+          "resource": "repo://_tabs/archives.md",
+          "version": "repo-file-v1:sha256:7228f6876f0ff61151bb5b27ae07692b6f7872d7817a89a91c989563d51b3b58"
+        },
+        {
+          "resource": "repo://_tabs/tags.md",
+          "version": "repo-file-v1:sha256:9a33f76f395b1cc1c17b483b0d34c9ea95098683803a9461ac189733cce5c2a1"
+        },
+        {
+          "resource": "repo://index.html",
+          "version": "repo-file-v1:sha256:3e305e0931a03218bd1ac60769fd90dfca5a02e16c207fd53d280c5d9b71a7cf"
+        }
+      ]
+    },
+    {
+      "id": "claim_21f35270c2e3445b9901ce4326ed61d9",
+      "statement": "The home page paginates at ten posts and the site is served from the domain root because `baseurl` is empty.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L127-L130",
+          "version": "repo-lines-v1:sha256:d77f9548640965ca0e23582f942e471fc24d14d8f8e2add4712c6dead667acf9:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGY0NWJkZDRjMWQ3M2NhODVmNTE0YzJjYjFiYjFmOTE2NWFkNzdkYzU1NDRlNDkyNzE2ZjE4OTgxY2MwZWExOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWIzMzA0NDMyMDlmMTM2MzViYmQ2OWNkYmQ3MDQwNTY3NjU5NTI0NGJiZmZiNzBjNDg0YzVlMjEwM2Q3ZDAyZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWU1NTBmN2U4NGJkMGM5ZWQ4ZTU3YjQwM2U3ZmYwYWQwN2M5M2M1ZmZlYThkZWY2M2YxZDY3MGM4NDIyZmE2YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYThmMTYzZjVhNDVjM2RhYjUxMzk4ZGM5ZmViZTYyZjc3YjExMWVmYTVlYjU1ODQ3MWYwMzM0ZmExYTVhYjZhMSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.4.0",
+    "at": "2026-08-27T15:56:38.540Z"
+  }
+}

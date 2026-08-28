@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:1fbe160cac1c03d8197445395895b0c4462ed09dd01f03f4ca07c34b1abeef2f",
+  "claims": [
+    {
+      "id": "claim_e13a2e9917b14457bb5a3a0294eddf5b",
+      "statement": "The three image scripts share one visual language, using the same dark background and, for the two card renderers, the same accent orange, Roboto type pairing, and card furniture, so a palette change in one is meant to be mirrored in the others.",
+      "evidence": [
+        {
+          "resource": "repo://tools/linkedin-banner.py#L10-L18",
+          "version": "repo-lines-v1:sha256:f443449d2e9d81bc17eca47730b678e7cbbb41ebe3a2c98c5a5bf1fd0ccc45e4:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTRmYWNmMTlmOGQ2MjE3NmY3YjA5ZTRiOWRiOWNkODBmZTJlN2JiODI4ODViOGUyZDVjYTNlMzY0NzA1MWQ3ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODNkMzc2OWI5YjA2ODE3ZWZlMDFlMTdjNjA5ODQ4ZDFlZTkyY2RmYWJkMzdhNTViOTM1MjRjMWU1ZWIzNjUxNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWY1ODQ4M2M3OTQxMDg5OTMzMjBmOTg1OTIwMmE5ZTViMGU3NWU0MzM3NGNmMWVkZDUzYTQyZmMwZjk4NDM0NyJ9"
+        },
+        {
+          "resource": "repo://tools/og-card.py#L14-L26",
+          "version": "repo-lines-v1:sha256:741ca3d0f0f14e29015902320fcfce0ecbaa52de00556713dbdad47198527da3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyMTczOTMzOTVmZWRlZmEzZWQ2ZjQzMTAxYTBkNmE0MjI5OTQzOGJhYmY2NDQ0MWFjM2ZkMDFlYWIyOWFhZTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVmNTg0ODNjNzk0MTA4OTkzMzIwZjk4NTkyMDJhOWU1YjBlNzVlNDMzNzRjZjFlZGQ1M2E0MmZjMGY5ODQzNDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIwMjViYTQwNjRiN2E5NjllZjg1Yjk2ZjRlMWM5NTE1NzcwMzBlZjM4ZTU4NTA3MDIyMTZmYWJkMDc1MGJiNDEifQ"
+        },
+        {
+          "resource": "repo://tools/social-image.py#L13-L17",
+          "version": "repo-lines-v1:sha256:a7d3b996bebb542332b4066c01d50a1583a9e267974035eb8589d56218d0b5e2:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzRhZTQxNGM3NWNiMjI4YTdjNmJlM2ExMDQzM2IyZjI0MjFjNzVjZDgxOWNiNzY2MjJlMWQzMzMwYzA2ZTYxYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGFjYjdiOGY3OGI4NGU4MDk1ZDg5ZDY0ODUwODQwZWI3YTg5ZGM5YjkyNWJiMzU5ZDhhNDcxYzFhZWU0OTM3YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTgyZDQ5M2VmMTQxMDhmZTRjNzVhZGEzYTRkMDgwMDM0MWYwZjZlNTY1MjA4YzQ2MWMzYTk3Y2NhZGY5NGVhYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d42200cee2dd44c8926ec641f486815d",
+      "statement": "Both card renderers load Roboto from a hardcoded Windows font path, but only the LinkedIn banner script falls back to a DejaVu system font when the file is missing, so `og-card.py` raises on any machine without Roboto at that path.",
+      "evidence": [
+        {
+          "resource": "repo://tools/linkedin-banner.py#L57-L72",
+          "version": "repo-lines-v1:sha256:c40a002398da73ac526d52f46e5388e5eae9d684ea0fb6a930ecbf461edb62b5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkN2UwODk0NGE4OGFlZGY4YjE5NGEzZmJhOWEwNjdkMjA0MGFhMjdhYjFhNjZmYjQxNTBiNzIwZjg1NGVlMGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU4YzI4YWQxOWJkNThiNTFkMDAzMjAxNzUzYmRhZDU1NzIwNzBiZWI5ZTE3OTkwMjczMjA5OWZlNDU3MjYyYmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZlNTExMzUwZDc4MjQ4YzMzMzAyZWNkOWJkYjQ4MGY0N2ZkNmQyMDdkOGRjODA4NmE2N2MwNzVjN2ZhMDFiYzEifQ"
+        },
+        {
+          "resource": "repo://tools/og-card.py#L23-L26",
+          "version": "repo-lines-v1:sha256:0d26c040c635bd563c9dce169fae7ed91d5c8301bba328f936404f3298556cbc:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2Q3ZTA4OTQ0YTg4YWVkZjhiMTk0YTNmYmE5YTA2N2QyMDQwYWEyN2FiMWE2NmZiNDE1MGI3MjBmODU0ZWUwZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjVmMGVkMDgxZWMzNjY2NzBkM2Y5OGI2MDQ4MjhiZTU2NWU5YjA2N2YxNGU4ZTlkMDI5MTg2ZGY4MDNiYzJmYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjAyNWJhNDA2NGI3YTk2OWVmODViOTZmNGUxYzk1MTU3NzAzMGVmMzhlNTg1MDcwMjIxNmZhYmQwNzUwYmI0MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_89e0d76826e9416d8a90e1b0c2b84fc5",
+      "statement": "`og-card.py` raises rather than degrading when copy is too long: the title wrapper rejects text that will not fit two lines, and the subtitle check rejects text wider than the text column.",
+      "evidence": [
+        {
+          "resource": "repo://tools/og-card.py#L100-L103",
+          "version": "repo-lines-v1:sha256:ba15a5fb631673a4d7afd3e9cfd9d8d2481d3a1d416dae2ac028ed13c06a4a3d:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmI0YzFhYWE3YzYxNWMyMTkwMWQ4MGJjNDRjZWIzMDJlNjk4YTExMTNjMTA1OTgwYzI1Yzg5MGU5ZGEyOTcwYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDJhN2RlMzAwZmVkYzIxMTE4NmJhMWNlYjY0MzUzN2QwZTQ1MmVmODJmYjZkMTBmNTRjOGQ4NmQ3M2YyNDQ2MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjk1YTMyYTlkZDgzNDg5NmYwZDNkZjVkYTkzODEwNGFkMGY4MzhjNmJkMWY4ZjhiM2NkMTgzOTkwY2I3NmNjOSJ9"
+        },
+        {
+          "resource": "repo://tools/og-card.py#L68-L79",
+          "version": "repo-lines-v1:sha256:719c0c27176ecec63b489f89e97f83caf9975afdfeeb888e7ee5e0c86f16c71e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3YjMzODViN2M5MTI2NDUzNGMyMzliODdhMTA3N2ExODcwY2UwNDczNGNiNWNiNGY3MjRjMDE3YjE3OGY5ZjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA5ZjkzMDgzYzE5NzEyMWI5ODI3MDBiYThhZmFiZDE3MjJjZjFkM2U3NDA0NTA5ZTgwZWZhMjcyNDdmNjJmMDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQzNjRmNmJkZGY1MTRkZDZiMTU1YmZmNmZhZjE0NWViNGI2NmY0NjZiYjg1YmIyOWU3MDM4MmMxMzE5YWNlYTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_99973b9c297544b595ea74ceffc14baa",
+      "statement": "The social card layout grows the title block upward from a fixed subtitle baseline and anchors the tag pill to the bottom of the card, so one-line and two-line titles produce the same spacing.",
+      "evidence": [
+        {
+          "resource": "repo://tools/og-card.py#L92-L116",
+          "version": "repo-lines-v1:sha256:7471ac18930d769b0b6977989a262270e02d25a123df930b01071655086e00b4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjYmM0ZWNkNjc5NWI5NTgwNjhlY2NjODA0ZDU4ZDQzY2U2MjU0ZGU4MTI0YTdkYjIxNzQ5OTZkYWQ2YzcyOWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5NzA4MWZhYjZjMmJjZDk2NmE0MDZlZjNkNDI0M2NhYmY3M2Q4MjJmNjE2MDRmYzM3NmJhZGY3MjdkMzRhNjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNlYTUwYWExMWQzNjdlYTQwOTdlMmM5NjE4YjY3YTk3MDM4ZTNkZDhkMzUxNGE2YzY0ZTgxZTZiNGJkMmRhNzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwOTgyZjJhMTExNDc1MmY0Y2QxZDYxZTJlOGE4ZDU0ZDk2YWM5NzA3MTc1YzZlNTM0Mjk1NDkyMTIzMjVmMGQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_79b36ca33d3c489cbfb1b331febebfe7",
+      "statement": "Social cards are written to `assets/img/posts/<name>.png`, the location a post's `image` front matter key points at.",
+      "evidence": [
+        {
+          "resource": "repo://.claude/skills/new-post/SKILL.md#L30-L38",
+          "version": "repo-lines-v1:sha256:efbaa1c4702d5c8b91e21339994855f64214f2338497a706f169380d5f2c62ca:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTc0Yzk1ODNkOWI0MTkyOTgzMzhkYzA5YWUxZjlkNmY4YTBhZDkxYmYzNmE4ZDU4YTNkMjUxYmY5YTEzOGRkNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTIxOWUxYWJhMjQ0YTlhNGFhMjcyMDQ2NWEwZmI4ZTE3ZGM4ZTUxMGFiZTA5ODZmYzc0OTRmZjU3MmJhY2NiNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDMzY2Q4YjRlYmU4MjBmYjQxYjU0NzhiYWJiZTk1M2Y4NGQ1NmY5OTNiNjU3M2VkMmU5YWM4NzU0OGM3NGU4NyJ9"
+        },
+        {
+          "resource": "repo://tools/og-card.py#L126-L128",
+          "version": "repo-lines-v1:sha256:6a3700e7d27d21c017f2dfb2fec3d2af612519efa5d8c4cd5daae144fe107a72:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWVmYjBhNTI0MmJjMzVmNWJmZWRkN2NkNDE4YWVkMzkzNjQ3YzUzNjMyNTAwZDBkYTgyZGE5NzQ5OWUyZDM1MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmIzYzlkMDYzZTA5ODMzZGRjNGZlZmNhNDQ0NmI2NzY4NWY0MzYwZmMyMGExOTA5OWIwNzFmMjg5M2U0MmUzZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjIwNDI4ZTEyOGJmZTk4ZWFlZmQ3MTQwMDRlYWVkZWY0ZGIwNjYwMGQzODU3MWEwNWJlMDI3YTMwODUzOTI0MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2Q0MTM0MGNjMjM5YTE1OWNlOWI2MDIyZTlmNjMyMjgzMmUyZWFkNzZjYWU5ZTQ3NTRkMjEwZWI4ZmI2ZDVlOCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_cf5ff4ab475a4b9b946c5bce03ef555b",
+      "statement": "The LinkedIn banner is authored in 1x logical units and rendered at three times that size, because LinkedIn paints covers on high-DPI screens and re-encodes uploads, so a 1x render arrives upscaled and soft.",
+      "evidence": [
+        {
+          "resource": "repo://tools/linkedin-banner.py#L21-L28",
+          "version": "repo-lines-v1:sha256:20a2d9668042bdfaa7da3b6b8534b77685c7438922bbbd3e8960cefea24999b6:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjU3ZjIyNmExYWQzMjcyNGUyNDQ0YWYzMTRlNDliNTYwN2NiZDlmYTE0NWEzMzlkMjMyYzdkYTcyZGExMzBjNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDAyNTY0NGM4YTM2OGM0MjAzOGJmZGMzYTk3ZjdjZjk4NGIzYjBhM2RhYTZmNjRkMDUzM2I2ZTcwYzM3N2FiMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2VkMjljNjgyMDgzYmMwYjBlMDQxN2M1MWQwMDE4YjM5MDkwNDdmOWM3YzliNzRmYjk3ZGI1YmZjNTZkODY1NyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e5b5ce0a68394e1e9426f928e178aafc",
+      "statement": "All banner content starts at a safe left inset rather than the usual card margin, because LinkedIn overlays the profile photo across the cover's bottom-left corner.",
+      "evidence": [
+        {
+          "resource": "repo://tools/linkedin-banner.py#L160-L172",
+          "version": "repo-lines-v1:sha256:d2b60714b5cac711c9d956ff668b20da747bdb36d6dd9cda11449f7bf285bfd2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1NzMwNmQ1NDJhYWU1YjM3Y2VmYzA1MjRkN2M1YzkxNWZlMWNlYWY4Yjg2ZWE3NzQyNDJmMGExZTNhZTNjYTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlhMzk1YTBmYzUwMTdlNzQyODU0MzJjMmZkNjgyYTJmMTNlYTNlZjM4ZTRiNTliZTQ0ZWZjMDEwYTI0YjkzMGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc5MDBmOTkwZmViOTg4Yzg1YzU0ZDk2OTlmNzZlMjAwYTg1ZGI2NDk5ODYxZTMxMWMyMDM5MzBkNTI5NmQ5ZjMifQ"
+        },
+        {
+          "resource": "repo://tools/linkedin-banner.py#L50-L55",
+          "version": "repo-lines-v1:sha256:4b8644e30420f43918450c37b09054dabd568dbd21eb7a815df92eb4558e9637:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGI0MDhiOWYyMjYxNTA3YjU0NDcxZGNiYzZhNjQyYjA2ZDRlMDA0MDczMzJjN2NkOGM4ZjJlNTA1ZTMxNjYzYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2Y0ZGYyMzljODMzZTgxYzJjNjJkMWIxZmMwMTcyZmI4Y2I1M2ViN2EyNGIyMTMxMDIwYzFiMDhkM2M5MWIzZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzc3NzJhNmJjOGY0YjM4ZjRjODQ1NWI4OTExM2I3NDA5ZGNhOGFmYjRkMWQ4MDNlMmE3MjdmZTc3ZTYxODkyYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f21ba71aebb14356a52bca0735f0acdd",
+      "statement": "The banner's skill block is a three-tier pill system packed greedily into rows against a target width, with each row vertically centred on its tallest pill, so it reads as a designed group rather than a word cloud.",
+      "evidence": [
+        {
+          "resource": "repo://tools/linkedin-banner.py#L110-L146",
+          "version": "repo-lines-v1:sha256:0597d3c6ff43fc9905552613b4a6d1c4aa0b4e69e062c3db017d3f8f635a0f49:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgzZjdjZmIyNWQyMmRkODRhNTNjYzQ0ZTUxZGFjZWViZmNhMjhlMTA2MzM2NzUxZTA3N2JmNWFhYmQ3ODY2ZDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIyMTljM2RkZWNkZmEwYzliY2JjNDI3ZTFlOTMzZDY1NDgyMDg4YWQ2ZjNhNjNjMzhhZWEzYWQ3MjE5NmE5ZTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVkMzI1NGNkZDcyMzVjNWYzODY1OTIwZGUyYzNkMzY1NzViNGJmZGNhZDQ5MjVmYjRmNjA1ZThjNjc5MTU5OTkifQ"
+        },
+        {
+          "resource": "repo://tools/linkedin-banner.py#L172-L182",
+          "version": "repo-lines-v1:sha256:dbf075c3952c9c9c83ecf8d14f3535f8f4963249d471cac71d0789ed3bca2633:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1NzMwNmQ1NDJhYWU1YjM3Y2VmYzA1MjRkN2M1YzkxNWZlMWNlYWY4Yjg2ZWE3NzQyNDJmMGExZTNhZTNjYTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJlNDNhMWY0ZjY5ZmQxZTQ0ZDAyMzNiNjZmNWQ1ODA1OTQxMDExNzQzYTU4ZTI3NjI2OTkzZTUyZmQ3NDc1YzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBiNDJhOTE0Y2FlYjgzNTZiMzY2NDUwOGJjYTBkZjMwZmM2MWFlM2M5ZTM1NmQzYzY3ZDJlYzAwMmQ0NDUxYmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI2ZmE4ZGVlOTIxMjRjZmZkNTA0NzcwOTBjMzI2N2Q4NzNiODBjZTQxOTIzOGVhMjU2M2I4NmM4ZjUzOGQ2NDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_20c0ee9e83be46aa8a3cefbb73ef2c7b",
+      "statement": "The banner's light theme darkens the accent colour relative to the dark theme because the card orange lacks sufficient contrast against white.",
+      "evidence": [
+        {
+          "resource": "repo://tools/linkedin-banner.py#L30-L48",
+          "version": "repo-lines-v1:sha256:63c6b35e651b56cb4e3641a1d45ae505242d785e49bc22eaa6559a13d9e53e83:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjMzZiMGU3NzdhNjYzYjRhNmU3OGFiZDhhYmU3NDk5NzkzMTFlMGJhNGZlOTE0OTkyOWZiMGFiOTVlMDFkMDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg3YWQwYjgzYzNlMWFmYTFhNGExNGU2MTE5NzRkNzc3M2M2NWMwNGI0N2EyM2I1ZjAwNDMwYWNlOGQ1NmQ0NmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYwOTdiMjYxMTBjOTcxODdjZWM5NTFhYmU3ODcwN2EwMzY0OTJmZWUxOGI0ODBjNDMyZTgwMDNlOTJjODZjNGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU5YmE0ODRkYjBkYTBjMTRmNWZlMDkzMmYwMGU3NGUwZjczMjA1ZTMzZTZkNDM3NTc1MTExYmUyMjg4NDJlMDQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_715637efdbb74a7590950f7fa978e383",
+      "statement": "`social-image.py` letterboxes a phone screenshot onto a 4:5 canvas rather than cropping it, after trimming the OS status and navigation bars, so nothing is lost from the capture and no notification icons ship in a public image.",
+      "evidence": [
+        {
+          "resource": "repo://tools/social-image.py#L1-L32",
+          "version": "repo-lines-v1:sha256:a0c235a3b92004f900b9a2ed5ac47407f47021e899a42c7aca5a0070e206f0c9:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2ODJjYmRiNGM4YjA3NTE4YmY0ODZjNTg5OTBmYzM5MTc4M2FhMjBhOTE2YmZiMjdhZDIxMWViMWQ1YzM2NDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVlNjlkOTgwYmNlMjM4OTc5Y2JjNmQxODRmNTE5YzZiMDQyMWVlY2FkYzJmMjQxZWJkMDg1MWQ1MDU1NzRjYWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_eb30e832e357463e919ba90f28dc8900",
+      "statement": "`devto-export.py` writes front-matter-bearing Markdown into `tools/devto/`, which is why `tools` must remain in the build excludes to stop Jekyll publishing each export as a duplicate page.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L181-L188",
+          "version": "repo-lines-v1:sha256:7b94a1fda95c7daa1e449dde6326f4450109062864e3a883c854922943603577:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTdkYWYwOTExYjUxOTkyZDAyY2U0ZmJmNzk0NTVmYzEwOGI1MGUzMzAzNmJkMjRmMmRjMjA2YTc4NDQzNmFkZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmM2OWRmNzY3OGY4MTIxNzFhMDRkOGQ0ODlmYTU1ODc3MWJmOWQ2MjdmNmM3NTE1OWI3MzZjNDkwNDI1ODM3MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjBiZGE2MTNiYmNhOTY5ZTIxNjAxOGQ4NGIyYzZhNTkxOWZkNDM5M2Q1NTkwODBhMWM4N2ZmNjBjNGFmYTQxMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDdkODJkNjNhZjk4NTYyMWE3MjQxN2QxY2YxZGZkOGYyNzdlMDQ0YjlmM2IxY2M4ZDFjOGU4ZDUwM2Y1NjA4NCJ9"
+        },
+        {
+          "resource": "repo://tools/devto-export.py#L104-L112",
+          "version": "repo-lines-v1:sha256:70d69b884dced2e8718f3552b6083ab6bcce1a2d9703165962dd59b45125a122:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzJkYzQ5YTU5NzQ0MjdjN2Q5NzhhNzVlM2FiNDZkZjk3NmEyMTM2MDQzNGVjMjZhMTc4YjBkMjQwMGIyZGY5MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2ViMTlmMDg3ODc4ZWVkMWM2OTI0ZDQyYjllMWQyMWM2ZTU0MDA2MWE4ZGNmMTEyOTg1MjdmY2JlOWM2MzBjMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmMzMWQ5NDE4N2JiM2EyYTVhOTYwMmVlY2QzYTJlYzY2Y2IzYWI2NWRkOTlhMWNkNDMxMTJhZTUwMDNjODhmNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWMwMWVjOTdjOGYyNmM2NzZhMjE5MDg3ZmI1YjFmOTdjMjBlZTVlYzYwZDZjNTA0NjE0YjAzYjFhZTM5OTU3NyJ9"
+        },
+        {
+          "resource": "repo://tools/devto-export.py#L19-L23",
+          "version": "repo-lines-v1:sha256:c53944ea4a316b3c4a41ca0be03b59e0eff1de9001751d48d93385923bd3bf69:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmI4YmY4MDIwNGVjNDNkNDY4NTRjNjBiNzdhMDEzOTZlMzhjYmUzM2E2M2FkN2E2ZGJkNzhmZTFhMDRmNzc3MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODljNmZiZDg2NjBlNDNkMTk2MGFlODFmNGM0MmI5NmYzZmY5Nzc3YmIxZGU2ZDU3NWE0M2M1MGE0Y2M1MTg2OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWEzZjU2OTdkMjc5N2JlZmQwZDJjMzc1YjlkNDA3MWUzZjVjMTEzYzVmNjI2NDVlNzc5MmRhZjgxNmM5NmViMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2MxYmQ1N2VmNjc2OWRkMTdhZTNkOTM3ZjcwODMxZjg0ODJlMjg1Njg2Yzk3YzJkNTk1NTVlNjcyZDA5Y2U2OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e096863c508e4fdcb27e8b2ddd9b5c68",
+      "statement": "The exporter strips Chirpy kramdown attribute blocks that would render as literal text on dev.to, but relocates a code block's `file=` label as bold text immediately above the block it annotated.",
+      "evidence": [
+        {
+          "resource": "repo://tools/devto-export.py#L74-L86",
+          "version": "repo-lines-v1:sha256:ee8c13fbe22992d8544e0dcff2b0e42d507f49daf0262b6e06abca5522ea688a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5MTdkODU0NjBiZGI4Mjk0YmZkM2Y3YjhiYjgzODM4NmI3OTgwMDZmODAzYWY1NzEwNmFlMjgyOWQ3Yjg1OTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2ZTgwYzFlYTcxYTE5ODkzMGI5ZTAzOTdiZjQ2NTcyNzk1ZjI2ZDZmMTgzNTkxYWFjYjM2MzU5MTllNTlhMjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjliYzRkZTdiYWE2MzExYmEyNTc5M2JhZTNhYjQ0NzQ5M2RhOWY1MzczNzYxZjdjYWZmMGQ3MjE0NDE4ZWU2OTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRhNWE0OWM5OTUyZmNjN2M1NTE5MjZlNzM4NjUxZjk1YTIxMmI2NmYzODhjNTZlMjgxYjcyNzg2MWZmYzc4ODYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_59adaee6a47d4a67a43ef7ec6ca254fd",
+      "statement": "The exporter tracks fenced code blocks and passes their contents through untouched, so an attribute-looking line inside a code sample is not stripped.",
+      "evidence": [
+        {
+          "resource": "repo://tools/devto-export.py#L51-L73",
+          "version": "repo-lines-v1:sha256:8f5ce8b415f02c95a6a92890cc146c19c39a5d3d01f01431fb97a34e669734f2:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5ODA0ZDFmY2UxMzhiYjA3ZGFjOTk1OGE2YmMyODUyMjQzMTIyMjk3OTIzMTE5MmQwZjFmYzg2NmMxZTc2OTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5NDFjZWU5MDc2ZjYzMTY3MmE0OWRjZWQxYTI2MDQ1YWQ1MzI0NWI5OTMxMWYyYzQ1OTU3NWU2MDcyYWU0ZGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI4ZDdlZmMxNmQ5ODM5Mjg2YWYxNWFlODk0MmNjNWI2YTQ4NzIwZDg5MWQ0N2Y2MWVmZWY4YTc5MDcyNzI5ODgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU5YWViOGViOTVkZmU0NGJiNDU2ZWNlMTM0ODRiZjAyMjk4M2NlNjFkMzk3Yjg2OTQxOTc2NjM1ZmNkM2ViOWUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4be5e2729a85427db25d89ff31aa7f6c",
+      "statement": "Relative `/assets/` and `/posts/` links are rewritten to absolute blog URLs during export, because they would otherwise resolve against dev.to's own domain.",
+      "evidence": [
+        {
+          "resource": "repo://tools/devto-export.py#L87-L92",
+          "version": "repo-lines-v1:sha256:19baf30a70d8a3cd24213337e7fd038598d785794a98b562b82a31fb85522a93:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmI2Y2IzODg5N2UwZTBmNjliMTdmOGZkNzA2NGRiMjhiNTE5NmVjYWJiMmI4MmUzMTA0NzUyZTg5ZTVjODU1YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmM0ZjNjOTY3ZGQxZTc0MjUzMzJiMjdkMjc3NDc0YjU4NDE1NmQ5ODA0Yzk3OGFhODQzYjkwMWI3YmIwY2I2MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTBhZmI0MzljNGUwYjU2ZGNhMDVkYzljOGU5N2I0N2ZmZGU2MTRkMThmNWI2NjljM2M1NjM4YmNlZmIyOWQ4MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ff1aba66181845458e51bfe658c780c8",
+      "statement": "Mermaid blocks keep their source in the export and gain a line linking to the rendered diagram on the canonical post, because dev.to does not render mermaid.",
+      "evidence": [
+        {
+          "resource": "repo://tools/devto-export.py#L52-L64",
+          "version": "repo-lines-v1:sha256:1c79e719cb8d019df92ecf22d30a332906ca602188eff2fc9868a375bbfe7f4f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE3OWMxNGU5YTU1ZWUwNjUyYTkyMDllOTUzYjdjZTkwYWE3YjAzOGI2Y2FmZDg0NGI0ZmYzNzM4YWU2ODRlNDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY2M2NmNjE0N2M4N2EwYzg1YjEyMjIzYWMyZTRmNmI4YTBmNWYwYmUwZDUzZjNmNDZlNDEyZjVhMzcwMzA3M2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZiOTdkYjIxYjg1ZWZjOWU3Y2JiMjk1ZjBiNDNhODA3ZjE2Yjc3MmZmZTQ5ZmIyNzI2NDQyNjk3ZTQwMjVkZmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkyYWFhOWMxYjU0YTQ2OTM5ZjE4MzY0ZjYzMGU5MTA2N2NlYWYzZGY0NDUwZmViMDZmNTEzZDllNzBjZGJhNTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_095805f6379d484eac0d7bd26ef5282e",
+      "statement": "Exports always emit `published: false` so a converted post lands as a dev.to draft, and carry a `canonical_url` pointing back at the blog.",
+      "evidence": [
+        {
+          "resource": "repo://tools/devto-export.py#L95-L112",
+          "version": "repo-lines-v1:sha256:ebf9ac8771c8aaaf3f32e03853a102fd040757f71362cc5b92844a259adb562f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4MjAwYTU0YjljMzU0NWYzZjY3NjBiNDA4Mjk3ZWI2NjQ0ZDE4NDVlMWFjYTkyNDRhMjkwNjk3NTNhMDM0MjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNlYjE5ZjA4Nzg3OGVlZDFjNjkyNGQ0MmI5ZTFkMjFjNmU1NDAwNjFhOGRjZjExMjk4NTI3ZmNiZTljNjMwYzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM1NzcyNTJhYTJlNDFmMDk1YTQ1ODFmMmJhMTFhNzMxNTI0MzNjYzJmYzdhZTAwNzk4MGM0ZjE3OGNhZGFhY2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVjMDFlYzk3YzhmMjZjNjc2YTIxOTA4N2ZiNWIxZjk3YzIwZWU1ZWM2MGQ2YzUwNDYxNGIwM2IxYWUzOTk1NzcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_285804e143b24aef9131b08ca254283f",
+      "statement": "dev.to tags are configured per post in the exporter rather than reusing the post's own tags, because dev.to allows at most four tags and requires them to be alphanumeric.",
+      "evidence": [
+        {
+          "resource": "repo://tools/devto-export.py#L23-L30",
+          "version": "repo-lines-v1:sha256:90f491ad15acb49360e8cc275284df51ca4892234ef5d5aac6bafbb5765ce542:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODljNmZiZDg2NjBlNDNkMTk2MGFlODFmNGM0MmI5NmYzZmY5Nzc3YmIxZGU2ZDU3NWE0M2M1MGE0Y2M1MTg2OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzQ2YTI0OGViMjU0NDQzZDM3YTJiOTY0NmVmN2QxMmI4ZDIxYTFiMTk1Mjg2ODc4YTBjMWE0ZWJkMDNkYTZlZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGM1ZmJhYjNjYmI2OGExN2M4MTUwMTVjYzdhMjM0YjliMzIzNDEyMzM0MTU0OTFlYmE5ZWJjODZjN2NjZWM4ZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_afa84124a12b4749ae5a228af8a2afed",
+      "statement": "The exporter always quotes titles and descriptions in the emitted front matter because they routinely contain a colon followed by a space, which is a YAML parse error unquoted.",
+      "evidence": [
+        {
+          "resource": "repo://tools/devto-export.py#L96-L102",
+          "version": "repo-lines-v1:sha256:8ba498ec704895760f92ded63b9dfbac56e188afbdf8eee3eff1a904af470f77:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2UxNzk1MTAzOTMyYTc0YTI5M2EzOGJiZGZlYzQ3NDc0MmU4OThkZDk4YWIwM2U5YzMzMjdiYjFmZDk3Zjg1OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjQwYWQyMDZhY2Y3ZWE4NDcxMmMxMzA3YWQ1MjI5NWExZDViNjY4NjkwZjIwODMwOTFhYzg4NzRmZTUxMjU4OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTBhZmI0MzljNGUwYjU2ZGNhMDVkYzljOGU5N2I0N2ZmZGU2MTRkMThmNWI2NjljM2M1NjM4YmNlZmIyOWQ4MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2QyNzExZGEzZTYxZTlhOTFjYjViY2RlMDQ5MWViYjU3MDY1YzdkZDFjYzM5MjZhYzZjNTQ1ZjU3ZDI2YmQ4OSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.4.0",
+    "at": "2026-08-27T15:56:38.540Z"
+  }
+}

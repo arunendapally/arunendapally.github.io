@@ -182,6 +182,8 @@ exclude:
   - "*.gem"
   - "*.gemspec"
   - tools
+  - openwiki
+  - AGENTS.md
   - README.md
   - LICENSE
   - CLAUDE.md

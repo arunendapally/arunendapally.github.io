@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:3741c58e991e27a1d3b2ea2e87843c898e9027fb99fa98ef2a3a78bd72fe49b4",
+  "claims": [
+    {
+      "id": "claim_efb1a10d62b74c0d88236417680df9e7",
+      "statement": "`tools/run.sh` adds `--force_polling` when it detects a Docker environment by finding `docker` in `/proc/1/cgroup`, because filesystem change notifications do not propagate reliably across container bind mounts.",
+      "evidence": [
+        {
+          "resource": "repo://tools/run.sh#L43-L54",
+          "version": "repo-lines-v1:sha256:9b1df54f61593b447e50ab41e3b99ebc3438e374d5df49b329957c39e58a4a85:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmY2U2NTUyYzE5YTQyODY2YzQyZTc2ZDQyODM1ZDMxZmY1OWYyOTc2YzM4NzUyN2VjODM2MDA2ODZlMjg1MzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1N2E3ZjI3ZTg4MWU2NzkwMmE2Nzg3YWNlZDE1NTI0ZTQ5OTFmZTAyNjUxMzMwNjFlMDM4NGFhZTc4OTQ5OTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFkM2RmN2ZjNjc3ZWFhN2Q1ZDY4MTZhYzdkMTIzODA0ZDNhMWVlMjg3MjJlMWQ4ZjU4MTViOGJkZjQ5YzI0NzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7402908322664fcf8d428647db064432",
+      "statement": "`tools/test.sh` builds into a directory suffixed with the configured `baseurl` before running html-proofer, so internal links resolve the way they will in production.",
+      "evidence": [
+        {
+          "resource": "repo://tools/test.sh#L50-L67",
+          "version": "repo-lines-v1:sha256:ffb655b482e3e65c14f4f79a17306a5566d8646a7bbe89aa8b68c07ae017ffcb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUwZWQzZmE4ZDNjYWQzMTc0Mjk3NGNkZjAzZGM4OGYyMTk4YTU3NGNmZmJmNmVlNGM1NzMwY2UzNDU0NWVkMWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgyMjJmYzYwZjRlYmYxNDQ3NmE2M2I4MmJiZTA1NTUxNTAwM2Y2MjFiZjc3NjllZjBhNDgzZTA0ZWI2OTQzMzgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_50ea1146250d4014810b5e8af83b8b91",
+      "statement": "`tools/test.sh` parses `baseurl` from a comma-separated config list in reverse order so that the last config file to define it wins.",
+      "evidence": [
+        {
+          "resource": "repo://tools/test.sh#L29-L48",
+          "version": "repo-lines-v1:sha256:c3c586cac92d483ff392ad74acf397e14b36618b82ac351ae8f6575a019770a6:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5YjVlZGE3MDYzMGRlYTViMDA1OTQyODMzYTVmZDU4ZGM0ODZiOWU2N2ZjZWZiZDQyYWVlNzhjNmQyYmNhOGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM1ZmM5MGZmOGE0NDE0YzU0NDFkMGY2NzdjNWNiZmRhMzhiNDc0ZTUxYmZkNTU5YTU1NTlkZTBmODc3MDU1MjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI3YTY3ZGMyNmRmYTIwMTIxMzQ1M2VhZTBiZjVkOTI2NTBiMTliOGM0ODFlYzIyZDkyN2VjMGE1ZTg4YzlmNmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdjMTM3NDM0MzY3OTEyMGYyZGZhYmY2ZmRiMzRhZjNlODc3NmYwZDI2Nzg4Nzk5NGVlYjE0ZTAyYjZjNjQ2NTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b46cd9ebea57470a8c2c8910f2d76972",
+      "statement": "`Gemfile.lock` is deliberately gitignored because a lock generated on Windows pins mingw-only builds that the Linux CI runner cannot install, while regenerating it on Windows pulls gem versions that fail to build locally.",
+      "evidence": [
+        {
+          "resource": "repo://.gitignore#L1-L9",
+          "version": "repo-lines-v1:sha256:5ce3f3a6e77bc8367d97e0411c7cf2f3bb4607e41fda03b2c05367ec149e21d8:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTZiMjk2MDlmNzAxMzRmNTAwMTlkMTAyMmEwNTY0MTFmY2FjM2VhMjU0ZDAwODZjMjk2YjVmNTc2MWEzODJkZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTFmMTczNjg4MzJmMmE5MGMxOGZkMDc3ZTYyOTQwMDA5NzQ3NDQyMDdjYmRhNWJmZWY5MWY1YTE0MDg0MDhlZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTc0ZWNhMTIzMDQzYWE0ODMxYTRlZWVjYzlhNWIwNWYxNjBkNjUzNThkNGMzYTEzMjc3YjY1Y2Y2MDhmODU5MCJ9"
+        },
+        {
+          "resource": "repo://README.md#L13-L18",
+          "version": "repo-lines-v1:sha256:0f284ce718f81b813aa5adcd9082098c3a6c279928fc20dd6cebe7dc1ee831e7:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDBhY2M1YzBkOTU1MDgxZmE5ZmQ4MzE1OWNlNzRhMjk0Mzc0OGZmNjVkZWZiZWM2NGQ1ODdkY2E1MjNhZjE2ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDc2MDZiMWMyZmM2ODc0NjBiMDc0YjI5OWNjY2IxM2JmMDY2MzE1NWNhZjE3Y2E2N2ZhYmRlYmYyZDJjOTYzZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjE1ZmMyYzUyZGRlNDQ1ZTMwNDIwZTM2MDJlYjViNDA5NWU0M2MwMTc2ZDE4MTgwZDUyZjc2YjRiYzA3NjZkNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_cf63f659b5f04ec890ad3ef3b67a83d9",
+      "statement": "Because no lockfile is committed, the `Gemfile` version constraint is the project's only version pin, which is why `jekyll-theme-chirpy` carries an explicit constraint there.",
+      "evidence": [
+        {
+          "resource": "repo://Gemfile#L1-L8",
+          "version": "repo-lines-v1:sha256:a6d3728f333edb384e7fcea5ce7de63f30912d93dfcafe2b32424d5c272e0a54:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODVmMDI1YmYwZTc4MTA0OTEyZjljMjQzNDU5ZTYxMDM1ODE3N2Y4OGY1ZjUxYTZlYzkzMDVhZjMyMjY2ZmY0NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTJlMmIyNzNhMmY3ZGNkZTQyOGVkODZmYTlkMGY2YjY2MWUxOWQ3MmNlMzIxNDMwYzc4NjQ1MjMxM2IzZDliYyJ9"
+        },
+        {
+          "resource": "repo://README.md#L13-L18",
+          "version": "repo-lines-v1:sha256:0f284ce718f81b813aa5adcd9082098c3a6c279928fc20dd6cebe7dc1ee831e7:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDBhY2M1YzBkOTU1MDgxZmE5ZmQ4MzE1OWNlNzRhMjk0Mzc0OGZmNjVkZWZiZWM2NGQ1ODdkY2E1MjNhZjE2ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDc2MDZiMWMyZmM2ODc0NjBiMDc0YjI5OWNjY2IxM2JmMDY2MzE1NWNhZjE3Y2E2N2ZhYmRlYmYyZDJjOTYzZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjE1ZmMyYzUyZGRlNDQ1ZTMwNDIwZTM2MDJlYjViNDA5NWU0M2MwMTc2ZDE4MTgwZDUyZjc2YjRiYzA3NjZkNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_90f649bad5cd408c83f6518a1ef99499",
+      "statement": "`jekyll serve --livereload` and `--detach` do not work on Windows because the first needs eventmachine's native extension and the second needs `fork`, so plain `serve` with a manual browser reload is the local workflow.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L20-L22",
+          "version": "repo-lines-v1:sha256:8b5ecd37d6efa66dc3a6ca5b686475a72190b34cc5f2afee3fdb243ed16a7d4f:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTJhZTljZjhjODQ2NjFkOTRmYzYzNmZlMGNiMGUwZmUzN2ExYTk3OTYyODRkZDQ0NzRmZjRlZmEzYjUzOTAxMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmE4Y2NhMDNlZDRjMjBhZDI3ODEzM2FjNmEyNWNmMjQ1NmY1ZDQ5YjVmMWU5N2ZjMzMxYzhjN2E1YTg0OWRhMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmFlYmVkZGY1OWNjZWQ2MjI4MGRjM2JhODQ1NmE4Y2E4MGUxM2YyNTEzZTE3NzdmMDViMjA2M2NiMGExNTk5ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTkxNjIyNDVkOWRhYmNkNDRmMTE4ZjdjZDNhOWUxZDUwY2I0ODlkY2RmNTlmNTI3ZjU2Mzk5OWE4MThlY2E0ZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1a758de7dc9e4311a1010693eb58b732",
+      "statement": "`tools/run.sh` passes the livereload flag unconditionally, so the script cannot be used as-is on Windows where livereload is unavailable.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L20-L22",
+          "version": "repo-lines-v1:sha256:8b5ecd37d6efa66dc3a6ca5b686475a72190b34cc5f2afee3fdb243ed16a7d4f:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTJhZTljZjhjODQ2NjFkOTRmYzYzNmZlMGNiMGUwZmUzN2ExYTk3OTYyODRkZDQ0NzRmZjRlZmEzYjUzOTAxMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmE4Y2NhMDNlZDRjMjBhZDI3ODEzM2FjNmEyNWNmMjQ1NmY1ZDQ5YjVmMWU5N2ZjMzMxYzhjN2E1YTg0OWRhMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmFlYmVkZGY1OWNjZWQ2MjI4MGRjM2JhODQ1NmE4Y2E4MGUxM2YyNTEzZTE3NzdmMDViMjA2M2NiMGExNTk5ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTkxNjIyNDVkOWRhYmNkNDRmMTE4ZjdjZDNhOWUxZDUwY2I0ODlkY2RmNTlmNTI3ZjU2Mzk5OWE4MThlY2E0ZSJ9"
+        },
+        {
+          "resource": "repo://tools/run.sh#L5-L7",
+          "version": "repo-lines-v1:sha256:a55ff1cf6ef5c9a7fbd899baa5b803bd54891b12d7499c94298f2e06068a1583:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmI2ODI2ODhiMmQ1ZDUyYThhY2ZlYzUzYWM1YTczYTYyNjIzOTNkN2UwMjcyODMxNmFkOTgyNjQxOGI3OWZmMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTUzODE3YWMwOGYzMWYyNDdmNTc4MjA1M2M5NmM0NTkwM2E3MTFmZWVjMzAwYTU0ZTQ5ZDIxMWEwMzY1ZGIxNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmVmZThjNDdiMTk0NmE1MzhhZTY2NGVhZjIwODg1OGFjMDZmOTE2OWY1OWRkNDA5MmJlMmMzMWQ1YjIzNDEyOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2JkZGE1ZDhjZTVjYTU2MmZkMThiYjA2ZTIzZjE2OGE1Njk1MWJjMTA5MTE2ZTJmZDAyNDUxNjlhNWUzMDI1YyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d556bd823c97447abe1620487b1318bd",
+      "statement": "html-proofer cannot run on Windows because it requires libcurl, which the Windows Ruby installer does not ship, so the link check executes only in CI and a clean local build is not evidence it will pass.",
+      "evidence": [
+        {
+          "resource": "repo://THEME_UPGRADE.md#L136-L143",
+          "version": "repo-lines-v1:sha256:296779fd9f62e33a8bc79489bfb355d13a83ab96c9760f043506eade0f5518c1:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGIwYWU5NDk2MWI0NWU2ZDFjZjNlMWQ1ZmY1NGEzOWUyMDJiNTIxNDNjMTViN2Y0ZDk4NDc4NTA2ODlmZDNhYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTVkZTdiMDgwMTQ3YzE5NDViNjZlNmZkNTQ2MDNkNDliZWVkYzA3Mzc1ZGUyOGQwYWEyMWU2ODZlYzQzNDI1YyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_fb5ca08574704045ad5b67a93cfdb0ce",
+      "statement": "The devcontainer marks the workspace as a git safe directory on create, which the last-modified plugin depends on because it shells out to git during every build.",
+      "evidence": [
+        {
+          "resource": "repo://.devcontainer/devcontainer.json#L1-L6",
+          "version": "repo-lines-v1:sha256:de09bb4dbcd33a5cd3aa953fb12093613533f9b88b2917413a238fe7ab55e0e4:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODNlYWU3ZTZhNGQzYzcxYmNjOTYzMjhjNTE5ZmJhMjk0MWVlNDg2OTY4YTZkNjMyMmZiMDhjZWI0NGUzZWZkNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzYxODAxMGQxZWNmMTZhZjY1M2E4YzhlMGM4YmU1OWQ1NzY5ZmE3NGE2OGI2NmVjOTI1ZGNiNjNhMjI0MzVhYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzdkMzg1YTNhNzcxMDQ5NWEwYTEzODVmNDUzMzE5M2RmMGMxOWI1MDIxNmEzYWU4MjA4OWFjMjlkNzgwYTFjNSJ9"
+        },
+        {
+          "resource": "repo://_plugins/posts-lastmod-hook.rb#L5-L14",
+          "version": "repo-lines-v1:sha256:7874e27e0796f706f4c2c6c8c07845e5c0fb6aa28d20f30b3ad124b15e3abd81:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyY2YzMGQ4NTUxMWFmOGEyMzA5ZmRiNjgyZDJiYjg2YWJjMTZjZmMwM2EzMGJlZDM2ODdjNDI2ZmI2NWJiZTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3YjZjNjU4OWRiZjI3MDkxNTI4ZmMyMTNlYTNhM2M2YmVmNmYzNzBmNjQ1ZTdkNzc3ZTMyMTAwMzYxYzc2NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZmMzY1MDI1YWY0NzE3MDIzNjk2MzRiZmY1NzhmZmYxNjZkNmI1NGFhYTEzMWVlY2ZjZjUxNjgzMzBhZWYzYzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4c02fc539f704a0c9debe18ee6f3f84d",
+      "statement": "The devcontainer's post-create script runs an npm build only when a `package.json` exists, which this repository does not have, so that branch never executes here.",
+      "evidence": [
+        {
+          "resource": "repo://.devcontainer/post-create.sh#L1-L8",
+          "version": "repo-lines-v1:sha256:0548157bffd66897f205083ea1db89688bf081f60730e1f66c0b3b119bf3f5c8:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWQ5NWZjMDRhODBjOTUyZjQ5Y2U0MTg4NjI3YzUzYjBmYmU4YzQ0MDQxYjk1MmQ1OTJhY2QxZGU5OTg2MTQ2NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmYyZTE5ZTI1ZjAxN2I1MWZiM2I3YjBlMjljOThlMzRmNjA5ZWEwYTc4MTgyMTViNjM3NDI1MDEzNDg3OWExNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_542154b39423443f9101cf18f598c918",
+      "statement": "Both helper scripts are surfaced as VS Code tasks, with the Jekyll server registered as the default build task.",
+      "evidence": [
+        {
+          "resource": "repo://.vscode/tasks.json",
+          "version": "repo-file-v1:sha256:e196d8e6d5c0caf175ccc9e08434ee7e9236bc5417a458f1b35f947418ba9ba0"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.4.0",
+    "at": "2026-08-27T15:56:38.540Z"
+  }
+}

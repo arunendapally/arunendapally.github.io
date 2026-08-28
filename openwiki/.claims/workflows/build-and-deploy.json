@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:c30ff7ad69256bcf21b4e4842ff3e9e24d8041d491a5aeee67a38cc5eeabad83",
+  "claims": [
+    {
+      "id": "claim_ba665165d6744162a163a775271868f4",
+      "statement": "A single workflow handles both building and deploying the site, triggered by pushes to the default branches, pull requests against them, and manual dispatch.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/pages-deploy.yml#L1-L20",
+          "version": "repo-lines-v1:sha256:3b7886fc39d8b1aafe5ef273914f35c5dcddeb904774b74a4a276d266ac7e5fe:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0ZTA5NmE1NzY0YTBiOTQ5ZWQyNDMxN2NlYTQ4MTYwOGEwMmMzNGZiYTVhNzNlODA1ZDdjZWExYWM0MjYxOWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2NjIzMmVhNWMxY2Y4MTZiZjBhYTI1NTg0MzVkMDZlNzA5NmYyOGI3OWY2OGFjZmZjNjFiOWZkOWY5YTA5NGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEzNjZmNmMyNTRhYTNmNjA0YzA4MDlhNDRiYzJkMjMyNjZiYzllYTU5N2ZjYzFmYmE0MWVmOTEzYzU4ZjZjMTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bb07ce3440f3466ea2d33770fc163df5",
+      "statement": "Documentation-only commits to `.gitignore`, `README.md`, or `LICENSE` are excluded from the push trigger so they do not spend a deploy.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/pages-deploy.yml#L3-L10",
+          "version": "repo-lines-v1:sha256:a9ecf7e3d0a515699feb5903aa4e96fa4b9a1d8ba92c6b0388d57198ef002b28:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTljYmQ3MDk2NWU3MmQ5ZDA1NWYzMDFjZGY4NGI2MTg1Y2Y1YzA1YmQxZTM0OTAxMWU0ZmIzMWExYmQzY2JkOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzA3ODEzMWU1M2ZiZGI5MjhiYjA5ZDNlZWQ1MjNlYjc4ZjkxNjk4ZWNjZGRjMjc2NjNiNmRkM2ViNDNmMzQ5MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDVmNDA0MzhiODUxMzg4ZDZhYzQyMDY3MzUxNjY2YzIzYWM1MjA2NzczNTU5YTVkYzJjZTI5ZjYxMDRlNmU1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTFiMTczMWMxMjRmNWMwYmFmYzgzNmEzMjdkODVjOTk4MGIzMTg3YzE5NGNkMmYyYjRmODBmOTQzM2QwNTliYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b8b2899e0ba64538b3c4e1f7b2ab44ca",
+      "statement": "Pull requests run the full build and link check but can never publish, because the artefact upload and the deploy job are each independently gated on the event not being a pull request.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/pages-deploy.yml#L64-L77",
+          "version": "repo-lines-v1:sha256:4d9eaf17766ec05caf7172a68132e1ae98d26ccf5fc2983f96fb13bc986d8860:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzOGZmM2FhZjk2Mjk2NmI2NzkyZTUxMTY4NTk1YzExNjM1ODI1MzgzOTBkMTZlZmM0ZThhOWFkYjljZGNlZWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzN2QyYTQ0OTVmZDE4MjU3NWYzMTcyNDUwZDg1MTgyMmIzYTViODQxMDVkMWIyNjg1ZTg0NDVjZDdiNzZhMjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ0OWMyMDA2NGFhNjFmOTZhNDk3OTY5YWFkZDdlOWViMmExNzIyOGFkZWFkMDBhZWJkYWRmYTQ3YjNmYTIzYzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg5NWFhZTYwYmRjOGIzNzQ4ZWQzNGQwZWEyOGJkMmE0M2MzNzhmYTEwMDUyMTQ5ZjM0ODY2MWZjYjMyMjdjMmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7b3fd556a6ff49899b433ddd9a01a75f",
+      "statement": "The checkout uses `fetch-depth: 0` because the last-modified plugin reads git history per post during the build; a shallow clone would silently make every post appear unmodified rather than failing.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/pages-deploy.yml#L38-L41",
+          "version": "repo-lines-v1:sha256:1edc2bd5307b500d8c63a7995a888b5cac590be9088c5ce87e59d07aedd22b9f:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmRmYzU1YTNlYTM4MDU4OGE3YmJhNmQ2MjgyMDZhMmIzMzViMjZiMDRlNWNmZGJmZTcwNDRkYTc5NmViNzU1OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2RhM2M1ZDllZTNiNGNlN2JmN2QxZDEyY2M2OGNlNDAyNjA5OGY1YWU1MWU3ZjJiNzdmM2QzY2NiNTg2NDFiMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTEwYTNiM2YyYWYwNjlmNDFmYWM4ODE5YjQwNmMxMmM0YzU1MzQwNTQ3Mjk2MTk5OWM2ODE2MmFmZGI5ZjNlNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzY2Yjk5Y2FiZGQyNzk5Y2M4OTQzZTNhOTNlMTU4NjM1ZDg3MWQ1MTAyZDYwYmY4OTViNGMyZTBlZjI4YzgwMiJ9"
+        },
+        {
+          "resource": "repo://_plugins/posts-lastmod-hook.rb#L5-L14",
+          "version": "repo-lines-v1:sha256:7874e27e0796f706f4c2c6c8c07845e5c0fb6aa28d20f30b3ad124b15e3abd81:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyY2YzMGQ4NTUxMWFmOGEyMzA5ZmRiNjgyZDJiYjg2YWJjMTZjZmMwM2EzMGJlZDM2ODdjNDI2ZmI2NWJiZTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3YjZjNjU4OWRiZjI3MDkxNTI4ZmMyMTNlYTNhM2M2YmVmNmYzNzBmNjQ1ZTdkNzc3ZTMyMTAwMzYxYzc2NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZmMzY1MDI1YWY0NzE3MDIzNjk2MzRiZmY1NzhmZmYxNjZkNmI1NGFhYTEzMWVlY2ZjZjUxNjgzMzBhZWYzYzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_913f4c3e56ba40d6b6db3514365238f3",
+      "statement": "CI builds with Ruby 3.4 and `bundler-cache: true`, installing and caching gems resolved fresh against the Gemfile on each run.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/pages-deploy.yml#L47-L51",
+          "version": "repo-lines-v1:sha256:dd2f5e5917cdb41b1c1dab6fbe8e1e218535ed7dc70d1425cac4682f20338a19:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDdhYjM2YzQ0MGFjOGRmNDFhN2E5OTA4ZDM3NjIwZmE1OWE0MTdhZDA5MTczOGUwZmQzY2Q1ZWY2YTdiYjA2YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjMwOWRjM2I5MTIzYjdkZTBiNGU3NGJkYTdhM2M4ZTQyZjZkNzBmNmU4YzFhZDg5ZjBkZGU1MWY0MDEyM2QzMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjdkMGY4NjI3OGIyMjMzYzQ1OTFmNTYzNTI3ODJlNWEwNDM2ZmIwMmQ5YTE3MGNiMmM1ZGVkZjBkYjkyNzYwZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjRlMDUzMDg4YzM3OGRmNWYzN2ZlZWMwNzkxYWUwOWEzYjg5YzdhNjY0ZjhhYjUxMzFmMDVhZDc0ZWI0NmM4NiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b268a18f0f4342ca87810bf99eb10cf1",
+      "statement": "The site is built into a directory suffixed with the Pages base path reported by `configure-pages`, so internal links in the checked output resolve as they will when served.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/pages-deploy.yml#L43-L45",
+          "version": "repo-lines-v1:sha256:b36153c88d95ecad388bd7e74406627a647e827f980bb4cf00b1addc2a594afb:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjAzMTlmNjIyZmI5ODFjZTQ0MzllZWYzODdhZDU1MjBiNTJhYmVhZjkzMjZkYTVhOTA2MzgwZjgzMmFjOTI5MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTM0MWE2NzgwZmI2MDg4MGRlMzhjMDNkODVhNTBhNzgyMmQ2MGMyYTAyZTJjMDY1MDhiZGUzNTk3MGU4NGNiMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmNmYjE5ZTFjZDVmNzcwNGE4MjFkNzBiZjBmYzE0NGQwYmEwZjcyODA2ODBmNDNmMDk5NjI4OWU4NTQ5NTk5NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmQzZDFhMmQyMWNkZTM2YTRkNjAyNzljOWUzNDE4MDIyNDY1NjcyN2IyZDg1ODFkM2ZkZDc0ZDQxNDQxMmQyMyJ9"
+        },
+        {
+          "resource": "repo://.github/workflows/pages-deploy.yml#L53-L56",
+          "version": "repo-lines-v1:sha256:04d3aae9717e6973cd5575fd6ec305d30b6aa1b5c5d1f29924bfafef31c064cd:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGZhMTMyMjgwMjkxMzFhYjE1NjlkM2QxMjkyZjZjZGViYjAwMTcwZmUxZGE5YTAzYjMzMzFhNTFkMDM2YWZmNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjZhZGE4ZDM5MzZjOGQ0YjUwYzhmMWQ2ZjJkMDk0ODVmMDNhYTBjZDJkZTQ2MDk3YTE4OWU1ZDZkYThkYzY1MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWFhOTI5YzFhZWEyYTk5Zjg3MzFhZDBlMmYxMWU1NDQ4YzgzNTg0N2Y3N2Q5ZTBhMzhhN2M5YzUxOGFjYThmZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjYzZWQzNzViMjUyZDQxNGQ4YjkzNjU0ZmFjMjc4Y2Q5MjkwZDAxNzAyODMwZGMwMjQ2MmQxZDI0ZGEwNzA5OSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a86717619c214a66bf1081d2a524692b",
+      "statement": "The html-proofer gate validates internal links, anchors, and image references only: external links are disabled and loopback URLs are ignored, so a broken outbound link or a wrong configured domain passes unnoticed.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/pages-deploy.yml#L58-L62",
+          "version": "repo-lines-v1:sha256:c6b102bc3ba5167438fb9ded12256e752420c84025551bd1e2d5a6311c4f01db:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2ZkN2MwODRiZGIxZWQ4ZjA0NmY0MzgyOWM4NWNkMTRkMzRiZTg5MWM5M2ZiZmVkZDY2ODI0MzMxNDMwYmUyZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTI1MDZiMmU2NGMwZTFmZmFmYjU1MTBhZjAxYzBmMGI4YzkxZmViMzNlNWIyZGM0OTM1MDhkZWVmOTk3ZDRkYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDQ4ZWUwNjk0MzRkMjc2OTA1Yjc2MTQwNGY5Mjc0NzU1M2JlYzg1ODQ3MDZmMTMyYjg4MDRhOTc0MmU5ODlmNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjcwM2M1OWMyZTAzYzlhNmNhMWY5OWU4YzFkNzkwMWZlNmQ0ZjAxMTljMTE4MjhlMzg4YWNhOGVhY2U3ZTc4NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_44f79ca0657945f191f79c1f075d9a67",
+      "statement": "`tools/test.sh` mirrors CI's production build and html-proofer flags but derives the base path by parsing config files itself and clears `_site` first, steps a fresh CI runner does not need.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/pages-deploy.yml#L53-L62",
+          "version": "repo-lines-v1:sha256:235caab7432f62b8eebaa952b4c9fd36dcc7a26a9e6261c402097b53bacd32be:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmYTEzMjI4MDI5MTMxYWIxNTY5ZDNkMTI5MmY2Y2RlYmIwMDE3MGZlMWRhOWEwM2IzMzMxYTUxZDAzNmFmZjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEyNTA2YjJlNjRjMGUxZmZhZmI1NTEwYWYwMWMwZjBiOGM5MWZlYjMzZTViMmRjNDkzNTA4ZGVlZjk5N2Q0ZGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVhYTkyOWMxYWVhMmE5OWY4NzMxYWQwZTJmMTFlNTQ0OGM4MzU4NDdmNzdkOWUwYTM4YTdjOWM1MThhY2E4ZmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY3MDNjNTljMmUwM2M5YTZjYTFmOTllOGMxZDc5MDFmZTZkNGYwMTE5YzExODI4ZTM4OGFjYThlYWNlN2U3ODUifQ"
+        },
+        {
+          "resource": "repo://tools/test.sh#L50-L67",
+          "version": "repo-lines-v1:sha256:ffb655b482e3e65c14f4f79a17306a5566d8646a7bbe89aa8b68c07ae017ffcb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUwZWQzZmE4ZDNjYWQzMTc0Mjk3NGNkZjAzZGM4OGYyMTk4YTU3NGNmZmJmNmVlNGM1NzMwY2UzNDU0NWVkMWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgyMjJmYzYwZjRlYmYxNDQ3NmE2M2I4MmJiZTA1NTUxNTAwM2Y2MjFiZjc3NjllZjBhNDgzZTA0ZWI2OTQzMzgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a8e7a02e8e4f4171bd7ad2a7bc167519",
+      "statement": "The concurrency group is keyed by git ref rather than being global, so a pull request run cannot cancel an in-flight production deploy while successive pushes to the same branch still collapse to the latest.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/pages-deploy.yml#L27-L31",
+          "version": "repo-lines-v1:sha256:97fe1116d589cbe44a8ebdcd3c1f3cba52a77b976c95023cf6ff179c8ce9e488:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzAzOWU0MDU2MGQ0MGJhODQ2NzA4M2FiYzZkMDRiZTE0ZGYxNTBjM2Y3MTAwNzQ0MGVmOGExOGU1YmRkNDJlNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWIyZjE1MTU3NTQ0ZTE1NjZmMGNhY2Y0Zjg2YzAxYWIxY2M3MzlkMzYxNWUwYmU4YjZhNjE1MWRjZDQ2OWI2ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWU5OTJjZjZhMDE1ZjQxYzlmNWJkYTdjODU2NDYwNjIwMWE5MzAxY2YxYjFlZTcxYjY3YzMxMWYwZjk1YjIyNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTQ2MWM1YmIzZjRiMWJiZjc1NjgxMjJjMTFlNzg1NzdhYWQyNzUyOGQ3YjFhMDBmMDIzZjQxZWI3MzA1ZTRjMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ca411400677440c5842994c142031cb4",
+      "statement": "The workflow requests only read access to repository contents plus the Pages write and OIDC id-token permissions, so it never needs write access to the repository.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/pages-deploy.yml#L22-L25",
+          "version": "repo-lines-v1:sha256:ce0e634877aa1839091c220b2d8ddbdf66cd2e6cd518deb91bafcc6ab87fd632:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDdiZDNhNmUxZWYwMDExNWIxYTkyYTFkZTJlNmM3NWMwOWRjYzcwMTA4ZDkyMzNhNjFiYjFhNWU4OTFkYzVlOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTNlNTNhM2RmMzY4MDUwYTk5MjUxMGIzMDEwNTllZTA1NWU0YzkyZmRjYzc3OWYzMDRlNTM0MmY2NDg4YTUzNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTI5MWMyNjZkMjE1NWM0NmNjOTFiNDA0NDU3ODVmMjllMWI2NTNiNTdkZTJmNzBkNGFmZjBkNjg0MzJhYTlkZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTg2NWNjZmQ3ODIxMzQyYzUzOTdjYTkwMDRhMjEwMTYzYzA5ZTk0MjJmMWE2MmJjN2FjMDEzMzZlYmFiY2RiYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_60a0e7fa17d449d8857ea7f494c9c376",
+      "statement": "Deployment runs through `actions/deploy-pages` in a named `github-pages` environment that exposes the resulting page URL as its environment URL.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/pages-deploy.yml#L70-L81",
+          "version": "repo-lines-v1:sha256:b6d074e62f2b3a95b8636af6bebc7df6d11eecdf1bd9ddcce4c11dfbd0f18401:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlNzJmNWM3NDliODFjNTE0ZmRkMmVmM2M1OGRlMWM5MWYxYmRmNzYyM2I3N2RjYzYzMGUzODgzYTBkZTVjOGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0ZTZhMTRkODliMTZkMzIxNGE2YWYxNDNkNTM1M2QxNWE5MTk1NDg5YzI0MTg0ZTRiZWU4YmJlODQxYzk0MjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMzYWFhMjcyNWM2NDVhNTA3MWYxYTg5NTQ4MWRkYjEzNjdiMDdiODIxMjYwZWE2MTY4OTE4MDc0MmViYzk0MzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_80411dc6de5a4779bb7d95474f63ca0e",
+      "statement": "The custom domain is declared in a root `CNAME` file that must agree with the site's configured `url`, and nothing in the pipeline verifies that they match.",
+      "evidence": [
+        {
+          "resource": "repo://CNAME",
+          "version": "repo-file-v1:sha256:96eaca499fdf76a8c4a1278e350417716f9a5120c37bec97b2805598b35d9f9e"
+        },
+        {
+          "resource": "repo://_config.yml#L24-L26",
+          "version": "repo-lines-v1:sha256:c960e04f9f38b4b15d93b5bc176e0133d48c13a0b673a6fc45418a1a589326fa:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTAyOTExZjljYTQ5MWVmYmNjM2Y4NTg0NThkZmU3YWRmOGE1Y2MwOTQxYjZhZWYzMTA3ZjIzYzk2ZDIyNGQyMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTEwY2U5NDIwODhmMTQ5Zjk5Y2Y5NGMwYjM5YTBiZTU0ZWVmZjljMTY4MGIwOGYyZDljMTk1NTIwNGEyMWZhYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmYxZWRlYWY4YWVjZDFjNzk4OGQxZjZjYTIzMDZmYTg5ZjZmZTM2ZjQ2ZTFiYWJiMDM5Yjc2NjAxNDE4MjMxYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjYwZmJmZTZkMWNmMzliOTc4ZWQ4NTQxYTQ3NGY4OTk2ODk0Mjg5MmMyZjBmMDFhOTQ2NzZhNDk3NDY1YmQxZSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.4.0",
+    "at": "2026-08-27T15:56:38.540Z"
+  }
+}

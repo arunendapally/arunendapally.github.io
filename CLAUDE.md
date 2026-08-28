@@ -36,3 +36,11 @@ Run through this checklist before marking a post ready:
 ## Ads
 This site does not run ads. There is no AdSense script, ad unit, or `ads.txt`.
 Do not add ad code back without an explicit request.
+
+<!-- OPENWIKI:START -->
+
+## OpenWiki
+
+See [AGENTS.md](AGENTS.md) for OpenWiki agent instructions.
+
+<!-- OPENWIKI:END -->

@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:0d315b90d7682973ea65857ff4df83eff995263b81a5c67635dc0feaf49d725e",
+  "claims": [
+    {
+      "id": "claim_ac1669a1508c42a299a233613f03f676",
+      "statement": "Every post date must use a `+0000` offset, because a non-zero offset can place the timestamp in the future relative to the build, and Jekyll then silently omits the post while the build and deploy still succeed.",
+      "evidence": [
+        {
+          "resource": "repo://.claude/skills/new-post/SKILL.md#L31-L40",
+          "version": "repo-lines-v1:sha256:e6bad1057739fb3cb4456ade47a2b44893b864525982656c174ced0704dc31dc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjYmQ0ZTI5YmM5OGE2ZjIzY2M4YzA2NmU1NGFiYTVmZWQyZDQ4MzI1Y2EyZDM4NGEyZmM0NWMwM2I4MmUyODAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNjZjA0OTE1Njg0ZTE2ZTk3NzExNTc2MTM2NDIwMDRjN2Q0MDE1ZDU3MGE3YjExZjE3YmRjYmU0N2Y4NzUxYTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJjMGMwZTE1YjEwMDljNDFlMTcyNWQzNjRhYzY5ZmZjYjkwN2NmY2RlZTY2ZTY5NzcxNzc1NzljOTJjYzU0YjcifQ"
+        },
+        {
+          "resource": "repo://CLAUDE.md#L6-L9",
+          "version": "repo-lines-v1:sha256:af643f42fde0425091d0ab5055d3c1598fdd7ff862666c2631d35f5131a9a337:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWQ5OGMzMGVmYzc4ZThiOGNjMzM2NWE1ZjE0MzZmOGJlMmI0NGY0NmU0NDc5MjZjNmY1YTRiMjQ0NWEyOGEyYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTZjOTZmNjc0NDhiYjU4ZWIxNWMzOGI0ZTM1MmQ0ZjBjMWI0OTU5MjFlMjBlMTc1YzYxOGIxNjk1ZGE3OTdhOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTA5MjI2ZTY1ZjIzY2U0M2IyOWJjNmIzZWUwZTVjZDc3MDk4OGQ1ZmEwZTVkYjdjNWMzY2EzYTc4NDVhMDk2MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9627b2cac8264c099481d46b0e168272",
+      "statement": "The visible post subtitle and the meta description both come from the top-level `description` key, while `seo.description` is read only for share-link text, so setting only `seo.description` leaves jekyll-seo-tag to fall back to the post's first heading.",
+      "evidence": [
+        {
+          "resource": "repo://.claude/skills/new-post/SKILL.md#L41-L54",
+          "version": "repo-lines-v1:sha256:7dd2646fedb8d0a3265f8bfaf529c7afc7f822b2469c4848a19ed7e821f8899d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcxOTA0YThhMDI5ZTgyODdjNjQ2NTIwYTAzNmI4MGJhYzRmMzlmMzUyZTUxM2VjNTE2ZTIzNGJiOGQ2ZTExODYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZiNDgxZTU1Mzc5ODlhODQ0MGM3YjQ0Nzg5MzM1NGM2N2EyYmE3OWViNDkxOTVmMTRhMjVkOTE5ZjEyZmY2ZDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcwMTFmY2M3ZGFhMWY0ZDM4OGY5MDAzN2NmMjNjOGU5NjFmNTBiYzI0Y2ExMThhNTM2ODA4Yjg3ODExZWU3NGYifQ"
+        },
+        {
+          "resource": "repo://_includes/post-sharing.html#L9-L9",
+          "version": "repo-lines-v1:sha256:37d1ea34066c6e10fcc66bc5d3a6e2050522f8c4c20c15a44f861e5a47b810e8:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzdkMWVhMzQwNjZjNmUxMGZjYzY2YmM1ZDNhNmUyMDUwNTIyZjhjNGMyMGMxNWE0NGY4NjFlNWE0N2I4MTBlOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzdkMWVhMzQwNjZjNmUxMGZjYzY2YmM1ZDNhNmUyMDUwNTIyZjhjNGMyMGMxNWE0NGY4NjFlNWE0N2I4MTBlOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjIyYjg2ZTI3ZDJlNmI2OTI0MjQwM2Q4MjMwN2FmYTliZDIwYWI3YmVkYTUzODhkMmU3NzhjYjBjNWQ2N2FkZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWJhYzI4ZDY5Y2M0ZTE5NmM3ZDMyZDM1OTE4YjE4NmQ4NzVhN2I3ZDBmYzliMTlkYTE3ODRlNzc2MWRlYjRkNSJ9"
+        },
+        {
+          "resource": "repo://_layouts/post.html#L18-L22",
+          "version": "repo-lines-v1:sha256:2300dac0de3bc2ad78bcbc6ba100f2895b2eaf0607e2092272677be7c54a2195:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzczZTBkZGFkYjMyMWFmOGY2M2VlZjNhYjJkNzRhY2QzNWU2NmM1ZjZmYjVjODFmNTU3ZWI4ODg2YTc5NmM3MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmQzMjM4NzVjYzMzNTZkY2JiNzM2NjExNDVmZDEzNTRlMTI3MTk0MWZkZTAxMDQ0ZGQzNDNhNWViMTZmZDA5MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDBjMzg2YTBlYTFhZTcwY2JkNTNkYmE2NDZjNjNkZjNkNWFjMmMwNGRiY2E5MjFlMDU5ZTM5ODZmOGM1M2E1NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWY2MDEzM2ZmOTg3YzYzOTAyYWQ1MDNmNjEzZDQyNzMzZWNjNjA1NmE5NjQ3MDlkYzJiOTE0YzNiNTdiMTAwNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d8c530879f384e7291e7bcd03553ffab",
+      "statement": "Posts must not repeat layout, TOC, comment, or permalink keys because scoped defaults supply them site-wide.",
+      "evidence": [
+        {
+          "resource": "repo://.claude/skills/new-post/SKILL.md#L14-L28",
+          "version": "repo-lines-v1:sha256:fe0f7ab921d63b12724dd327d01bb2f5e357d6730c1daedf6a72975e731b98f8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRiMWZiYTU0ZmY5MGNmZjZhYzNmOTM3NDYwMjNhZjg0M2ZmNDFhYmFkZGQwNzg4OTRmOTIyZDkxMjgxZGEzNzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM4OTNkODc1NzA4YzcyMDc4NDYwMjZlODhmOTkwNDQ4ODUxNzc0N2ZlYzdiYmMxNDllNDU5ODJkNDNlMjI5MDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIxZTU2ODEwZjVkMmFjYzhjMjUzZjBhNzU0MDBiMGM5ZjIxNjgyOTY1Njk5YzFmNDlmZjVlMmMwMzcyMzNmMTMifQ"
+        },
+        {
+          "resource": "repo://_config.yml#L151-L167",
+          "version": "repo-lines-v1:sha256:3bf22b1cb44822f5cd87bbed471a2ad269718670c156207c3214f2b57d11b4cc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFhNTEzY2JhZDMyMjdhNzNiYmU5ZjdlYzNhYmQ4ZjkxZDc0ODhjYjk3Y2IxMDlhY2NmYTQyNzA3NWRlMDQ0YWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlNTg4MzhjZmE5OTRmMDg0ZWYwNGY2NTE0MzBmNGQ3YzYwYzlmNjQ5YTM3Mzg0ZDlhMDMwNDM3MTU5MjMxZjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhhYzg4YTEzZTUwMjY3MjM2ZmQzN2Q2ZTExYTM5M2EwNWI0NTcxYjdmNmVkZGZhMzRiNjQ0MTAyOGI4ODljOGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVhZDEzYWM1Yjg5MDUwZWZlYzZhNzYxOWYzZDBiMzBmZjI1M2E0MWRhNWI0YTA1NjA3ZDk2MmFkMDIyZTFhNzcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_88a09a45b2724923afebd34f6b914b78",
+      "statement": "A post's `author` value is a key resolved through `_data/authors.yml`, and this repository uses a single author key on every post.",
+      "evidence": [
+        {
+          "resource": "repo://.claude/skills/new-post/SKILL.md#L31-L33",
+          "version": "repo-lines-v1:sha256:edd628afd7f3542be26da5e6d0c1386800ab982f4bcfa010352e8e6dde5c0922:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGNiZDRlMjliYzk4YTZmMjNjYzhjMDY2ZTU0YWJhNWZlZDJkNDgzMjVjYTJkMzg0YTJmYzQ1YzAzYjgyZTI4MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzQ4ZDRmZmZiY2MwM2M1NTE0YWUxYTRjODY5MmU4N2M0ODc2ZGNjZTRmYTU5ZTg2OGExZmVjMDg0MjJiMWE2NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2NmMDQ5MTU2ODRlMTZlOTc3MTE1NzYxMzY0MjAwNGM3ZDQwMTVkNTcwYTdiMTFmMTdiZGNiZTQ3Zjg3NTFhNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODA3YmQ1ODgzMzQ4M2MxYzdmZmIxODZmMGM3ZDUyZGExODY3YTBhZjMwZWUzZjIzYmI2OGFkZmNlNjAxZGZmYyJ9"
+        },
+        {
+          "resource": "repo://_data/authors.yml",
+          "version": "repo-file-v1:sha256:d21fb2abd277a12daf6c06ca9e9225c1e1e17a52d4438f40eb534e3d8ccf87a0"
+        }
+      ]
+    },
+    {
+      "id": "claim_8f7bc87330364b5f863f63034f951ea1",
+      "statement": "Mermaid diagrams render only when the post sets `mermaid: true` in front matter; without it the block renders as plain code.",
+      "evidence": [
+        {
+          "resource": "repo://.claude/skills/new-post/SKILL.md#L130-L140",
+          "version": "repo-lines-v1:sha256:a7a8e69a0a22e3c9dc835d4fb52f6b261914b5067820b50591d91e20f7812363:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzNDNiMjNlYjYzNWE2ZDhlOTU4N2NmNWIzYTI5NjBiOTE1NTI3YTUyNzZkZDRjNWVkYWFhZTI5OTAxZDJlOTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNkNGNjMTVjYzA0ZTQwMGY4MDQ5ODUwOTUzNDkwNGU5NjZhYjQ2ZDU5ZTAyYjBkMDZlMmVhZDY0N2U1NTZhMDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAxNjBlNWNmZDFmMzAxNjYzMzY3ZWQwMjk5ZjI5Mjc4MTIyMDZhNjQzNTZjNDc5MGRmZWEyZmYxMWQ4ZWIwZjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_38d3bf696f654792b11a0913715b47e7",
+      "statement": "Pinning posts is prohibited so the home page stays in reverse date order.",
+      "evidence": [
+        {
+          "resource": "repo://.claude/skills/new-post/SKILL.md#L39-L39",
+          "version": "repo-lines-v1:sha256:cf3d4bf376cf2c0c4543fe0b307dd04028ec6fc6e93fa1a3818357bd4d350ae3:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2YzZDRiZjM3NmNmMmMwYzQ1NDNmZTBiMzA3ZGQwNDAyOGVjNmZjNmU5M2ZhMWEzODE4MzU3YmQ0ZDM1MGFlMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2YzZDRiZjM3NmNmMmMwYzQ1NDNmZTBiMzA3ZGQwNDAyOGVjNmZjNmU5M2ZhMWEzODE4MzU3YmQ0ZDM1MGFlMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDQyNjgzMjVhYjdiM2FkNWUyZWFmYmU1NjlhNDAzOWNhNGZlYmFhNTZmMmRiYTVjN2JiNmFmOGFmOGI4OWY3YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmQxNmEyOGUxZTMxYWQ0YzZlZGU5ODMwNDUwMjA2MDFkMDgwZTExZjEwZWZkMDY0MTY3MmFmNGVhZThmMDE5NiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ea0658e9f96846c491c1b00c68f45b12",
+      "statement": "In-post images declare `w` and `h` at the file's native pixel dimensions purely to let the browser reserve layout space, since the theme's CSS caps rendered width at the content column regardless.",
+      "evidence": [
+        {
+          "resource": "repo://.claude/skills/new-post/SKILL.md#L82-L88",
+          "version": "repo-lines-v1:sha256:ca7a7548a6ac0eff9341c26a8f72832a04caf3aa1933473a791631aecd876b9b:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzczODY2ZTMyN2FjODgzNTI1MTA3ZTM3ZjExOGMyM2MzZjRhNDhiYjlhOWUxZjc3Yjk0ODQ4ZDZiOWVjZjk3YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2Y2Yzg5YmZmN2Y1ZjZkMmFiNzgyOWU2ZWFjN2Q3NWIxZWY4NTJiNWE2ZDI4YTE5MzY5MDUzM2JkMWExMGJhNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjIxYzQ5YTViYjZiNGQzM2M0M2FlNjk5YjIyYzM1ZGEwNzliYjlhODU2ZThhN2I4MDljMDhkZDM4N2NkZDUxNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmMyNzU2ZTg4ZGQ1YWZlNjY0YWZlOWRjNTliYzU2YjQzZWZjYmJjNGQ4Y2EzNzM0MjYwZDFkNTJhNGYwMGEzZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4e89b5ec337a4e4a8910d7e4c41605d5",
+      "statement": "Front matter social cards are exempt from the explicit sizing rule because the theme already injects their dimensions.",
+      "evidence": [
+        {
+          "resource": "repo://.claude/skills/new-post/SKILL.md#L86-L88",
+          "version": "repo-lines-v1:sha256:401f39a39adea8e2bddb55ef34c2cb728a408ff1aba65d3d11125dfa5fb9328f:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTdmMDY0YmQyMTVjODUzZDllNTdiODkzNTc1MmYzMmJjNmU1MjYwOGFmYzUyMzk1YjIwZGUzY2I4OTgyMTZhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2Y2Yzg5YmZmN2Y1ZjZkMmFiNzgyOWU2ZWFjN2Q3NWIxZWY4NTJiNWE2ZDI4YTE5MzY5MDUzM2JkMWExMGJhNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2Q4MjA0MTEyNTMyNjQzMmE3NDJkYTVkYzVjNWVjOWNlZjAyNTg0NGEyZDEzNGM1ZjUyNzUyZTY3ZTYyOTVkYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmMyNzU2ZTg4ZGQ1YWZlNjY0YWZlOWRjNTliYzU2YjQzZWZjYmJjNGQ4Y2EzNzM0MjYwZDFkNTJhNGYwMGEzZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a53e7d2a38a043178e397c3aee0b181c",
+      "statement": "Declaring `w` below the content column width renders a deliberate thumbnail while the lightbox still opens the untouched original.",
+      "evidence": [
+        {
+          "resource": "repo://.claude/skills/new-post/SKILL.md#L88-L92",
+          "version": "repo-lines-v1:sha256:1e7a67e35e8c5d06473c73a684e5c9dfd5736e50ba0b9b7e05ccbbf0ff6fbb2b:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2Y2Yzg5YmZmN2Y1ZjZkMmFiNzgyOWU2ZWFjN2Q3NWIxZWY4NTJiNWE2ZDI4YTE5MzY5MDUzM2JkMWExMGJhNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDg4NjhmNWVmYTIyMjY0YTdmYjVlODE1NWI2Mzc2OTA5YzhkMjE3YzRhODE0ZGEzZGUyMWZkNmYwODZmNjcxYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTE3NGI4MWExZDQxODEzODlhYjMyMTYwNDYwYjRmZTAxNjgxYmU1MzA2YWRhOThhYTgwMDFiNDBjOTdhNzgwYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDUwZTY5ZjUzN2YwNzAwMWNkZWNmNDlkM2JkZDI4MzFlNjIwMWY2NTIyZTY4YmU3YjhjNTJjY2MyMWNmMDE1MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5e69ec942bfc4151848d9798f8532a54",
+      "statement": "Click-to-zoom requires no author markup: every in-post image is wrapped in a popup anchor and picked up by GLightbox automatically.",
+      "evidence": [
+        {
+          "resource": "repo://.claude/skills/new-post/SKILL.md#L90-L91",
+          "version": "repo-lines-v1:sha256:499ff59c4c3a7ca433a367a2081ec5fa08594e3c5667e03bd26acca8ce5c0209:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDgxMjc0ZDY3YzYxZWQyZjE3YzkyNjg3ZTU1ZmFjYzAwYmUxZmUzZTNkNGFmYTNhYTA2MjViNDI5OTBhYTRjZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2FmNTVhMGNhNGQ5ZmQ0NzFiOTg1ZjhhNzFiZjMzYmRlN2UyN2Q4YjE4NDdlYTRlNDYwMzkyYzMxMTUzMjFhYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWE4MTc4ZjVhMjNlZmM5OTQ5YmYxYWNhNGZiZjNmYWZlOWM2YWZjOGIxZDRhYTIyNGM4Y2ExYjRjMmJhM2Y1ZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4e10b35c8b244ee4b0a47676e2c4a389",
+      "statement": "A post must contain at least 600 words of original substantive content and a concrete example, code sample, or real-world scenario before it is considered ready.",
+      "evidence": [
+        {
+          "resource": "repo://CLAUDE.md#L12-L25",
+          "version": "repo-lines-v1:sha256:bd289d63c6fb3cc8d75386d462df5e93b77f4853a31cac8e0451e80fbeee9afc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjZmU2MDI1ZDQ2YzljMDIxMGJlZGY4ZmUxZDk1ODY5M2FjZDY5YTRiY2UwYzhiYWZkZDYzMGJiMTRhYjFhNTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNhOTQxZDk4ZWVkMGIzMzY1OWY5YjdiMTIwYjdmZmVlZjY1NjA4MGFmZTg4YTk3MjZkOWZiYzQ4OTcxMDcwZmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM1NGExODNkMWY2MjNhZDYwNzQ1MDY0MGFjZjdhNDJhNzFhYjQzZmE0MWY3Zjg3NTQ5OTBjYzIxZDA1MTg5NGIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_61bdaf7092d24c4ca2dbf80c9e676e62",
+      "statement": "Code samples in posts must be tested or explicitly marked as illustrative, and contested or opinion-based claims must be identified as such.",
+      "evidence": [
+        {
+          "resource": "repo://CLAUDE.md#L31-L34",
+          "version": "repo-lines-v1:sha256:ee7630da7a70fe2c0c9ff6c56819b95156cdf06cd49da66f485fe22c3417b4e6:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjkyOTAxODgyYWIwZTU0YmRjOWM5Yzk0NTgyNDZiZTliMGQ1ZTQxNmMxYjVmMmM4M2Y4MDJiOGVhY2QyNzAxNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzA2Y2FhY2ViZTIzZDlkNzIxNjFjMjE5ZGEzYzNhZjE3MmIwMDQwZjgyZmRlZmI1YjYwZTYwNzExNjQxY2I4MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjExODc4NGIxYzg2MDg5NTEyNmVkOTJmMWY0NjM0Y2UzMDY2Y2Q2NTBiNWViOWQ4NDcyZGI4YmM4MDY1Y2VhYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzQ3NjJhMDIwODVjMDQzZDdhNTgzN2MxZGU4ZjY1ZTFmOTAyYmViODEwZmNjN2ViZDA2MWJlYjI4NjQzZmIwZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ee1d29e13ce44764b6671bc421341e64",
+      "statement": "The site runs no advertising of any kind, and ad code is not to be reintroduced without an explicit request.",
+      "evidence": [
+        {
+          "resource": "repo://CLAUDE.md#L36-L38",
+          "version": "repo-lines-v1:sha256:6e9c2a164ba06d6139a920b8c876237e14ec8bfb99d4ea3f1462924c7e6d0e57:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODg2ZmZhZWI0ZjcyNmM3NmM1YmNkNjdkYWYwOWI5ZDBkYmU1ZTEyM2VhYWI5NDRiMmExN2ZkYjZkY2U4NDIxYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODY2OTY5NDgxYjc1ZTk3ODQ1OGU4Y2VmYjhhNGU4NDkxYzkzZDA1NjBhYTBkZmQ4MGNlMzlmNGYzNDU1MzhmMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2RmYzZhOWMzNWY2ZjE5ODI2MDM2ODg0MmJhMTA1YzFjNzYxMzE5MWY0MGU0OGQ4YzcyNzNkNjhkNjgwZWVhNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWIxYmM1YmM0YTIzN2Y1NzhlNmFmNGE0MTVkMDY0N2Y5OTEwYjAzYjM2NGUxZTI3YzFmMWRiYWE3NDNkMDNiYSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1d9b5e1c84214f53bd5e3732130a4d7c",
+      "statement": "Post voice must avoid citing a specific number of years of experience.",
+      "evidence": [
+        {
+          "resource": "repo://CLAUDE.md#L26-L29",
+          "version": "repo-lines-v1:sha256:7c3f84ec6ae2cfff5d8c7d8dbceb99f93e0b469f37d139544f2b129c3fdd158e:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWYwNWYwMzQzNDIzZDQzNjdjMzJmNTY0ZDI1YzNmOTcwYzRiMTBjOWM0MGIwNzgyZDIxYjBjMWE5NTUzNmM5ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjljODk3ZjM1ZGQ5YWRkNGMwZDllMTFkYzZkODAyNmQyZTI3YjRiMjA3ZTY5MzBjZWU3ZTBhOTNhZmZlNDEzYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTc3MDhhZjlmMmMzZDM5ZGVmYTNjMmM4ODZmNGVhY2QwNTAzMzczNTRkOWIwN2Y0N2JlODA4Y2E2NTFjNjg1MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmZiNGVhMWRmOTAxNDZhMThiODdmMzY2MmU2MWZiMTQ0OTM2NDZmMGViYWI1YmFhMzc5MGU4NmY3NGJjZTgwOSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_35835fcdec1847119951fc1630ebf6e0",
+      "statement": "The publishing check verifies the rendered meta description by grepping the built page rather than trusting the source front matter.",
+      "evidence": [
+        {
+          "resource": "repo://.claude/skills/new-post/SKILL.md#L161-L171",
+          "version": "repo-lines-v1:sha256:c317368e8fce27c92c16807ded562d22a3cb8cfc6ffb3541e7262c53f12ec9bf:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzNTI3MDk0OGNjYzZmMmJiMTc1N2QxYmE3MWYwNDUxNzFmZDc4MDI3MTZmYjcxNGZmOTFjYTM3MDA3OTQ4ODYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkNDdkZTUzZmIxN2Q0MDYyYTUzZDA5NzViMjFlNDgzYjZmNTcxZGUxNWNlZjg0OWFkOWY4N2I1YjNlMDdhOWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4ODljNDI2Y2NmMzhiZGMxMzc0Mjc3MjRlZmNlNTAxNGI4Mjg4MGQyN2Q1MDk2MTE4OTcyM2Q3ODZiODU0NDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.4.0",
+    "at": "2026-08-27T15:56:38.540Z"
+  }
+}

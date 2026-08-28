@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:e0536d8ab6e42b2f26d64a16a7dda86af856e81d544ef0b1ef93ff4d03917f33",
+  "claims": [
+    {
+      "id": "claim_0d1a1dc8b5c94c78ac9ec66694ea13c5",
+      "statement": "The stylesheet override exists because widening the content column requires passing `$main-content-max-width` to the theme's variables module at `@use` time, which means owning a copy of the theme's Sass entrypoint.",
+      "evidence": [
+        {
+          "resource": "repo://assets/css/jekyll-theme-chirpy.scss#L1-L15",
+          "version": "repo-lines-v1:sha256:d1daffaf6bc35a4e644d9d1e10ef703a04e4211071b3d103b082585a2084ad77:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5Yzc4NDc4Yzk3MTg3YmVmZGYwZjNhZGI3YmFkYzUwMTgzY2QwMjliY2VhMzU5YmU3NjZkZGNhMGQ1MDgwZmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ0MDcwZTYwMGVkMWVlODQ1YWJkYzlkOTAzNDRkNzIyY2IyZjkyOTI4N2UyYzAzYzliZWUzODZkNjM5ZWMyZjMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b55de216db404251924d059bd55c5998",
+      "statement": "Widening content to 1600px pushes Chirpy's back-to-top `calc()` position negative between the 1650px breakpoint and roughly 1900px of viewport, so the override floors it with an interpolated CSS `max()` that Sass emits rather than evaluates.",
+      "evidence": [
+        {
+          "resource": "repo://assets/css/jekyll-theme-chirpy.scss#L71-L82",
+          "version": "repo-lines-v1:sha256:e0719b9c313e92248d71a2930347784c0824de5844943fb391ffcf1acfa4fe97:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhZGMzOWJhYTk4NDQ4YTljZWI0OTQ1YjI3ZDVlMTNjYjJjMzk2YmU5YzcxZjA0ZGFjYjFhZjhiOGMwZTU1ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyMmZhYTUzNWJkMmVhM2Q1MmU3NDFlZDQ1NDQzNWI3ZmU0OWU4MzU4NmU5NDNkOThkODJiYmZiMjRkMWY1YzUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ0N2YyMjAzZGUzYWNhNjVhNjVhNjFmYjU3MmVmOTRkMTA5YzQ3OWZiNDQzMjZkMThhZWEzNGU2YjhiNTM5YjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_01425698643d4a3baf710d78aeec8a2c",
+      "statement": "The post layout override is a verbatim copy of the gem's layout whose only intentional difference is adding `newsletter` to the front of `tail_includes`, making it the highest-risk override because upstream changes to that layout are silently frozen at the copied version.",
+      "evidence": [
+        {
+          "resource": "repo://THEME_UPGRADE.md#L48-L56",
+          "version": "repo-lines-v1:sha256:cb530f3f93bb7e851622aa3ee80785aa632af55b513d6a5bcced856d7f3eb3bd:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGZmMjRkY2U5ZTlkNTc3MjhlNzIzZmZhMGUxOGFmMzg4ZGI1YTMzZjlmZWU5NTAwNjEzYTBlMzhlNmYwM2E3ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzgzMmJhODVmMDdjZmVjZDAwNTI4ZDQ5Yjg5YTI0NDBiNGZjYWNjNmY2YTE0ZTNhZmQ1NzU5ZTc4ZDdjYWY0ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzJlMzI4ZDJjNGVlOGI5NGYyZjAyNDMwZTg5OTU1MjNhYmVlYjE4YTE5MmFjYTY5ZTMwMmJlOGM0Yjg2ZTczMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2QwMmJmMjAwZWNmYWRjZTFhYTc2YTVhOTEwMGNhNGJlYmMwNzM2ZjI2MDdmMTgwOTNhNDgxMGYwZTcxYmViMCJ9"
+        },
+        {
+          "resource": "repo://_layouts/post.html#L1-L10",
+          "version": "repo-lines-v1:sha256:5d403f436ef8c376927ff5c8f01dcd3e4274c59f96805e6eec0f45ba7e302ca5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5Yzc4NDc4Yzk3MTg3YmVmZGYwZjNhZGI3YmFkYzUwMTgzY2QwMjliY2VhMzU5YmU3NjZkZGNhMGQ1MDgwZmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlMzY5ZTk2NmM4ZWIxOGRmNGVmYzk0ZmFiYzU2MmIzNjFlYWRiNWZjZjY5YmNkMmY2OTMyMmYwYWQwNGI0ZWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI0ODdmYmIxMjQ1NjM3NTBlMWM3NTljMjcwZTg1YWNlZjY4ODQyNDg4YTFjYzI4OWI0ZGUxODJkNTI0ZDMwZDIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8723c04c7e0a4ebead9c502b42019eab",
+      "statement": "The post-sharing override adds a `DESCRIPTION` substitution to share links, resolving it from `page.seo.description`, then `page.description`, then the site description.",
+      "evidence": [
+        {
+          "resource": "repo://_includes/post-sharing.html#L5-L35",
+          "version": "repo-lines-v1:sha256:0e4bd223400adf9b62637dd74d12bd1208aa3608181121883e206f809f3ec7a2:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNlYzNmZTA4ZWZhNjY4MGU5OWM4OTdhZGQxNWU4ZjEzNjQ3MjU0OTE5NDRlYTJhMjRjOWQ4MDdmMGU5MjExNTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg2NmMxYTkwM2YyNTU3NTI2ZDI1ZjFhNjRiYTk5YzhkN2EwM2QyYzUxMWI0OWE0MjJjNzdhYTRiMWNhMDA5OWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRmNmM4ZDI3MWZiMDFmNDJkZDlmMzc1OWE5MDVlNWVkNjFjYzI5MThlNzEwZjdkNGE3OWJiMzY4MGY0MmNjZGIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b6457693f9904d43ba93ff00ac4848e8",
+      "statement": "The sharing include and `_data/share.yml` are a coupled pair: the data file's link templates carry a `DESCRIPTION` placeholder that only the override substitutes, so enabling a platform requires both files to agree.",
+      "evidence": [
+        {
+          "resource": "repo://_data/share.yml#L1-L20",
+          "version": "repo-lines-v1:sha256:995553b1eec95d32d7e139fe3b4561288bd7ed417db9ec429a45c0fea159fbff:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJmMTU4ZjI4MzE0Y2U3ODk4YTk4ZDQyM2NlYTQ2ODdhNTQ0NDQ3M2ZkYzJhMjViMmQyZjRkMjVhZjU1NTQxODciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2OTUyODQyNmU1NTAxYzhmYjYzZGYwZDk2MmU3NzQ3N2EwMzU4OWY2YWQ2ZDExMDgxOTMxNWM4MGZhNDZlZWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ0M2ZlZGI2MDZiYzA1ZTdjZGJjZTJhOTE0NjA1OTc4YmNkMzY5MDJjZDFmYzE3OGNhMzA3MWZmMDgyNjhmNjgifQ"
+        },
+        {
+          "resource": "repo://_includes/post-sharing.html#L34-L34",
+          "version": "repo-lines-v1:sha256:ccf489bddb699e98f6c4a900d180c3ebefd4c1fe77a65c10457140ca6ec5e377:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2NmNDg5YmRkYjY5OWU5OGY2YzRhOTAwZDE4MGMzZWJlZmQ0YzFmZTc3YTY1YzEwNDU3MTQwY2E2ZWM1ZTM3NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2NmNDg5YmRkYjY5OWU5OGY2YzRhOTAwZDE4MGMzZWJlZmQ0YzFmZTc3YTY1YzEwNDU3MTQwY2E2ZWM1ZTM3NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWVhZTQyYjU5OGZlZjEyZTFiMTJkZjlhM2MyMDhjZDRlNGY5ODcyNGY0YzAyMDkyMzJiOGMzMmE2NmVkYWE1OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDFjMWVmYWE5MTUwZmIyMDc4YjEwNmI1ZTMzODJjZmFmNmJiODkzZWU3NjI3ZmUyZDNlNTM2MzdlOWIyYTY3NiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_eac4c498d6ba47a0af784e829a1615ed",
+      "statement": "The share-link include is the only place `page.seo.description` is read; the meta description tag and visible post subtitle both come from the top-level `description` key instead.",
+      "evidence": [
+        {
+          "resource": "repo://_includes/post-sharing.html#L9-L9",
+          "version": "repo-lines-v1:sha256:37d1ea34066c6e10fcc66bc5d3a6e2050522f8c4c20c15a44f861e5a47b810e8:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzdkMWVhMzQwNjZjNmUxMGZjYzY2YmM1ZDNhNmUyMDUwNTIyZjhjNGMyMGMxNWE0NGY4NjFlNWE0N2I4MTBlOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzdkMWVhMzQwNjZjNmUxMGZjYzY2YmM1ZDNhNmUyMDUwNTIyZjhjNGMyMGMxNWE0NGY4NjFlNWE0N2I4MTBlOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjIyYjg2ZTI3ZDJlNmI2OTI0MjQwM2Q4MjMwN2FmYTliZDIwYWI3YmVkYTUzODhkMmU3NzhjYjBjNWQ2N2FkZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWJhYzI4ZDY5Y2M0ZTE5NmM3ZDMyZDM1OTE4YjE4NmQ4NzVhN2I3ZDBmYzliMTlkYTE3ODRlNzc2MWRlYjRkNSJ9"
+        },
+        {
+          "resource": "repo://_layouts/post.html#L18-L22",
+          "version": "repo-lines-v1:sha256:2300dac0de3bc2ad78bcbc6ba100f2895b2eaf0607e2092272677be7c54a2195:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzczZTBkZGFkYjMyMWFmOGY2M2VlZjNhYjJkNzRhY2QzNWU2NmM1ZjZmYjVjODFmNTU3ZWI4ODg2YTc5NmM3MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmQzMjM4NzVjYzMzNTZkY2JiNzM2NjExNDVmZDEzNTRlMTI3MTk0MWZkZTAxMDQ0ZGQzNDNhNWViMTZmZDA5MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDBjMzg2YTBlYTFhZTcwY2JkNTNkYmE2NDZjNjNkZjNkNWFjMmMwNGRiY2E5MjFlMDU5ZTM5ODZmOGM1M2E1NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWY2MDEzM2ZmOTg3YzYzOTAyYWQ1MDNmNjEzZDQyNzMzZWNjNjA1NmE5NjQ3MDlkYzJiOTE0YzNiNTdiMTAwNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c135e7e53493444586efb30606c78f88",
+      "statement": "The newsletter include renders nothing at all unless `newsletter.buttondown_user` is set in configuration, so the feature ships disabled and is enabled by filling in a single config value.",
+      "evidence": [
+        {
+          "resource": "repo://_config.yml#L83-L89",
+          "version": "repo-lines-v1:sha256:b2af39643568b5ad364233b14b19bffc10cf2e3774f708c9c3edfd94ec798627:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDI5ZTMwZWZlNWUwMTBlNDI2ZTdkM2MyMzIyM2RjOWIxMWRlMGJhZGZlMGY2M2YwYTZmODg1OGY5M2NiZjc3OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTE0ODJiZjhjNjEzNmZjNWM3MmZkY2UzNmJmMWZjZTg5MDlmYTBkMDdlYzM0NDJhN2Y3ZDZhM2MyNDEyNDgxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTI2MmEzYTE2ODczMzdkNTVjYTBhMzg3NDE3OWQwN2RmNTcyMWMzMGM5NjI3N2I3NjcxZTUwMjZmZTI2ODQ1MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGVlNzJjYWQyMzVmOWQzOWQyYzU0NmQzNGFjZWFiOGQ0MTc0MjI5NjcyZjFhMTM0ZWU5MmY3NmE2NDgxYWQwYSJ9"
+        },
+        {
+          "resource": "repo://_includes/newsletter.html#L1-L26",
+          "version": "repo-lines-v1:sha256:cd5ad76011593565305c9c72f65d1e13df191ef5a73197c1025420c57b646017:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBmN2U0MzViMjgwNzk4ZWI0YTdmZWY0YmVhOGM3MDRmNmQyOTczZGFmNWRhM2IwZDcxOGM5MWRjY2JjOTMwNWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJjNmU1MmVhODBkNDE0NjdiMzc3ZmYwZTE4NTk1YjlmMTE0MDVjNWU1ODViMzIzNTgwNmZkZDgwMzQzOTZlNGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_444ce0f8f8234db9ad75625e6896bc6f",
+      "statement": "The newsletter email input deliberately borrows Bootstrap's `--bs-border-color` rather than Chirpy's `--main-border-color`, because the latter is near-white in light mode and would be invisible against the card background.",
+      "evidence": [
+        {
+          "resource": "repo://assets/css/jekyll-theme-chirpy.scss#L38-L48",
+          "version": "repo-lines-v1:sha256:e787dc736f2e57575f09c280102b11bd74d28951eaadecad65f7aee9a350e349:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3ZThlMmJiZTQ1Y2EwNmY2ODY0NzQyMjUzNjY0Mjk0ZDgwYzQxZDBhMzdiZDFlNjIzMTRkNmM2N2RjN2M2ZmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI2OWJmYmQ3OTVmYmYxNjFlMDljMmE5MDgzZWRiMTI0OTExNTFmY2M1NjQxODdiYTA4ZDA1OTNkYTI4ZmMyMjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUzYzI1ZjdlNTdkNWU4OWRkNDdlM2VmNjE2NzQ2MTUzMTU4MDE5MWU5NDFlYmMwYmRiYTc2YmMzMTc1N2E0OWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_78cf58602ca44c6c8bedea23c0427307",
+      "statement": "Every theme upgrade must diff each override against the new gem and expect a specific known difference; anything beyond that shape means upstream restructured the file and the customization must be re-applied onto the new base.",
+      "evidence": [
+        {
+          "resource": "repo://THEME_UPGRADE.md#L104-L124",
+          "version": "repo-lines-v1:sha256:0f2284495fff91f9c88d3932e4ce308c792255d3b50da738df920603e19817b9:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyYTMxYjRhYmVjYmRmYmQwN2IzZjRkMWRjZDk5ODZmMTcyMDQxODZjZGVlOGY1ZDRlYzk5NzhkZmY4M2ZkZjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcxYWNlNmRmZDg3NWQzZTUwYmI5ODY1ZWU5Mjg5NDY3YzVhZTkzNmJjYWYyODViYWM1YjZkZTBhYzdiMzVlZjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM2MWU0MTE5NDY5ZDgwNjczYzFiYjQ2ZTgwYzg1YzlmMGViOTdiMjI5N2NlYjU5OWFiNjMyNDBmMmZlYjJjMmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8e8e3c89976b4e678e531d7e825fe159",
+      "statement": "Only upstream changes to `_includes/*`, `_sass/*`, `assets/css/*`, or `_config.yml` defaults can collide with this repository's overrides, which is what the upgrade preflight skims the commit list for.",
+      "evidence": [
+        {
+          "resource": "repo://THEME_UPGRADE.md#L88-L98",
+          "version": "repo-lines-v1:sha256:8e286ecd6deee286734b50ac629106b1d58a63963b259958ddfa4ad29b13a169:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYjcwMjU3NTkzZGEwNmY2ODJhM2RkZGE1NGE5ZDI2MGQ0ZmM1MTRmNjQ1MjM3ZjVjYTc0YjA4ZjhkYTYxYTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkYWE1YjM3ZmFkYmEwMTdjY2ZmYWZhMDAyY2MxODU4NGRmNDM2YmI4MjFiYzFjNjg2MDBlNzhmN2QzMWI2N2MiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFhODAwMTlhMmI5Yjk3OTRkNGZjMDUxMDA4M2YwYjY4ZjM3ODdmYWRiMDlmZmMyYzJkYzI5OWUyZmQzMmVmMGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjliMmVlNzhjNjM3NmRmMTA0OGRkY2ViYWQ2MTEyMWZmMjIwMmNkYTNmMmNmMWEyOWM0OWYxYTNmYzUyZjZhMjIifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.4.0",
+    "at": "2026-08-27T15:56:38.540Z"
+  }
+}
