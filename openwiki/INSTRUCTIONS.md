@@ -26,6 +26,10 @@ third-party theme. Document that custom layer. Do not document Chirpy itself.
    it exists rather than restating its code.
 4. **The publishing tools.** `tools/` — what each script produces, what it
    expects as input, and how it is invoked. Group them as one system.
+   This means every script in that directory, not only the Python ones:
+   `run.sh` and `test.sh` are the two a maintainer actually runs daily and
+   must be covered. Note that `tools/devto/` and `tools/social/` are
+   excluded, so the scripts are readable but their output is not.
 5. **Site configuration.** The parts of `_config.yml` and `_data/` that a
    maintainer actually edits.
 
